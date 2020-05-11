@@ -18,6 +18,7 @@ require("./config/passport")(passport);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+//please work
 app.get("/", (req, res) => { res.send("Hoi frens") })
 app.use("/api/users", users)
 
