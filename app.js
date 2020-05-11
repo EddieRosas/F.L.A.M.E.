@@ -7,7 +7,7 @@ const db = require("./config/keys").mongoURI;
 app.get("/", (req, res) => res.send("Hi it me. it werk"))
 app.listen(port, () => console.log(`Server is running on port ${port}`));
 
-// Uncomment below when we add in our MongoDB
+// Uncomment below when we add in our MongoDB @eddie
 
 // mongoose
 //   .connect(db, { useNewUrlParser: true })
