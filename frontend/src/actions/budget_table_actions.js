@@ -4,6 +4,7 @@ export const RECEIVE_TABLE_ENTRIES = "RECEIVE_ALL_TABLE_ENTRIES";
 export const RECEIVE_TABLE_ENTRY = "RECEIVE_TABLE_ENTRY";
 export const REMOVE_TABLE_ENTRY = "REMOVE_TABLE_ENTRY";
 export const RECEIVE_ENTRY_ERRORS = "RECEIVE_ENTRY_ERRORS";
+export const CLEAR_ENTRY_ERRORS = "CLEAR_ENTRY_ERRORS";
 
 export const receiveTableEntries = entries => ({
   type: RECEIVE_TABLE_ENTRIES,
@@ -23,6 +24,10 @@ export const removeTableEntry = entryId => ({
 export const receiveEntryErrors = errors => ({
   type: RECEIVE_ENTRY_ERRORS,
   errors
+});
+
+export const clearEntryErrors = () => ({
+  type: CLEAR_ENTRY_ERRORS,
 });
 
 export const fetchEntries = (userId) => dispatch => ApiUtil.fetchEntries(userId)
