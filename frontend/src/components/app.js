@@ -9,6 +9,8 @@ import LoginFormContainer from "./session/login_form_container";
 import SignupFormContainer from "./session/signup_form_container";
 import ProfileContainer from "./profile/profile_container";
 
+import BudgetFormContainer from './budget/budget_form_container';
+
 
 const App = () => (
   <div>
@@ -18,6 +20,7 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
+      <ProtectedRoute exact path="/budget" component={BudgetFormContainer} />
       <ProtectedRoute exact path="/profile" component={ProfileContainer} />
       
     </Switch>
