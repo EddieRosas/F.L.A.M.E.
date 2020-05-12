@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const db = require("./config/keys_dev").mongoURI;
 const bodyParser = require("body-parser");
 const users = require("./routes/api/users");
+const entries = require("./routes/api/budget_table_entries")
 const passport = require("passport");
 const path = require("path");
 
@@ -19,8 +20,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //please work
-app.get("/", (req, res) => { res.send("Hoi frens") })
+// app.get("/", (req, res) => { res.send("Hoi frens") })
 app.use("/api/users", users)
+app.use("/api/entries", entries)
 
 const port = process.env.PORT || 5000;
 
