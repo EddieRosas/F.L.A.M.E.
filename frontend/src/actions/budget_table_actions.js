@@ -30,7 +30,7 @@ export const clearEntryErrors = () => ({
   type: CLEAR_ENTRY_ERRORS,
 });
 
-export const fetchEntries = (userId) => dispatch => ApiUtil.fetchEntries(userId)
+export const fetchEntries = () => dispatch => ApiUtil.fetchEntries()
   .then(entries => dispatch(receiveTableEntries(entries)));
 
 export const fetchEntry = (entryId) => dispatch => ApiUtil.fetchEntry(entryId)
