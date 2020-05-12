@@ -1,4 +1,5 @@
 import React from 'react';
+import BudgetListItem from './budget_list_item.jsx';
 
 class BudgetList extends React.Component {
   componentDidMount() {
@@ -6,12 +7,20 @@ class BudgetList extends React.Component {
   }
   
   render() {
-    const { fetchEntries, fetchEntry, deleteEntry, updateEntry } = this.props;
+    const { deleteEntry, updateEntry, entries } = this.props;
     return (
       <div>
         <h1>Budget List</h1>
         <div class="budget-list">
-          
+          {
+            entries.map((entry) => (
+              <BudgetListItem 
+                entry={entry}
+                deleteEntry={deleteEntry}
+                updateEntry={updateEntry}
+              />
+            ))
+          }
         </div>
       </div>
     );

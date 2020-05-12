@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import BudgetList from './budget_list.jsx';
 
 const mSTP = (state) => ({
-  currentUser: state.session.user
+  currentUser: state.session.user,
+  entries: state.budgetTables.entries
 });
 
 const mDTP = (dispatch) => ({
