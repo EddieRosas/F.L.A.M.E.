@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const passport = require("passport");
 
 const BudgetTableEntry = require("../../models/BudgetTableEntry");
-// const validateEntryInput 
+const validateEntryInput = require("../../validation/budget_table_entry");
 
 
 //protected route landing page (entries index)
@@ -23,11 +23,11 @@ router.get("/",
 router.post("/",
     passport.authenticate("jwt", { session: false }),
     (req, res) => {
-        // const { errors, isValid } = validateEntryInput(req.body);
+        const { errors, isValid } = validateEntryInput(req.body);
 
-        // if (!isValid) {
-        //     return res.status(400).json(errors);
-        // }
+        if (!isValid) {
+            return res.status(400).json(errors);
+        }
 
         const newEntry = new BudgetTableEntry({
             userId: req.user.id,
@@ -35,11 +35,23 @@ router.post("/",
             incomeOrDebt: req.body.incomeOrDebt,
             description: req.body.description,
             category: req.body.category,
-            data: req.body.date
+            date: req.body.date
         });
 
         newEntry.save().then(entry => res.json(entry));
     }
 );
+
+// protected route to delete entries
+router.delete("/:entryId",
+    passport.authenticate("jwt", { session: false }),
+    (req, res) => {
+       BudgetTableEntry.findByIdAndDelete(req.params.entryId)
+         .then(entry => res.json(entry.id))
+         .catch(err => res.status(404).json({ noEntryFound: "Entry not found"})
+         );
+    }
+)
+
 
 module.exports = router;
