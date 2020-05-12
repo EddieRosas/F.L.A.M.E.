@@ -13,8 +13,8 @@ export const createEntry = (entry) => {
   return axois.post("/api/tables/new", entry);
 };
 
-export const updateEntry = (entryId) => {
-  return axois.patch(`/api/tables/${entryId}`);
+export const updateEntry = (entry) => {
+  return axois.patch(`/api/tables/${entry.id}`);
 };
 
 export const deleteEntry = (entryId) => {
