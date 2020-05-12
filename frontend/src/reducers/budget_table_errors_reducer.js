@@ -1,4 +1,4 @@
-import { RECEIVE_ENTRY_ERRORS } from "../actions/budget_table_actions";
+import { RECEIVE_ENTRY_ERRORS, CLEAR_ENTRY_ERRORS } from "../actions/budget_table_actions";
 
 export default (state = [], action) => {
   Object.freeze(state);

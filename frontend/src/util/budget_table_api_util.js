@@ -2,7 +2,7 @@ import axois from "axios";
 
 // routes might change based on backend
 export const fetchEntries = () => {
-  return axois.get("/api/entries", userId);
+  return axois.get("/api/entries");
 };
 
 export const fetchEntry = (entryId) => {
