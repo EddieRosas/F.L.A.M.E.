@@ -11,7 +11,7 @@ class BudgetList extends React.Component {
     return (
       <div>
         <h1>Budget List</h1>
-        <div class="budget-list">
+        <div className="budget-list">
           {
             entries.map((entry) => (
               <BudgetListItem 

@@ -33,7 +33,7 @@ class BudgetForm extends React.Component {
       category: this.state.category,
       date: this.state.date,
     };
-    //this.props.createEntry(entry);
+    this.props.createEntry(entry);
   }
 
   render() {
@@ -76,6 +76,8 @@ class BudgetForm extends React.Component {
             value={this.state.date}
             onChange={this.update("date")}
           />
+          <br />
+          <button type="submit">Submit</button>
         </form>
       </div>
     );

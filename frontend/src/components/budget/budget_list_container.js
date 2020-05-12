@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-//import { updateEntry, fetchEntries, fetchEntry, deleteEntry } from '../../actions/budget_table_actions';
+import { updateEntry, fetchEntries, fetchEntry, deleteEntry } from '../../actions/budget_table_actions';
 import BudgetList from './budget_list.jsx';
 
 const mSTP = (state) => ({
   currentUser: state.session.user,
-  entries: state.budgetTables.entries
+  entries: Object.values(state.budgetTable)
 });
 
 const mDTP = (dispatch) => ({
