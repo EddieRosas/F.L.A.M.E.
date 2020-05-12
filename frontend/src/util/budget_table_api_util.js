@@ -3,7 +3,7 @@ import axois from "axios";
 // routes might change based on backend
 export const fetchEntries = () => {
   return axois.get("/api/entries");
-};
+}; // removed params for entries. backend handles userId
 
 export const fetchEntry = (entryId) => {
   return axois.get(`/api/entries/${entryId}`)
