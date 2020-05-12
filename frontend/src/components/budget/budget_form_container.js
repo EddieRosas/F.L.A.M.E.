@@ -1,3 +1,4 @@
+// need to uncomment out createEntry
 import { connect } from 'react-redux';
 //import { createEntry } from '../../actions/budget_table_actions';
 import BudgetForm from './budget_form.jsx';
