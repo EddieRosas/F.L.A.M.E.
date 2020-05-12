@@ -28,7 +28,7 @@ module.exports = function validateBudgetTableInput(data) {
   }
 
   // if (!Validator.isDate(data.date)) {
-  //   errors.date = "Please input a valid Data"
+  //   errors.date = "Please input a valid date"
   // }
   
   return {
