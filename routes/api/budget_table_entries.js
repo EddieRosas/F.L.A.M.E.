@@ -38,7 +38,7 @@ router.post("/",
             date: req.body.date
         });
 
-        newEntry.save().then(entry => res.json(entry));
+        newEntry.save().then(entry => res.json(entry.data));
     }
 );
 

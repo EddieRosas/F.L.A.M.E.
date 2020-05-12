@@ -4,12 +4,12 @@ import BudgetList from './budget_list.jsx';
 
 const mSTP = (state) => ({
   currentUser: state.session.user,
-  entries: Object.values(state.budgetTable)
+  entries: state.budgetTable
 });
 
 const mDTP = (dispatch) => ({
   updateEntry: (entry) => dispatch(updateEntry(entry)),
-  fetchEntries: (userId) => dispatch(fetchEntries(userId)),
+  fetchEntries: () => dispatch(fetchEntries()),
   fetchEntry: (entryId) => dispatch(fetchEntry(entryId)),
   deleteEntry: (entryId) => dispatch(deleteEntry(entryId))
 });

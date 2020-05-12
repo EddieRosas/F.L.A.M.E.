@@ -3,11 +3,16 @@ import BudgetListItem from './budget_list_item.jsx';
 
 class BudgetList extends React.Component {
   componentDidMount() {
-    this.props.fetchEntries(this.props.currentUser.id);
+
+    this.props.fetchEntries();
   }
   
   render() {
     const { deleteEntry, updateEntry, entries } = this.props;
+    debugger;
+    if(!!entries) {
+      return null;
+    }
     return (
       <div>
         <h1>Budget List</h1>

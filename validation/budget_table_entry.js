@@ -27,9 +27,9 @@ module.exports = function validateBudgetTableInput(data) {
     errors.description = "Description needs to be between 1 and 200 characters";
   }
 
-  if (!Validator.isDate(data.date) {
-    errors.date = "Please input a valid Data"
-  }
+  // if (!Validator.isDate(data.date)) {
+  //   errors.date = "Please input a valid Data"
+  // }
   
   return {
     errors,
