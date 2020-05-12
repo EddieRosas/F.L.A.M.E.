@@ -35,7 +35,7 @@ router.post("/",
             incomeOrDebt: req.body.incomeOrDebt,
             description: req.body.description,
             category: req.body.category,
-            // data: Date.now // not sure if this is needed or if model will for sure default
+            data: req.body.date
         });
 
         newEntry.save().then(entry => res.json(entry));
