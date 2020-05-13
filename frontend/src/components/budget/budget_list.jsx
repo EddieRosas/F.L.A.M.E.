@@ -16,7 +16,8 @@ class BudgetList extends React.Component {
 
     // this.props will not update until fetchEntries is called, therefore if prevProps and this.props is same,
     // we have to double check
-    if (JSON.stringify(prevProps.entries.length) === JSON.stringify(this.props.entries.length)) {
+    if ((JSON.stringify(prevProps.entries.length) === JSON.stringify(this.props.entries.length)) 
+        && !(prevProps.entries.length === 0 && this.props.entries.length === 0)){
       this.props.fetchEntries();
     }
   }

@@ -3,8 +3,6 @@ import { updateEntry, fetchEntries, fetchEntry, deleteEntry } from '../../action
 import BudgetList from './budget_list.jsx';
 
 
-
-
 const mSTP = (state) => {
   let result = [];
   if (state.budgetTable) {
