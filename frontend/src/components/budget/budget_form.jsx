@@ -26,14 +26,14 @@ class BudgetForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let entry = {
-      userId: this.props.currentUser.id,
+      //userId: this.props.currentUser.id,
       amount: this.state.amount,
       incomeOrDebt: this.state.incomeOrDebt,
       description: this.state.description,
       category: this.state.category,
       date: this.state.date,
     };
-    //this.props.createEntry(entry);
+    this.props.createEntry(entry);
   }
 
   render() {
@@ -51,8 +51,8 @@ class BudgetForm extends React.Component {
           <br />
           <select onChange={this.update("incomeOrDebt")}>
             <option value=""></option>
-            <option value="income">Income</option>
-            <option value="debt">Debt</option>
+            <option value="true">Income</option>
+            <option value="false">Debt</option>
           </select>
           <br />
           <input
@@ -76,6 +76,8 @@ class BudgetForm extends React.Component {
             value={this.state.date}
             onChange={this.update("date")}
           />
+          <br />
+          <button type="submit">Submit</button>
         </form>
       </div>
     );
