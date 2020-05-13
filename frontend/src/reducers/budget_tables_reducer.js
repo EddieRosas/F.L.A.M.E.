@@ -8,9 +8,7 @@ const budgetTablesReducer = (state = {}, action) => {
     case RECEIVE_TABLE_ENTRIES:
       return action.entries.data;
     case RECEIVE_TABLE_ENTRY:
-      //return{ [action.entry.id]: action.entry };
       return Object.assign({}, nextState, { [action.entry.data.id]: action.entry.data });
-      //return action.entry;
     case REMOVE_TABLE_ENTRY:
       delete nextState[action.entryId];
       return nextState;
