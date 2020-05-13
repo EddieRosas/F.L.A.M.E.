@@ -12,7 +12,7 @@ router.get("/",
     passport.authenticate("jwt", { session: false }),
     (req, res) => {
         let entries =
-        BudgetTableEntry.find({user: req.user.id})
+        BudgetTableEntry.find({userId: req.user.id})
             .sort({date: -1})
             .then(entries => res.json(entries))
             .catch(err => res.status(404).json({ noEntriesFound: "No entries found"})
@@ -39,7 +39,7 @@ router.post("/",
             date: req.body.date
         });
 
-        newEntry.save().then(entry => res.json(entry.data));
+        newEntry.save().then(entry => res.json(entry));
     }
 );
 
