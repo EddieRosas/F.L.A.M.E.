@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from 'react-modal';
 import "./budget.css"
 
 const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
@@ -14,7 +15,7 @@ const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
         <button onClick={() => deleteEntry(entry._id)}>Delete</button>
       </label>
       <label>Update: 
-        <button>Update</button>
+        <button>Edit</button>
       </label>
     </section>
   )
