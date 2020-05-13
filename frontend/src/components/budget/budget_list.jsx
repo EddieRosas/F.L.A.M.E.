@@ -1,7 +1,6 @@
 import React from 'react';
 import BudgetListItem from './budget_list_item.jsx';
 import "./budget.css";
-import { json } from 'body-parser';
 
 class BudgetList extends React.Component {
   componentDidMount() {
