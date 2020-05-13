@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import "./login.css";
 
 class LoginForm extends React.Component {
@@ -36,39 +37,44 @@ class LoginForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>{this.state.errors[error]}</li>
-        ))}
-      </ul>
+      <div className="errors">
+        <ul>
+          {Object.keys(this.state.errors).map((error, i) => (
+            <li id="error-item" key={`error-${i}`}>{this.state.errors[error]}</li>
+          ))}
+        </ul>
+      </div>
     );
   }
 
   render() {
     return (
       <div className="login-box">
+        {this.renderErrors()}
         <form onSubmit={this.handleSubmit} id="login-form">
-          <div id="input-fields">
-            <label>USERNAME</label>
+          <div id="login-input-fields">
+            <label id="label">USERNAME</label>
             <input
-              id="username-input"
+              id="input"
               type="text"
               value={this.state.username}
               onChange={this.update("username")}
-              placeholder="Username"
+              placeholder="*required field"
             />
             <br />
-            <label>PASSWORD</label>
+            <label id="label">PASSWORD</label>
             <input
-              id="password-input"
+              id="input"
               type="password"
               value={this.state.password}
               onChange={this.update("password")}
-              placeholder="Password"
+              placeholder="*required field"
             />
             <br />
-            <input id="submit-login-button" type="submit" value="Submit" />
-            {this.renderErrors()}
+            <input id="submit-button" type="submit" value="Submit" />
+            <Link to="/" id="session-go-back">
+              back
+            </Link>
           </div>
         </form>
       </div>

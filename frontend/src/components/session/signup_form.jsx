@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "./signup.css";
 
 class SignupForm extends React.Component {
@@ -46,50 +46,65 @@ class SignupForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>{this.state.errors[error]}</li>
-        ))}
-      </ul>
+      <div className="errors">
+        <ul>
+          {Object.keys(this.state.errors).map((error, i) => (
+            <li id="error-item" key={`error-${i}`}>
+              {this.state.errors[error]}
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   }
 
   render() {
     return (
       <div className="signup-box">
-        <form onSubmit={this.handleSubmit}>
-          <div className="signup-form">
+        {this.renderErrors()}
+        <form className="signup-form" onSubmit={this.handleSubmit}>
+          <div id="input-fields">
             <br />
+            <label id="label-email">EMAIL</label>
             <input
+              id="input"
               type="text"
               value={this.state.email}
               onChange={this.update("email")}
-              placeholder="Email"
+              placeholder="*required field"
             />
             <br />
+            <label id="label">USERNAME</label>
             <input
+              id="input"
               type="text"
               value={this.state.username}
               onChange={this.update("username")}
-              placeholder="Username"
+              placeholder="*required field"
             />
             <br />
+            <label id="label">PASSWORD</label>
             <input
+              id="input"
               type="password"
               value={this.state.password}
               onChange={this.update("password")}
-              placeholder="Password"
+              placeholder="*required field"
             />
             <br />
+            <label id="label-confirm">CONFIRM PASSWORD</label>
             <input
+              id="input"
               type="password"
               value={this.state.password2}
               onChange={this.update("password2")}
-              placeholder="Confirm Password"
+              placeholder="*required field"
             />
             <br />
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
+            <input id="submit-button" type="submit" value="Submit" />
+            <Link to="/" id="session-go-back">
+              back
+            </Link>
           </div>
         </form>
       </div>
