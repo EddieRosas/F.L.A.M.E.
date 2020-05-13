@@ -1,7 +1,7 @@
 import React from 'react';
 import BudgetListContainer from './budget_list_container.js';
 import BudgetFormContainer from './budget_form_container.js';
-import "./budget.css"
+import "./budget.css";
 
 class BudgetComponent extends React.Component {
 

@@ -1,0 +1,21 @@
+.login-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: grey;
+}
+
+#login-form {
+  height: 500px;
+  width: 400px;
+  background: darkgrey;
+  border: 1px solid black;
+}
+
+#input-fields {
+  display: flex;
+  flex-direction: column;
+}
