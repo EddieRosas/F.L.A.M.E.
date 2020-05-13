@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-modal';
-import "./budget.css"
+import "./budget.css";
+import EditBudgetItem from './edit_budget_item.jsx';
+Modal.setAppElement('#root');
 
 const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
 
+  const [modalIsOpen, setModalIsOpen] = useState(false)
   return (
     <section>
       <p>Amount: {entry.amount.$numberDecimal}</p>
@@ -15,8 +18,13 @@ const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
         <button onClick={() => deleteEntry(entry._id)}>Delete</button>
       </label>
       <label>Update: 
-        <button>Edit</button>
+        <button onClick={() => setModalIsOpen(true)}>Edit</button>
       </label>
+      <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+        <h1>Update Item</h1>
+        <EditBudgetItem />
+        <button onClick={() => setModalIsOpen(false)}>Close</button>
+      </Modal>
     </section>
   )
 }
