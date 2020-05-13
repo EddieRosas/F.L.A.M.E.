@@ -1,0 +1,22 @@
+.main-page-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: beige;
+}
+
+#footer {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: rgb(194, 191, 191);
+  width: 100%;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import "./budget.css"
 
 const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
 
