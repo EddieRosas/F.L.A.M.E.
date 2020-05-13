@@ -5,6 +5,9 @@ class MainPage extends React.Component {
   render() {
     return (
       <div className="main-page-box">
+        <div id="main-content">
+          Placeholder for splash content
+        </div>
         <div id="footer">
           <h1>F.L.A.M.E.</h1>
           <h3>Financial Literacy and Manage Everything</h3>
