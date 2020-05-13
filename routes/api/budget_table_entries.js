@@ -43,6 +43,19 @@ router.post("/",
     }
 );
 
+router.patch("/:entryId", (request, response) => {
+    
+  BudgetTableEntry.updateOne(
+    { userId: request.user.id },
+    { amount: request.body.amount },
+    { incomeOrDebt: request.body.incomeOrDebt },
+    { description: request.body.description },
+    { category: request.body.category },
+    { date: request.body.date }
+  )
+    BudgetTableEntry.save().then((entry) => res.json(entry));
+});
+
 // protected route to delete entries
 router.delete("/:entryId",
     passport.authenticate("jwt", { session: false }),
