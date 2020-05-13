@@ -42,6 +42,7 @@ class BudgetForm extends React.Component {
         <h1 id="budget-form-title">Budget Form</h1>
         <form className="budget-form" onSubmit={this.handleSubmit}>
           <input
+            id="budget-amount"
             type="number"
             value={this.state.amount}
             onChange={this.update("amount")}
@@ -56,6 +57,7 @@ class BudgetForm extends React.Component {
           </select>
           <br />
           <input
+            id="budget-description"
             type="text"
             value={this.state.description}
             onChange={this.update("description")}
