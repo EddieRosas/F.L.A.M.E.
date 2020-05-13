@@ -35,7 +35,7 @@
 
 #signup-button {
   width: 60px;
-  padding: 5px 14px 5px 0px;
+  padding: 5px 40px 5px 0px;
   color: black;
   font-family: monospace;
   font-size: 17px;
@@ -44,7 +44,26 @@
 
 #login-button {
   width: 50px;
-  padding: 5px 14px 5px 0px;
+  padding: 5px 40px 5px 0px;
+  color: black;
+  font-family: monospace;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+#logout-button {
+  width: 50px;
+  padding: 5px 50px 5px 0px;
+  color: black;
+  font-family: monospace;
+  font-size: 17px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#profile-link {
+  width: 50px;
+  padding: 5px 50px 5px 0px;
   color: black;
   font-family: monospace;
   font-size: 17px;

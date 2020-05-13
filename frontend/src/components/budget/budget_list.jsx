@@ -29,9 +29,9 @@ class BudgetList extends React.Component {
       return null;
     }
     return (
-      <div>
-        <h1>Budget List</h1>
-        <div className="budget-list">
+      <div className="budget-list-box">
+        <h1 id="budget-list-title">Budget List</h1>
+        <div id="budget-list">
           {
             entries.map((entry) => {
               return (<BudgetListItem

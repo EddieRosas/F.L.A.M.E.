@@ -38,9 +38,9 @@ class BudgetForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Budget Form</h1>
-        <form onSubmit={this.handleSubmit}>
+      <div className="budget-form-box">
+        <h1 id="budget-form-title">Budget Form</h1>
+        <form className="budget-form" onSubmit={this.handleSubmit}>
           <input
             type="number"
             value={this.state.amount}
