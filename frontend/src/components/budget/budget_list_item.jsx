@@ -10,7 +10,7 @@ const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
       <p>Category: {entry.category}</p>
       <p>Date: {entry.date}</p>
       <label>Delete:
-        <button onClick={() => deleteEntry(entry.id)}>Delete</button>
+        <button onClick={() => deleteEntry(entry._id)}>Delete</button>
       </label>
       <label>Update: 
         <button>Update</button>

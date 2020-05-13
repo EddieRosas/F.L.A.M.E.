@@ -64,11 +64,11 @@ class BudgetForm extends React.Component {
           <br />
           <select onChange={this.update("category")}>
             <option value=""></option>
-            <option value="health-fitness">Health & Fitness</option>
-            <option value="groceries">Groceries</option>
-            <option value="mortgage">Mortgage</option>
-            <option value="entertainment">Entertainment</option>
-            <option value="other">Other</option>
+            <option value="Health-Fitness">Health & Fitness</option>
+            <option value="Groceries">Groceries</option>
+            <option value="Mortgage">Mortgage</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Other">Other</option>
           </select>
           <br />
           <input
