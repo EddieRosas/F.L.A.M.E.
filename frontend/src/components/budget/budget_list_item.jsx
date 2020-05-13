@@ -1,4 +1,5 @@
 import React from 'react';
+import "./budget.css"
 
 const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
 

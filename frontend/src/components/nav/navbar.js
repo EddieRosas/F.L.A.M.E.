@@ -24,9 +24,9 @@ class NavBar extends React.Component {
       );
     } else {
       return (
-        <div>
-          <Link to={"/signup"}>Signup</Link>
-          <Link to={"/login"}>Login</Link>
+        <div className="session-buttons">
+          <Link to={"/login"} id="login-button">LOGIN</Link>
+          <Link to={"/signup"} id="signup-button">SIGNUP</Link>
         </div>
       );
     }
@@ -35,8 +35,10 @@ class NavBar extends React.Component {
   render() {
     return (
       <div className="navbar-box">
-        <h1 className="user-profile-header">FLAME</h1>
-        <h2 className="title-name">Financial Literacy and Manage Everything</h2>
+        <div className="title-box">
+          <h1 className="user-profile-header">FLAME</h1>
+          <h2 className="title-name">Financial Literacy and Manage Everything</h2>
+        </div>
         {this.getLinks()}
       </div>
     );

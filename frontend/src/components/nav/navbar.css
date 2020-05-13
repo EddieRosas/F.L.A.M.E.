@@ -1,6 +1,13 @@
 .navbar-box {
   background-color: #E0B0ff;
+  display: flex;
+}
+
+.title-box {
+  display: flex;
   text-align: center;
+  padding-bottom: 10px;
+  width: 85%;
 }
 
 .user-profile-header {
@@ -8,9 +15,38 @@
   font-family: monospace;
   font-size: 50px;
   font-weight: 900;
-  margin-bottom: 15px;
+  padding-left: 20px;
 }
 
 .title-name {
-  
+  font-family: monospace;
+  font-size: 16px;
+  padding: 20px 25px 0px
+}
+
+.session-buttons {
+  width: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: right;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#signup-button {
+  width: 60px;
+  padding: 5px 14px 5px 0px;
+  color: black;
+  font-family: monospace;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+#login-button {
+  width: 50px;
+  padding: 5px 14px 5px 0px;
+  color: black;
+  font-family: monospace;
+  font-size: 17px;
+  text-decoration: none;
 }
