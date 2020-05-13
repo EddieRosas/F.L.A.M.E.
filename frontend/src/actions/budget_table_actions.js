@@ -36,8 +36,13 @@ export const fetchEntries = () => dispatch => ApiUtil.fetchEntries()
 export const fetchEntry = (entryId) => dispatch => ApiUtil.fetchEntry(entryId)
   .then(entry => dispatch(receiveTableEntry(entry)));
 
+// export const createEntry = (entry) => dispatch => ApiUtil.createEntry(entry)
+//   .then(entry => dispatch(receiveTableEntry(entry)), err => (
+//     dispatch(receiveEntryErrors(err))
+//   ));
 export const createEntry = (entry) => dispatch => ApiUtil.createEntry(entry)
-  .then(entry => dispatch(receiveTableEntry(entry)), err => (
+  .then(entry => dispatch(receiveTableEntry(entry)))
+  .catch(err => (
     dispatch(receiveEntryErrors(err))
   ));
 
