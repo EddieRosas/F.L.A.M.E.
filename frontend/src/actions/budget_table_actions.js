@@ -36,10 +36,7 @@ export const fetchEntries = () => dispatch => ApiUtil.fetchEntries()
 export const fetchEntry = (entryId) => dispatch => ApiUtil.fetchEntry(entryId)
   .then(entry => dispatch(receiveTableEntry(entry)));
 
-// export const createEntry = (entry) => dispatch => ApiUtil.createEntry(entry)
-//   .then(entry => dispatch(receiveTableEntry(entry)), err => (
-//     dispatch(receiveEntryErrors(err))
-//   ));
+
 export const createEntry = (entry) => dispatch => ApiUtil.createEntry(entry)
   .then(entry => dispatch(receiveTableEntry(entry)))
   .catch(err => (
@@ -51,5 +48,9 @@ export const updateEntry = (entry) => dispatch => ApiUtil.updateEntry(entry)
     dispatch(receiveEntryErrors(err))
   ));
 
-export const deleteEntry = entryId => dispatch => ApiUtil.deleteEntry(entryId)
-  .then(() => dispatch(removeTableEntry(entryId)));
+export const deleteEntry = entryId => dispatch => {
+  return (
+    ApiUtil.deleteEntry(entryId)
+    .then(() => dispatch(removeTableEntry(entryId)))
+  )
+}
