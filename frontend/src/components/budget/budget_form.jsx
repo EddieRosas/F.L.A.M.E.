@@ -68,6 +68,8 @@ class BudgetForm extends React.Component {
             <option value="Groceries">Groceries</option>
             <option value="Mortgage">Mortgage</option>
             <option value="Entertainment">Entertainment</option>
+            <option value="Paycheck">Paycheck</option>
+            <option value="Dividends">Dividends</option>
             <option value="Other">Other</option>
           </select>
           <br />
