@@ -3,9 +3,7 @@ import BudgetListItem from './budget_list_item.jsx';
 
 class BudgetList extends React.Component {
   componentDidMount() {
-    debugger;
     this.props.fetchEntries();
-    debugger;
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -18,19 +16,15 @@ class BudgetList extends React.Component {
 
     // this.props will not update until fetchEntries is called, therefore if prevProps and this.props is same,
     // we have to double check
-    debugger;
     if ((JSON.stringify(prevProps.entries.length) === JSON.stringify(this.props.entries.length)) 
         && !(prevProps.entries.length === 0 && this.props.entries.length === 0)){
-      debugger;
       this.props.fetchEntries();
     }
   }
   
   render() {
     const { deleteEntry, updateEntry, entries } = this.props;
-    debugger;
     if(!entries.length) {
-      debugger;
       return null;
     }
     return (
