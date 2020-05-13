@@ -1,7 +1,12 @@
 import React from 'react';
+import Modal from 'react-modal';
 
 const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
 
+  /*  <Modal isOpen={true}>
+        <h2>Hello</h2>
+      </Modal>  
+  */
   return (
     <section>
       <p>Amount: {entry.amount.$numberDecimal}</p>
