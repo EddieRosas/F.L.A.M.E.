@@ -1,81 +1,69 @@
-// need to uncomment out createEntry
-import React from "react";
+import React from 'react';
 
-class BudgetForm extends React.Component {
+class EditBudgetItem extends React.Component {
   constructor(props) {
     super(props);
+    const { entry } = this.props;
     this.state = {
-      amount: "",
-      incomeOrDebt: "",
-      description: "",
-      category: "",
-      date: ""
+      amount: entry.amount.$numberDecimal,
+      incomeOrDebt: entry.incomeOrDebt,
+      description: entry.description,
+      category: entry.category,
+      date: entry.date
     };
-
     this.handleSubmit = this.handleSubmit.bind(this);
-
   }
 
   update(field) {
     return (e) =>
       this.setState({
-        [field]: e.currentTarget.value
+        [field]: e.currentTarget.value,
       });
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    let entry = {
+    let newEntry = {
+      _id: this.props.entry._id,
       amount: this.state.amount,
       incomeOrDebt: this.state.incomeOrDebt,
       description: this.state.description,
       category: this.state.category,
       date: this.state.date,
     };
-    this.props.createEntry(entry);
+    this.props.updateEntry(newEntry);
+    this.props.setModalIsOpen(false);
   }
 
   render() {
+    const { setModalIsOpen } = this.props;
     return (
-      <div className="budget-form-box">
-        <h1 id="budget-form-title">Budget Form</h1>
-        <form className="budget-form" onSubmit={this.handleSubmit}>
+      <section>
+        <h1>Update Item</h1>
+        <form onSubmit={this.handleSubmit} action="">
           <input
-            id="budget-amount"
             type="number"
             value={this.state.amount}
             onChange={this.update("amount")}
             placeholder="Amount"
             step="0.01"
-            autoComplete="off"
           />
           <br />
-          <select id="budget-select" onChange={this.update("incomeOrDebt")}>
-            <option id="budget-dropdown-first" value="" disabled selected>
-              Income or Debt?
-            </option>
+          <select onChange={this.update("incomeOrDebt")}>
+            <option value=""></option>
             <option value="true">Income</option>
             <option value="false">Debt</option>
           </select>
           <br />
           <input
-            id="budget-description"
             type="text"
             value={this.state.description}
             onChange={this.update("description")}
             placeholder="Description"
-            autoComplete="off"
           />
           <br />
-          <select id="budget-select" onChange={this.update("category")}>
-            <option
-              id="budget-dropdown-first"
-              value="category"
-              disabled
-              selected
-            >
-              Choose Category
-            </option>
+          <select onChange={this.update("category")}>
+            <option value=""></option>
             <option value="Health-Fitness">Health & Fitness</option>
             <option value="Groceries">Groceries</option>
             <option value="Mortgage">Mortgage</option>
@@ -86,20 +74,16 @@ class BudgetForm extends React.Component {
           </select>
           <br />
           <input
-            id="budget-date"
             type="date"
             value={this.state.date}
             onChange={this.update("date")}
           />
           <br />
-          <button id="budget-submit" type="submit">
-            Add Entry
-          </button>
+          <button type="submit">Update</button>
         </form>
-      </div>
+      </section>
     );
   }
-
 }
 
-export default BudgetForm;
+export default EditBudgetItem;

@@ -43,10 +43,14 @@ export const createEntry = (entry) => dispatch => ApiUtil.createEntry(entry)
     dispatch(receiveEntryErrors(err))
   ));
 
-export const updateEntry = (entry) => dispatch => ApiUtil.updateEntry(entry)
+export const updateEntry = (entry) => dispatch => { 
+  return (
+    ApiUtil.updateEntry(entry)
   .then(entry => dispatch(receiveTableEntry(entry)), err => (
     dispatch(receiveEntryErrors(err))
-  ));
+  ))
+  )
+}
 
 export const deleteEntry = entryId => dispatch => {
   return (

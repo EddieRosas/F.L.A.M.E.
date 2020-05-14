@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const BudgetTableEntrySchema = new Schema({
+const BudgetTableEntrySchema = new Schema(
+    {
     userId: {
         type: Schema.Types.ObjectId,
         ref: 'users'
@@ -23,7 +24,7 @@ const BudgetTableEntrySchema = new Schema({
    },
     date: {
         type: Date,
-        default: Date.now
+        default: new Date().toISOString()
     },
 
 })
