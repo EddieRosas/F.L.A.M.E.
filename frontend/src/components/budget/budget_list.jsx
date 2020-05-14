@@ -32,16 +32,25 @@ class BudgetList extends React.Component {
       <div className="budget-list-box">
         <h1 id="budget-list-title">Budget List</h1>
         <div id="budget-list">
-          {
-            entries.map((entry) => {
-              return (<BudgetListItem
+          <div className="budget-list-top">
+            <p>Amount</p>
+            <p>Type</p>
+            <p>Description</p>
+            <p>Category</p>
+            <p>Date</p>
+            <p></p>
+            <p></p>
+          </div>
+          {entries.map((entry) => {
+            return (
+              <BudgetListItem
                 key={entry._id}
                 entry={entry}
                 deleteEntry={deleteEntry}
                 updateEntry={updateEntry}
-              />)
-            })
-          }
+              />
+            );
+          })}
         </div>
       </div>
     );
