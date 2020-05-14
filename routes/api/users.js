@@ -7,7 +7,7 @@ const keys = require("../../config/keys");
 const passport = require("passport");
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
-
+const validateFireCalcs = require("../../validation/fire_calcs");
 
 //private auth rout
 router.get("/current", passport.authenticate("jwt", {session: false}), (req, res) => {
@@ -102,7 +102,11 @@ router.post("/login", (req, res) => {
 
 // update user fireNum/yearsToFI 
 router.patch("/:userId", (req, res) => {
+    const { errors, isValid } = validateFireCalcs(req.body);
 
+    if (!isValid) {
+        return res.status(400).json(errors);
+    }
     var objForUpdate = {};
 
     if (req.body.fireNum) objForUpdate.fireNum = req.body.fireNum;
