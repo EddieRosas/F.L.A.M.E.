@@ -1,45 +1,46 @@
-// need to uncomment out createEntry
-import React from "react";
+import React from 'react';
 
-class BudgetForm extends React.Component {
+class EditBudgetItem extends React.Component {
   constructor(props) {
     super(props);
+    const { entry } = this.props;
     this.state = {
-      amount: "",
-      incomeOrDebt: "",
-      description: "",
-      category: "",
-      date: ""
+      amount: entry.amount.$numberDecimal,
+      incomeOrDebt: entry.incomeOrDebt,
+      description: entry.description,
+      category: entry.category,
+      date: entry.date
     };
-
     this.handleSubmit = this.handleSubmit.bind(this);
-
   }
 
   update(field) {
     return (e) =>
       this.setState({
-        [field]: e.currentTarget.value
+        [field]: e.currentTarget.value,
       });
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    let entry = {
+    let newEntry = {
+      _id: this.props.entry._id,
       amount: this.state.amount,
       incomeOrDebt: this.state.incomeOrDebt,
       description: this.state.description,
       category: this.state.category,
       date: this.state.date,
     };
-    this.props.createEntry(entry);
+    this.props.updateEntry(newEntry);
+    this.props.setModalIsOpen(false);
   }
 
   render() {
+    const { setModalIsOpen } = this.props;
     return (
-      <div>
-        <h1>Budget Form</h1>
-        <form onSubmit={this.handleSubmit}>
+      <section>
+        <h1>Update Item</h1>
+        <form onSubmit={this.handleSubmit} action="">
           <input
             type="number"
             value={this.state.amount}
@@ -78,12 +79,11 @@ class BudgetForm extends React.Component {
             onChange={this.update("date")}
           />
           <br />
-          <button type="submit">Submit</button>
+          <button type="submit">Update</button>
         </form>
-      </div>
+      </section>
     );
   }
-
 }
 
-export default BudgetForm;
+export default EditBudgetItem;
