@@ -45,7 +45,7 @@ class NavBar extends React.Component {
     return (
       <div className="navbar-box">
         <div className="title-box">
-          <h1 className="user-profile-header">FLAME</h1>
+          <Link to={"/"} className="user-profile-header">FLAME</Link>
           <h2 className="title-name">Financial Literacy and Manage Everything</h2>
         </div>
         {this.getLinks()}
