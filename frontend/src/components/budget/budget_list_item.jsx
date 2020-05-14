@@ -5,20 +5,20 @@ import "./budget.css"
 const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
 
   return (
-    <section className ="budget-list-item-box">
-      <p>{entry.amount.$numberDecimal}</p>
+    <section className="budget-list-item-box">
+      <p>${entry.amount.$numberDecimal}</p>
       <p>{entry.incomeOrDebt ? "Income" : "Debt"}</p>
-      <p id="item-description"> {entry.description}</p>
+      <p> {entry.description}</p>
       <p>{entry.category}</p>
-      <p>{entry.date}</p>
-      <label>
-        <button onClick={() => deleteEntry(entry._id)}>Delete</button>
+      <p id="budget-list-date">{entry.date}</p>
+      <label id="budget-item-change" onClick={() => deleteEntry(entry._id)}>
+        <button id="budget-item-delete-button">Delete</button>
       </label>
-      <label>
-        <button>Edit</button>
+      <label id="budget-item-change">
+        <button id="budget-item-delete-button">Edit</button>
       </label>
     </section>
-  )
+  );
 }
 
 export default BudgetListItem;
