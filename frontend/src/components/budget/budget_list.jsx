@@ -4,27 +4,20 @@ import "./budget.css";
 
 class BudgetList extends React.Component {
   componentDidMount() {
-    debugger;
     this.props.fetchEntries();
-    debugger;
   }
 
-  componentDidUpdate(prevProps, prevState) {
 
-    debugger;
-
-    if (JSON.stringify(prevProps.entries.length) !== JSON.stringify(this.props.entries.length)) {
-      debugger;
-      this.props.fetchEntries();
-
-    }
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   if ((prevProps.entries.length === this.props.entries.length) && 
+  //     !(prevProps.entries.length === 0 && this.props.entries.length === 0)) {
+  //     this.props.fetchEntries();
+  //   }
+  // }
   
   render() {
     const { deleteEntry, updateEntry, entries } = this.props;
-    debugger;
     if(!entries.length) {
-      debugger;
       return null;
     }
     return (
