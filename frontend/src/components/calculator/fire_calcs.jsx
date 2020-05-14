@@ -71,7 +71,7 @@ class Calculators extends React.Component {
               <h3 id="years-to-fi-result"></h3>
             </div>
             <div className="fi-chart-box">
-              <p># maybe a neon green chart yanno like robinhood dark mode huehue</p>
+              <p>-insert edgy neon green chart-</p>
             </div>
           </div>
         );

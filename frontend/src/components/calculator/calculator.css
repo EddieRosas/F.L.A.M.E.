@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: scroll;
   min-width: 30%;
   min-height: 100%;
   background: #f1f1f1;
@@ -47,7 +48,7 @@
 
 #input-title {
   font-size: 20px;
-  margin: 15px 42px;
+  margin: 15px 55px;
   text-align: left;
 }
 
@@ -70,6 +71,13 @@
   width: 78%;
   height: 30px;
   padding-right: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: border-color .3s;
+}
+
+#fi-input-expenses:focus {
+  border-color: rgb(112, 58, 240);
 }
 
 #fi-input-expenses::-webkit-inner-spin-button { 
@@ -82,6 +90,13 @@
   width: 78%;
   height: 30px;
   padding-right: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: border-color .3s;
+}
+
+#fi-input-withdrawls:focus {
+  border-color: rgb(112, 58, 240);
 }
 
 #fi-input-withdrawls::-webkit-inner-spin-button { 
@@ -94,7 +109,15 @@
   width: 78%;
   height: 30px;
   padding-right: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: border-color .3s;
 }
+
+#fi-input-income:focus {
+  border-color: rgb(112, 58, 240);
+}
+
 
 #fi-input-income::-webkit-inner-spin-button { 
   -webkit-appearance: none; 
@@ -106,7 +129,15 @@
   width: 78%;
   height: 30px;
   padding-right: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: border-color .3s;
 }
+
+#fi-input-expenses2:focus {
+  border-color: rgb(112, 58, 240);
+}
+
 
 #fi-input-expenses2::-webkit-inner-spin-button { 
   -webkit-appearance: none; 
@@ -118,7 +149,15 @@
   width: 78%;
   height: 30px;
   padding-right: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: border-color .3s;
 }
+
+#fi-input-withdrawls2:focus {
+  border-color: rgb(112, 58, 240);
+}
+
 
 #fi-input-withdrawls2::-webkit-inner-spin-button { 
   -webkit-appearance: none; 
@@ -127,4 +166,14 @@
 
 #fi-submit {
   margin-top: 20px;
+  border: 1px solid rgb(155, 153, 153);
+  width: 82%;
+  height: 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+#fi-submit:hover {
+  background: rgb(2, 175, 2);
 }
