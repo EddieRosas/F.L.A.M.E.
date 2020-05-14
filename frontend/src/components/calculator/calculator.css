@@ -32,3 +32,8 @@
 #fi-years-form {
   text-align: center;
 }
+
+#fi-num-title {
+  margin: 40px 10px 20px;
+  font-size: 30px;
+}

@@ -37,7 +37,7 @@ class Calculators extends React.Component {
           <div className="fi-box">
             <div className="fi-calculator-box">
               <div className="fire-num-calc">
-                <h2>Fire Number Calculator</h2>
+                <h2 id="fi-num-title">Fire Number Calculator</h2>
                 <form id="fire-number-form" onSubmit={this.fireNumber}>
                   <p>Estimated Annual Expenses</p>
                   <text>$</text>&nbsp;
