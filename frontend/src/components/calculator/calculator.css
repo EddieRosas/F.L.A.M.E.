@@ -26,14 +26,105 @@
 }
 
 .fire-num-calc {
+  width: 100%;
   text-align: center;
+}
+
+#fire-number-form {
+  width: 100%;
 }
 
 #fi-years-form {
   text-align: center;
+  width: 100%;
 }
 
 #fi-num-title {
-  margin: 40px 10px 20px;
+  margin: 20px 10px;
   font-size: 30px;
+  text-align: center;
+}
+
+#input-title {
+  font-size: 20px;
+  margin: 15px 42px;
+  text-align: left;
+}
+
+.years-to-fi-calc {
+  margin-top: 50px;
+}
+
+#fire-num-result {
+  margin: 20px 10px 0px;
+  font-size: 25px;
+}
+
+#years-to-fi-result {
+  margin: 20px 10px 0px;
+  font-size: 25px;
+}
+
+#fi-input-expenses {
+  text-align: right;
+  width: 78%;
+  height: 30px;
+  padding-right: 15px;
+}
+
+#fi-input-expenses::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#fi-input-withdrawls {
+  text-align: right;
+  width: 78%;
+  height: 30px;
+  padding-right: 15px;
+}
+
+#fi-input-withdrawls::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#fi-input-income {
+  text-align: right;
+  width: 78%;
+  height: 30px;
+  padding-right: 15px;
+}
+
+#fi-input-income::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#fi-input-expenses2 {
+  text-align: right;
+  width: 78%;
+  height: 30px;
+  padding-right: 15px;
+}
+
+#fi-input-expenses2::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#fi-input-withdrawls2 {
+  text-align: right;
+  width: 78%;
+  height: 30px;
+  padding-right: 15px;
+}
+
+#fi-input-withdrawls2::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#fi-submit {
+  margin-top: 20px;
 }

@@ -2,34 +2,42 @@ import React from 'react';
 import "./calculator.css";
 
 class Calculators extends React.Component {
+    constructor(props) {
+      super(props)
+      this.state = {
+        fireNum: 0,
+        yearsToFI: 0
+
+      }
+    }
 
     // most basic formulas
 
     fireNumber = () => {
 
-        let annualSpending = document.getElementById("fire-num-calc-expenses").value;
-        let withdrawalRate = document.getElementById("fire-num-calc-rate").value
+        let annualSpending = document.getElementById("fi-input-expenses").value;
+        let withdrawalRate = document.getElementById("fi-input-withdrawls").value
 
         let fireNum = ( annualSpending * (100 / withdrawalRate) )
         
-        document.getElementById("fire-num-result").innerHTML = `Your fire number: $${fireNum} `;
+        document.getElementById("fire-num-result").innerHTML = `FIRE Number: $${fireNum} `;
     }
 
     yearsToFI = () => {
 
-        let annualSpending = document.getElementById("years-to-fi-calc-expenses")
+        let annualSpending = document.getElementById("fi-input-expenses2")
           .value;
-        let withdrawalRate = document.getElementById("years-to-fi-calc-rate")
+        let withdrawalRate = document.getElementById("fi-input-withdrawls2")
           .value;
-        let annualIncome = document.getElementById("years-to-fi-calc-income").value;
+        let annualIncome = document.getElementById("fi-input-income").value;
         
         let fireNum = ( annualSpending * ( 100 / withdrawalRate ) );
         let annualSavings = ( annualIncome - annualSpending );
-        let years = ( fireNum / annualSavings ) 
+        let years = ( fireNum / annualSavings ) || 0 
         
         document.getElementById(
           "years-to-fi-result"
-        ).innerHTML = `Years until FI: ${years} years`;
+        ).innerHTML = `Years to F.I.: ${years} years`;
     }
 
     render () {
@@ -39,33 +47,26 @@ class Calculators extends React.Component {
               <div className="fire-num-calc">
                 <h2 id="fi-num-title">Fire Number Calculator</h2>
                 <form id="fire-number-form" onSubmit={this.fireNumber}>
-                  <p>Estimated Annual Expenses</p>
-                  <text>$</text>&nbsp;
-                  <input id="fire-num-calc-expenses" type="number" min="0" />
-                  <p>Annual Withdrawal Rate (4% recommended)</p>
-                  <input id="fire-num-calc-rate" type="number" min="3" />
-                  &nbsp;
-                  <text>%</text>
+                  <p id="input-title">Estimated Annual Expenses</p>
+                  <input id="fi-input-expenses" type="number" min="0" />
+                  <p id="input-title">Annual Withdrawal Rate</p>
+                  <input id="fi-input-withdrawls" type="number" min="3" defaultValue={4} />
                   <br/>
-                  <button type="submit">Calculate</button>
+                  <button id="fi-submit" type="submit">Calculate</button>
                 </form>
                 <h3 id="fire-num-result"></h3>
               </div>
               <div className="years-to-fi-calc"></div>
-              <h2>Financial Independence Calculator</h2>
+              <h2 id="fi-num-title">Financial Independence Calculator</h2>
               <form id="fi-years-form" onSubmit={this.yearsToFI}>
-                <p>Annual Income (post-tax)</p>
-                <text>$</text>&nbsp;
-                <input id="years-to-fi-calc-income" type="number" min="0" />
-                <p>Estimated Annual Expenses</p>
-                <text>$</text>&nbsp;
-                <input id="years-to-fi-calc-expenses" type="number" min="0" />
-                <p>Annual Withdrawal rate (4% recommended)</p>
-                <input id="years-to-fi-calc-rate" type="number" min="3" />
-                &nbsp;
-                <text>%</text>
+                <p id="input-title">Annual Income (post-tax)</p>
+                <input id="fi-input-income" type="number" min="0" />
+                <p id="input-title">Estimated Annual Expenses</p>
+                <input id="fi-input-expenses2" type="number" min="0" />
+                <p id="input-title">Annual Withdrawal rate</p>
+                <input id="fi-input-withdrawls2" type="number" min="3" defaultValue={4} />
                 <br/>
-                <button type="submit">Calculate</button>
+                <button id="fi-submit" type="submit">Calculate</button>
               </form>
               <h3 id="years-to-fi-result"></h3>
             </div>
