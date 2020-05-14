@@ -36,7 +36,7 @@ router.post("/",
             incomeOrDebt: req.body.incomeOrDebt,
             description: req.body.description,
             category: req.body.category,
-            date: req.body.date
+            date: ( req.body.date === "" ? Date.now : req.body.date)
         });
 
         newEntry.save().then(entry => res.json(entry));
