@@ -51,7 +51,7 @@ class BudgetForm extends React.Component {
           />
           <br />
           <select id="budget-select" onChange={this.update("incomeOrDebt")}>
-            <option id="budget-dropdown-first" value="" disabled selected>
+            <option id="budget-dropdown-first" value="" disabled defaultValue>
               Income or Debt?
             </option>
             <option value="true">Income</option>
@@ -72,7 +72,7 @@ class BudgetForm extends React.Component {
               id="budget-dropdown-first"
               value="category"
               disabled
-              selected
+              defaultValue
             >
               Choose Category
             </option>
