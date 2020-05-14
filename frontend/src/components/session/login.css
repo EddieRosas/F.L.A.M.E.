@@ -43,16 +43,28 @@
 
 #input {
   width: 240px;
-  border: none;
+  border: 1px solid white;
   padding: 5px;
   border-radius: 5px;
+  transition: border-color .3s
+}
+
+#input:focus {
+  border-color: rgb(112, 58, 240);
 }
 
 #submit-button {
   margin-top: 8px;
   width: 250px;
   padding: 3px;
+  border: 1px solid grey;
   border-radius: 5px;
+  background-color: rgb(214, 211, 211);
+  transition: background-color .3s;
+}
+
+#submit-button:hover {
+  background-color: rgb(236, 231, 231);
 }
 
 #session-go-back {

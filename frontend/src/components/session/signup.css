@@ -42,9 +42,13 @@
 
 #input {
   width: 240px;
-  border: none;
+  border: 1px solid white;
   padding: 5px 5px 5px 10px;
   border-radius: 5px;
+}
+
+#input:focus {
+  border-color: rgb(112, 58, 240);
 }
 
 #submit-button {
