@@ -17,12 +17,18 @@ class NavBar extends React.Component {
   getLinks() {
     if (this.props.loggedIn) {
       return (
-        <div>
-          <Link to={"/profile"}>Profile</Link>
+        <div className="session-buttons">
+          <Link id="budget-link" to={"/budget"}>
+            Budget
+          </Link>
           &nbsp;
-          <Link to={"/calculators"}>FI Calculators</Link>
+          <Link id="calculator-link" to={"/calculators"}>
+            FI Calculators
+          </Link>
           &nbsp;
-          <button onClick={this.logoutUser}>Logout</button>
+          <label id="logout-button" onClick={this.logoutUser}>
+            Logout
+          </label>
         </div>
       );
     } else {

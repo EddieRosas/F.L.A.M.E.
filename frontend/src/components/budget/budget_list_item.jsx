@@ -14,19 +14,17 @@ const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
 
   const [modalIsOpen, setModalIsOpen] = useState(false)
   return (
-    <section>
-      <p>Amount: {entry.amount.$numberDecimal}</p>
+    <section className="budget-list-item-box">
+      <p>${entry.amount.$numberDecimal}</p>
       <p>{entry.incomeOrDebt ? "Income" : "Debt"}</p>
-      <p>Description: {entry.description}</p>
-      <p>Category: {entry.category}</p>
-      <p>Date: {newDate}</p>
-      <label>
-        Delete:
-        <button onClick={() => deleteEntry(entry._id)}>Delete</button>
+      <p>{entry.description}</p>
+      <p>{entry.category}</p>
+      <p id="budget-list-date">{newDate}</p>
+      <label id="budget-item-change">
+        <button id="budget-item-delete-button" onClick={() => deleteEntry(entry._id)}>Delete</button>
       </label>
-      <label>
-        Update:
-        <button onClick={() => setModalIsOpen(true)}>Edit</button>
+      <label id="budget-item-change">
+        <button id="budget-item-delete-button" onClick={() => setModalIsOpen(true)}>Edit</button>
       </label>
       <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
         <EditBudgetItem 

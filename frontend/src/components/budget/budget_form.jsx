@@ -37,32 +37,45 @@ class BudgetForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Budget Form</h1>
-        <form onSubmit={this.handleSubmit}>
+      <div className="budget-form-box">
+        <h1 id="budget-form-title">Budget Form</h1>
+        <form className="budget-form" onSubmit={this.handleSubmit}>
           <input
+            id="budget-amount"
             type="number"
             value={this.state.amount}
             onChange={this.update("amount")}
             placeholder="Amount"
             step="0.01"
+            autoComplete="off"
           />
           <br />
-          <select onChange={this.update("incomeOrDebt")}>
-            <option value=""></option>
+          <select id="budget-select" onChange={this.update("incomeOrDebt")}>
+            <option id="budget-dropdown-first" value="" disabled defaultValue>
+              Income or Debt?
+            </option>
             <option value="true">Income</option>
             <option value="false">Debt</option>
           </select>
           <br />
           <input
+            id="budget-description"
             type="text"
             value={this.state.description}
             onChange={this.update("description")}
             placeholder="Description"
+            autoComplete="off"
           />
           <br />
-          <select onChange={this.update("category")}>
-            <option value=""></option>
+          <select id="budget-select" onChange={this.update("category")}>
+            <option
+              id="budget-dropdown-first"
+              value="category"
+              disabled
+              defaultValue
+            >
+              Choose Category
+            </option>
             <option value="Health-Fitness">Health & Fitness</option>
             <option value="Groceries">Groceries</option>
             <option value="Mortgage">Mortgage</option>
@@ -73,12 +86,15 @@ class BudgetForm extends React.Component {
           </select>
           <br />
           <input
+            id="budget-date"
             type="date"
             value={this.state.date}
             onChange={this.update("date")}
           />
           <br />
-          <button type="submit">Submit</button>
+          <button id="budget-submit" type="submit">
+            Add Entry
+          </button>
         </form>
       </div>
     );
