@@ -9,7 +9,7 @@ import MainPage from "./main/main_page.jsx";
 import LoginFormContainer from "./session/login_form_container";
 import SignupFormContainer from "./session/signup_form_container";
 import ProfileContainer from "./profile/profile_container";
-import Calculators from "./calculator/fire_calcs";
+import Calculators from "./calculator/fire_calcs.jsx";
 
 import BudgetContainer from './budget/budget.jsx'
 

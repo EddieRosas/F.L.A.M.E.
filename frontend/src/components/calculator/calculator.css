@@ -1,0 +1,179 @@
+.fi-box {
+  display: flex;
+  height: 100vh;
+}
+
+.fi-calculator-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  min-width: 30%;
+  min-height: 100%;
+  background: #f1f1f1;
+}
+
+.fi-chart-box {
+  min-width: 70%;
+  min-height: 100%;
+  background: #1e232d;
+}
+
+.fi-chart-box p {
+  color: #39ff14;
+  text-align: center;
+  padding-top: 300px;
+  font-size: 20px;
+}
+
+.fire-num-calc {
+  width: 100%;
+  text-align: center;
+}
+
+#fire-number-form {
+  width: 100%;
+}
+
+#fi-years-form {
+  text-align: center;
+  width: 100%;
+}
+
+#fi-num-title {
+  margin: 20px 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#input-title {
+  font-size: 20px;
+  margin: 15px 55px;
+  text-align: left;
+}
+
+.years-to-fi-calc {
+  margin-top: 50px;
+}
+
+#fire-num-result {
+  margin: 20px 10px 0px;
+  font-size: 25px;
+}
+
+#years-to-fi-result {
+  margin: 20px 10px 0px;
+  font-size: 25px;
+}
+
+#fi-input-expenses {
+  text-align: right;
+  width: 78%;
+  height: 30px;
+  padding-right: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: border-color .3s;
+}
+
+#fi-input-expenses:focus {
+  border-color: rgb(112, 58, 240);
+}
+
+#fi-input-expenses::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#fi-input-withdrawls {
+  text-align: right;
+  width: 78%;
+  height: 30px;
+  padding-right: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: border-color .3s;
+}
+
+#fi-input-withdrawls:focus {
+  border-color: rgb(112, 58, 240);
+}
+
+#fi-input-withdrawls::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#fi-input-income {
+  text-align: right;
+  width: 78%;
+  height: 30px;
+  padding-right: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: border-color .3s;
+}
+
+#fi-input-income:focus {
+  border-color: rgb(112, 58, 240);
+}
+
+
+#fi-input-income::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#fi-input-expenses2 {
+  text-align: right;
+  width: 78%;
+  height: 30px;
+  padding-right: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: border-color .3s;
+}
+
+#fi-input-expenses2:focus {
+  border-color: rgb(112, 58, 240);
+}
+
+
+#fi-input-expenses2::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#fi-input-withdrawls2 {
+  text-align: right;
+  width: 78%;
+  height: 30px;
+  padding-right: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: border-color .3s;
+}
+
+#fi-input-withdrawls2:focus {
+  border-color: rgb(112, 58, 240);
+}
+
+
+#fi-input-withdrawls2::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#fi-submit {
+  margin-top: 20px;
+  border: 1px solid rgb(155, 153, 153);
+  width: 82%;
+  height: 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+#fi-submit:hover {
+  background: rgb(214, 212, 212);
+}

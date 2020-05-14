@@ -52,8 +52,9 @@ class LoginForm extends React.Component {
       <div className="login-box">
         {this.renderErrors()}
         <form onSubmit={this.handleSubmit} id="login-form">
+          <p id="login-title">LOGIN</p>
           <div id="login-input-fields">
-            <label id="label">USERNAME</label>
+            <label id="login-label">USERNAME</label>
             <input
               id="input"
               type="text"
@@ -62,7 +63,7 @@ class LoginForm extends React.Component {
               placeholder="*required field"
             />
             <br />
-            <label id="label">PASSWORD</label>
+            <label id="login-label">PASSWORD</label>
             <input
               id="input"
               type="password"
