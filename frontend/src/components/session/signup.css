@@ -6,15 +6,20 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background: grey;
 }
 
 .signup-form {
-  height: 400px;
+  height: 480px;
   width: 400px;
   background: darkgrey;
   border: 1px solid black;
   box-shadow: -8px 8px 12px black;
+}
+
+#signup-title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 28px;
 }
 
 #input-fields {
@@ -22,26 +27,29 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 #label {
-  padding-bottom: 10px;
-  margin-right: 155px;
-}
-
-#label-email {
+  font-size: 18px;
   padding-bottom: 10px;
   margin-right: 190px;
 }
 
-#label-confirm {
+#label-email {
+  font-size: 18px;
   padding-bottom: 10px;
-  margin-right: 80px;
+  margin-right: 230px;
+}
+
+#label-confirm {
+  font-size: 18px;
+  padding-bottom: 10px;
+  margin-right: 108px;
 }
 
 #input {
-  width: 240px;
+  width: 280px;
   border: 1px solid white;
   padding: 5px 5px 5px 10px;
   border-radius: 5px;
@@ -53,7 +61,14 @@
 
 #submit-button {
   margin-top: 8px;
-  width: 255px;
+  width: 298px;
   padding: 3px;
   border-radius: 5px;
+  border: 1px solid grey;
+  background-color: rgb(214, 211, 211);
+  transition: background-color .3s;
+}
+
+#submit-button:hover {
+  background-color: rgb(236, 231, 231);
 }
