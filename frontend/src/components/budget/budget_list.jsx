@@ -7,21 +7,13 @@ class BudgetList extends React.Component {
     this.props.fetchEntries();
   }
 
-  componentDidUpdate(prevProps, prevState) {
 
-    // we do === prevProps and this.props because when we first render the budget page, our entries
-    // in render destructuring in props is empty array, and that componentWillMount fetchEntries
-    // will help us refresh our data. Our props entries has things now. ComponentDidUpdate will be called 
-    // afterwards, and we know our prevProps for entry is [] and now this.props.entries has things. We don't 
-    // need to call fetchEntries again.
-
-    // this.props will not update until fetchEntries is called, therefore if prevProps and this.props is same,
-    // we have to double check
-    if ((JSON.stringify(prevProps.entries.length) === JSON.stringify(this.props.entries.length)) 
-        && !(prevProps.entries.length === 0 && this.props.entries.length === 0)){
-      this.props.fetchEntries();
-    }
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   if ((prevProps.entries.length === this.props.entries.length) && 
+  //     !(prevProps.entries.length === 0 && this.props.entries.length === 0)) {
+  //     this.props.fetchEntries();
+  //   }
+  // }
   
   render() {
     const { deleteEntry, updateEntry, entries } = this.props;

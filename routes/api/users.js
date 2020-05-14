@@ -7,7 +7,7 @@ const keys = require("../../config/keys");
 const passport = require("passport");
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
-
+const validateFireCalcs = require("../../validation/fire_calcs");
 
 //private auth rout
 router.get("/current", passport.authenticate("jwt", {session: false}), (req, res) => {
@@ -98,5 +98,52 @@ router.post("/login", (req, res) => {
                 });
         });
 });
+
+
+// update user fireNum/yearsToFI 
+router.patch("/:userId", (req, res) => {
+    const { errors, isValid } = validateFireCalcs(req.body);
+
+    if (!isValid) {
+        return res.status(400).json(errors);
+    }
+    var objForUpdate = {};
+
+    if (req.body.fireNum) objForUpdate.fireNum = req.body.fireNum;
+    if (req.body.yearsToFI) objForUpdate.yearsToFI = req.body.yearsToFI;
+
+    User.findOneAndUpdate(
+        { _id: req.params.userId },
+        objForUpdate,
+        { new: true }
+    )
+    .then((userData) => {
+    
+        return res.json(
+            { 
+                id: userData._id, 
+                username: userData.username,
+                email: userData.email, 
+                fireNum: userData.fireNum, 
+                yearsToFI: userData.yearsToFI 
+            }
+        );
+    })
+    .catch((errors) => res.json(errors));
+});
+
+
+// get user fire data
+router.get(
+  "/:userId",
+    (req, res) => {
+        User.findById( req.params.userId )
+        .then((userData) => {
+            return(
+                res.json({ fireNum: userData.fireNum, yearsToFI: userData.yearsToFI })
+            )
+        })
+    }
+)
 
 module.exports = router;
