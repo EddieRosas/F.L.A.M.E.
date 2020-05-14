@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background: white;
+  background: rgb(238, 236, 236);
   padding: 50px 30px;
   height: 100vh;
   border-right: 1px solid black;
@@ -75,9 +75,11 @@
 }
 
 .budget-list-container {
-  background: white;
+  width: 90%;
+  background: rgb(238, 236, 236);
   padding: 10px 50px 50px;
   margin: 50px;
+  border-radius: 8px;
 }
 
 #budget-submit {
@@ -157,6 +159,7 @@
 }
 
 #budget-item-delete-button {
+  background-color: rgb(238, 236, 236);
   border: none;
 }
 
