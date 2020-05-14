@@ -23,7 +23,7 @@ class EditBudgetItem extends React.Component {
     const { entry, setModalIsOpen } = this.props;
     return (
       <section>
-        
+        <form action=""></form>
         <button onClick={() => setModalIsOpen(false)}>Update</button>
       </section>
     );
