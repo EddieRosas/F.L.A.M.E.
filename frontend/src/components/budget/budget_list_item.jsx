@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-modal';
-import "./budget.css"
+import "./budget.css";
+import EditBudgetItem from './edit_budget_item.jsx';
+Modal.setAppElement('#root');
 
 const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
   let dateObj = new Date(entry.date)
@@ -10,21 +12,29 @@ const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
 
   let newDate = month + "/" + day + "/" + year;
 
+  const [modalIsOpen, setModalIsOpen] = useState(false)
   return (
-    <section>
-      <p>Amount: {entry.amount.$numberDecimal}</p>
+    <section className="budget-list-item-box">
+      <p>${entry.amount.$numberDecimal}</p>
       <p>{entry.incomeOrDebt ? "Income" : "Debt"}</p>
-      <p>Description: {entry.description}</p>
-      <p>Category: {entry.category}</p>
-      <p>Date: {newDate}</p>
-      <label>Delete:
-        <button onClick={() => deleteEntry(entry._id)}>Delete</button>
+      <p>{entry.description}</p>
+      <p>{entry.category}</p>
+      <p id="budget-list-date">{newDate}</p>
+      <label id="budget-item-change" onClick={() => deleteEntry(entry._id)}>
+        <button id="budget-item-delete-button">Delete</button>
       </label>
-      <label>Update: 
-        <button>Edit</button>
+      <label id="budget-item-change" onClick={() => setModalIsOpen(true)}>
+        <button id="budget-item-delete-button">Edit</button>
       </label>
+      <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+        <EditBudgetItem 
+          entry={entry} 
+          updateEntry={updateEntry}
+          setModalIsOpen={setModalIsOpen}
+        />
+      </Modal>
     </section>
-  )
+  );
 }
 
 export default BudgetListItem;

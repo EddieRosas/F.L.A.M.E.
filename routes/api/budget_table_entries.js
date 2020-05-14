@@ -11,7 +11,6 @@ const validateEntryInput = require("../../validation/budget_table_entry");
 router.get("/",
     passport.authenticate("jwt", { session: false }),
     (req, res) => {
-        let entries =
         BudgetTableEntry.find({userId: req.user.id})
             .sort({date: -1})
             .then(entries => res.json(entries))
@@ -44,6 +43,7 @@ router.post("/",
 );
 
 router.patch("/:entryId", (req, res) => {
+
   BudgetTableEntry.findOneAndUpdate(
     { _id: req.params.entryId },
     {
@@ -55,7 +55,9 @@ router.patch("/:entryId", (req, res) => {
     },
     { new: true }
   )
-    .then((entry) => res.json(entry))
+    .then((entry) => {
+      return res.json(entry);
+    })
     .catch((errors) => res.json(errors));
 });
 
