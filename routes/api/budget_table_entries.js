@@ -11,7 +11,6 @@ const validateEntryInput = require("../../validation/budget_table_entry");
 router.get("/",
     passport.authenticate("jwt", { session: false }),
     (req, res) => {
-        let entries =
         BudgetTableEntry.find({userId: req.user.id})
             .sort({date: -1})
             .then(entries => res.json(entries))
