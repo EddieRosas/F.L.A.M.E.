@@ -24,6 +24,7 @@ class EditBudgetItem extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let newEntry = {
+      _id: this.props.entry._id,
       amount: this.state.amount,
       incomeOrDebt: this.state.incomeOrDebt,
       description: this.state.description,

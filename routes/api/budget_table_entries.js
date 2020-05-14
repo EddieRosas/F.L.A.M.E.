@@ -44,6 +44,7 @@ router.post("/",
 );
 
 router.patch("/:entryId", (req, res) => {
+
   BudgetTableEntry.findOneAndUpdate(
     { _id: req.params.entryId },
     {
@@ -55,7 +56,9 @@ router.patch("/:entryId", (req, res) => {
     },
     { new: true }
   )
-    .then((entry) => res.json(entry))
+    .then((entry) => {
+      return res.json(entry);
+    })
     .catch((errors) => res.json(errors));
 });
 

@@ -14,7 +14,7 @@ export const createEntry = (entry) => {
 };
 
 export const updateEntry = (entry) => {
-  return axios.patch(`/api/entries/${entry.id}`);
+  return axios.patch(`/api/entries/${entry._id}`, entry);
 };
 
 export const deleteEntry = (entryId) => {

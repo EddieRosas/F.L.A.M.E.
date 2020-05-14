@@ -19,7 +19,7 @@ const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
       <p>{entry.incomeOrDebt ? "Income" : "Debt"}</p>
       <p>Description: {entry.description}</p>
       <p>Category: {entry.category}</p>
-      <p>Date: {entry.date}</p>
+      <p>Date: {newDate}</p>
       <label>
         Delete:
         <button onClick={() => deleteEntry(entry._id)}>Delete</button>
