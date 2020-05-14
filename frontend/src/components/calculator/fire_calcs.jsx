@@ -37,35 +37,33 @@ class Calculators extends React.Component {
           <div className="fi-box">
             <div className="fi-calculator-box">
               <div className="fire-num-calc">
-                <h2>Calculate your Fire Number</h2>
-                <form onSubmit={this.fireNumber}>
-                  <p>Enter your estimated annual expenses</p>
+                <h2>Fire Number Calculator</h2>
+                <form id="fire-number-form" onSubmit={this.fireNumber}>
+                  <p>Estimated Annual Expenses</p>
                   <text>$</text>&nbsp;
                   <input id="fire-num-calc-expenses" type="number" min="0" />
-                  <p>Enter your withdrawal rate (mininum of 4% recommended)</p>
+                  <p>Annual Withdrawal Rate (4% recommended)</p>
                   <input id="fire-num-calc-rate" type="number" min="3" />
                   &nbsp;
                   <text>%</text>
-                  <br/>
                   <br/>
                   <button type="submit">Calculate</button>
                 </form>
                 <h3 id="fire-num-result"></h3>
               </div>
               <div className="years-to-fi-calc"></div>
-              <h2>Calculate your years until Financial Independence</h2>
-              <form onSubmit={this.yearsToFI}>
-                <p>Enter your estimated annual income (post-taxes)</p>
+              <h2>Financial Independence Calculator</h2>
+              <form id="fi-years-form" onSubmit={this.yearsToFI}>
+                <p>Annual Income (post-tax)</p>
                 <text>$</text>&nbsp;
                 <input id="years-to-fi-calc-income" type="number" min="0" />
-                <p>Enter your estimated annual expenses</p>
+                <p>Estimated Annual Expenses</p>
                 <text>$</text>&nbsp;
                 <input id="years-to-fi-calc-expenses" type="number" min="0" />
-                <p>Enter your withdrawal rate (mininum of 4% recommended)</p>
+                <p>Annual Withdrawal rate (4% recommended)</p>
                 <input id="years-to-fi-calc-rate" type="number" min="3" />
                 &nbsp;
                 <text>%</text>
-                <br/>
                 <br/>
                 <button type="submit">Calculate</button>
               </form>
