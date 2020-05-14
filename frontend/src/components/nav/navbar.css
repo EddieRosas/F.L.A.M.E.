@@ -1,6 +1,7 @@
 .navbar-box {
   background-color: #E0B0ff;
   display: flex;
+  box-shadow: 0px 8px 12px black;
 }
 
 .title-box {
