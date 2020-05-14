@@ -50,9 +50,8 @@ class EditBudgetItem extends React.Component {
           />
           <br />
           <select onChange={this.update("incomeOrDebt")}>
-            <option value=""></option>
-            <option value="true">Income</option>
-            <option value="false">Debt</option>
+            <option value="true" selected={this.state.incomeOrDebt ? "selected" : ""}>Income</option>
+            <option value="false" selected={!this.state.incomeOrDebt ? "selected" : ""}>Debt</option>
           </select>
           <br />
           <input
@@ -63,14 +62,34 @@ class EditBudgetItem extends React.Component {
           />
           <br />
           <select onChange={this.update("category")}>
-            <option value=""></option>
-            <option value="Health-Fitness">Health & Fitness</option>
-            <option value="Groceries">Groceries</option>
-            <option value="Mortgage">Mortgage</option>
-            <option value="Entertainment">Entertainment</option>
-            <option value="Paycheck">Paycheck</option>
-            <option value="Dividends">Dividends</option>
-            <option value="Other">Other</option>
+            <option value="Health-Fitness" 
+              selected={this.state.category === 'Health-Fitness' ? "selected": ""}>
+              Health & Fitness
+            </option>
+            <option value="Groceries"
+              selected={this.state.category === 'Groceries' ? "selected" : ""}>
+              Groceries
+            </option>
+            <option value="Mortgage"
+              selected={this.state.category === 'Mortgage' ? "selected" : ""}>
+              Mortgage
+            </option>
+            <option value="Entertainment"
+              selected={this.state.category === 'Entertainment' ? "selected" : ""}>
+              Entertainment
+            </option>
+            <option value="Paycheck"
+              selected={this.state.category === 'Paycheck' ? "selected" : ""}>
+              Paycheck
+            </option>
+            <option value="Dividends"
+              selected={this.state.category === 'Dividends' ? "selected" : ""}>
+              Dividends
+            </option>
+            <option value="Other"
+              selected={this.state.category === 'Other' ? "selected" : ""}>
+              Other
+            </option>
           </select>
           <br />
           <input

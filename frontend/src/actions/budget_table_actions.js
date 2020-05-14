@@ -11,10 +11,12 @@ export const receiveTableEntries = entries => ({
   entries
 });
 
-export const receiveTableEntry = entry => ({
-  type: RECEIVE_TABLE_ENTRY,
-  entry
-});
+export const receiveTableEntry = entry => {
+  return {
+    type: RECEIVE_TABLE_ENTRY,
+    entry
+  }
+};
 
 export const removeTableEntry = entryId => ({
   type: REMOVE_TABLE_ENTRY,
