@@ -11,6 +11,7 @@ class EditBudgetItem extends React.Component {
       category: entry.category,
       date: entry.date
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 /* <p>Amount: {entry.amount.$numberDecimal}</p>
@@ -43,7 +44,7 @@ class EditBudgetItem extends React.Component {
     return (
       <section>
         <h1>Update Item</h1>
-        <form action="">
+        <form onSubmit={this.handleSubmit} action="">
           
         </form>
         <button onClick={() => setModalIsOpen(false)}>Update</button>
