@@ -26,7 +26,6 @@ class BudgetForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let entry = {
-      //userId: this.props.currentUser.id,
       amount: this.state.amount,
       incomeOrDebt: this.state.incomeOrDebt,
       description: this.state.description,

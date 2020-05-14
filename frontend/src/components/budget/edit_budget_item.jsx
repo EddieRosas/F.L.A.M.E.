@@ -19,11 +19,33 @@ class EditBudgetItem extends React.Component {
         <p>Category: {entry.category}</p>
         <p>Date: {entry.date}</p> */
 
+  update(field) {
+    return (e) =>
+      this.setState({
+        [field]: e.currentTarget.value,
+      });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    let entry = {
+      amount: this.state.amount,
+      incomeOrDebt: this.state.incomeOrDebt,
+      description: this.state.description,
+      category: this.state.category,
+      date: this.state.date,
+    };
+    this.props.updateEntry(entry);
+  }
+
   render() {
     const { entry, setModalIsOpen } = this.props;
     return (
       <section>
-        <form action=""></form>
+        <h1>Update Item</h1>
+        <form action="">
+          
+        </form>
         <button onClick={() => setModalIsOpen(false)}>Update</button>
       </section>
     );

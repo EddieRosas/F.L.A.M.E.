@@ -23,7 +23,6 @@ const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
         <button onClick={() => setModalIsOpen(true)}>Edit</button>
       </label>
       <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
-        <h1>Update Item</h1>
         <EditBudgetItem 
           entry={entry} 
           updateEntry={updateEntry}
