@@ -14,12 +14,6 @@ class EditBudgetItem extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-/* <p>Amount: {entry.amount.$numberDecimal}</p>
-        <p>{entry.incomeOrDebt ? "Income" : "Debt"}</p>
-        <p>Description: {entry.description}</p>
-        <p>Category: {entry.category}</p>
-        <p>Date: {entry.date}</p> */
-
   update(field) {
     return (e) =>
       this.setState({
@@ -29,25 +23,63 @@ class EditBudgetItem extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let entry = {
+    let newEntry = {
       amount: this.state.amount,
       incomeOrDebt: this.state.incomeOrDebt,
       description: this.state.description,
       category: this.state.category,
       date: this.state.date,
     };
-    this.props.updateEntry(entry);
+    this.props.updateEntry(newEntry);
+    this.props.setModalIsOpen(false);
   }
 
   render() {
-    const { entry, setModalIsOpen } = this.props;
+    const { setModalIsOpen } = this.props;
     return (
       <section>
         <h1>Update Item</h1>
         <form onSubmit={this.handleSubmit} action="">
-          
+          <input
+            type="number"
+            value={this.state.amount}
+            onChange={this.update("amount")}
+            placeholder="Amount"
+            step="0.01"
+          />
+          <br />
+          <select onChange={this.update("incomeOrDebt")}>
+            <option value=""></option>
+            <option value="true">Income</option>
+            <option value="false">Debt</option>
+          </select>
+          <br />
+          <input
+            type="text"
+            value={this.state.description}
+            onChange={this.update("description")}
+            placeholder="Description"
+          />
+          <br />
+          <select onChange={this.update("category")}>
+            <option value=""></option>
+            <option value="Health-Fitness">Health & Fitness</option>
+            <option value="Groceries">Groceries</option>
+            <option value="Mortgage">Mortgage</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Paycheck">Paycheck</option>
+            <option value="Dividends">Dividends</option>
+            <option value="Other">Other</option>
+          </select>
+          <br />
+          <input
+            type="date"
+            value={this.state.date}
+            onChange={this.update("date")}
+          />
+          <br />
+          <button type="submit">Update</button>
         </form>
-        <button onClick={() => setModalIsOpen(false)}>Update</button>
       </section>
     );
   }
