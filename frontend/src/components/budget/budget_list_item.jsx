@@ -20,11 +20,11 @@ const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
       <p>{entry.description}</p>
       <p>{entry.category}</p>
       <p id="budget-list-date">{newDate}</p>
-      <label id="budget-item-change">
-        <button id="budget-item-delete-button" onClick={() => deleteEntry(entry._id)}>Delete</button>
+      <label id="budget-item-change" onClick={() => deleteEntry(entry._id)}>
+        <button id="budget-item-delete-button">Delete</button>
       </label>
-      <label id="budget-item-change">
-        <button id="budget-item-delete-button" onClick={() => setModalIsOpen(true)}>Edit</button>
+      <label id="budget-item-change" onClick={() => setModalIsOpen(true)}>
+        <button id="budget-item-delete-button">Edit</button>
       </label>
       <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
         <EditBudgetItem 
