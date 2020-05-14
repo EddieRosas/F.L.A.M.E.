@@ -31,29 +31,32 @@ router.post("/",
         }
 
         const newEntry = new BudgetTableEntry({
-            userId: req.user.id,
-            amount: req.body.amount,
-            incomeOrDebt: req.body.incomeOrDebt,
-            description: req.body.description,
-            category: req.body.category,
-            date: req.body.date
+          userId: req.user.id,
+          amount: req.body.amount,
+          incomeOrDebt: req.body.incomeOrDebt,
+          description: req.body.description,
+          category: req.body.category,
+          date: req.body.date === "" ? new Date(): req.body.date,
         });
 
         newEntry.save().then(entry => res.json(entry));
     }
 );
 
-router.patch("/:entryId", (request, response) => {
-    
-  BudgetTableEntry.updateOne(
-    { userId: request.user.id },
-    { amount: request.body.amount },
-    { incomeOrDebt: request.body.incomeOrDebt },
-    { description: request.body.description },
-    { category: request.body.category },
-    { date: request.body.date }
+router.patch("/:entryId", (req, res) => {
+  BudgetTableEntry.findOneAndUpdate(
+    { _id: req.params.entryId },
+    {
+      amount: req.body.amount,
+      incomeOrDebt: req.body.incomeOrDebt,
+      description: req.body.description,
+      category: req.body.category,
+      date: req.body.date,
+    },
+    { new: true }
   )
-    BudgetTableEntry.save().then((entry) => res.json(entry));
+    .then((entry) => res.json(entry))
+    .catch((errors) => res.json(errors));
 });
 
 // protected route to delete entries

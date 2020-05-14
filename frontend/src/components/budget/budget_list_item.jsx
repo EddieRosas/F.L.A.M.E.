@@ -5,6 +5,12 @@ import EditBudgetItem from './edit_budget_item.jsx';
 Modal.setAppElement('#root');
 
 const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
+  let dateObj = new Date(entry.date)
+  let month = dateObj.getMonth() + 1; //months from 1-12
+  let day = dateObj.getUTCDate();
+  let year = dateObj.getFullYear();
+
+  let newDate = month + "/" + day + "/" + year;
 
   const [modalIsOpen, setModalIsOpen] = useState(false)
   return (
