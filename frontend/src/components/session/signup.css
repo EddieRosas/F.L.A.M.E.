@@ -72,3 +72,8 @@
 #submit-button:hover {
   background-color: rgb(236, 231, 231);
 }
+
+#signup-session-go-back {
+  text-decoration: none;
+  margin: 20px;
+}

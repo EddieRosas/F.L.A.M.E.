@@ -103,7 +103,7 @@ class SignupForm extends React.Component {
             />
             <br />
             <input id="submit-button" type="submit" value="Submit" />
-            <Link to="/" id="session-go-back">
+            <Link to="/" id="signup-session-go-back">
               back
             </Link>
           </div>
