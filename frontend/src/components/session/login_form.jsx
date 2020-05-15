@@ -16,7 +16,6 @@ class LoginForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
-    this.renderErrors = this.renderErrors.bind(this);
   }
 
 
@@ -47,18 +46,6 @@ class LoginForm extends React.Component {
     this.props.login(demoUser);
   }
 
-  notifyFailure(message){
-    toast.error(message, {position: toast.POSITION.TOP_CENTER});
-  }
-
-  renderErrors() {
-    Object.values(this.props.errors).map((error) => {
-        return (
-          this.notifyFailure(error)
-        )
-      }
-    )
-  }
 
   render() {
     return (
