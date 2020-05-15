@@ -37,10 +37,6 @@ const notifySuccessful = () => {
   toast.success('Successful login!');
 }
 
-const notifyFailure = () => {
-  toast.error('Failed login!');
-}
-
 
 // Upon signup, dispatch the approporiate action depending on which type of response we receieve from the backend
 export const signup = (user) => (dispatch) =>
@@ -68,7 +64,6 @@ export const login = (user) => (dispatch) =>
     })
     .catch((err) => {
       dispatch(receiveErrors(err.response.data));
-      notifyFailure();
     });
 
 // We wrote this one earlier
