@@ -75,7 +75,7 @@ class BudgetForm extends React.Component {
             <option
               id="budget-dropdown-first"
               disabled
-              selected
+              selected 
             >
               Choose Category
             </option>
