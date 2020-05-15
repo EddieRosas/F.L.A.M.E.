@@ -38,7 +38,7 @@ const notifySuccessful = () => {
 }
 
 const notifyFailure = () => {
-  toast.error('Failed login');
+  toast.error('Failed login!');
 }
 
 

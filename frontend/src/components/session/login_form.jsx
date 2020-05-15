@@ -53,20 +53,12 @@ class LoginForm extends React.Component {
   }
 
   renderErrors() {
-    debugger;
-    return (
-      <div className="errors">
-        <ul>
-          {Object.keys(this.props.errors).map((error, i) => {
-              return (
-                this.notifyFailure(error)
-              )
-            }
-           )
-          }
-        </ul>
-      </div>
-    );
+    Object.values(this.props.errors).map((error) => {
+        return (
+          this.notifyFailure(error)
+        )
+      }
+    )
   }
 
   render() {
