@@ -10,6 +10,9 @@ class Calculators extends React.Component {
         yearsToFI: 0
 
       }
+
+      this.submitFireNum = this.submitFireNum.bind(this);
+      this.submitYearsToFI = this.submitYearsToFI.bind(this);
     }
 
     componentDidMount() {
@@ -50,6 +53,16 @@ class Calculators extends React.Component {
         ).innerHTML = `Years to F.I.: ${years} years`;
     }
 
+    submitFireNum(e) {
+      e.preventDefault();
+      this.props.updateFiNum(this.props.currentUserId, this.state.fireNum)
+    }
+
+    submitYearsToFI(e) {
+      e.preventDefault();
+      this.props.updateYearsToFI(this.props.currentUserId, this.state.yearsToFI);
+    }
+
     render () {
         return (
           <div className="fi-box">
@@ -60,11 +73,29 @@ class Calculators extends React.Component {
                   <p id="input-title">Estimated Annual Expenses</p>
                   <input id="fi-input-expenses" type="number" min="0" />
                   <p id="input-title">Annual Withdrawal Rate (%)</p>
-                  <input id="fi-input-withdrawls" type="number" min="3" defaultValue={4} />
-                  <br/>
-                  <button id="fi-submit" type="submit">Calculate</button>
+                  <input
+                    id="fi-input-withdrawls"
+                    type="number"
+                    min="3"
+                    defaultValue={4}
+                  />
+                  <br />
+                  <button id="fi-submit" type="submit">
+                    Calculate
+                  </button>
                 </form>
                 <p id="fire-num-result"></p>
+                <button
+                  onClick={this.submitFireNum}
+                  className={
+                    this.state.fireNum === 0
+                      ? "fire-num-submit-disabled"
+                      : "fire-num-submit"
+                  }
+                  disabled={this.state.fireNum === 0}
+                >
+                  Save Number To Profile
+                </button>
               </div>
               <div className="years-to-fi-calc"></div>
               <h2 id="fi-num-title">Financial Independence Calculator</h2>
@@ -74,13 +105,34 @@ class Calculators extends React.Component {
                 <p id="input-title">Estimated Annual Expenses</p>
                 <input id="fi-input-expenses2" type="number" min="0" />
                 <p id="input-title">Annual Withdrawal rate (%)</p>
-                <input id="fi-input-withdrawls2" type="number" min="3" defaultValue={4} />
-                <br/>
-                <button id="fi-submit" type="submit">Calculate</button>
+                <input
+                  id="fi-input-withdrawls2"
+                  type="number"
+                  min="3"
+                  defaultValue={4}
+                />
+                <br />
+                <button id="fi-submit" type="submit">
+                  Calculate
+                </button>
               </form>
               <p id="years-to-fi-result"></p>
+              <button
+                onClick={this.submitYearsToFI}
+                className={
+                  this.state.yearsToFI === 0
+                    ? "years-to-fi-submit-disabled"
+                    : "years-to-fi-submit"
+                }
+                disabled={this.state.yearsToFI === 0}
+              >
+                Save Years To Profile
+              </button>
             </div>
-            <CalculatorChartsComponent fireNum={this.state.fireNum} yearsToFI={this.state.yearsToFI} />
+            <CalculatorChartsComponent
+              fireNum={this.state.fireNum}
+              yearsToFI={this.state.yearsToFI}
+            />
           </div>
         );
     }
