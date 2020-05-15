@@ -54,7 +54,7 @@ class LoginForm extends React.Component {
   }
 
   notifyFailure(message){
-    toast.error(message);
+    toast.error(message, {position: toast.POSITION.TOP_CENTER});
   }
 
   renderErrors() {
