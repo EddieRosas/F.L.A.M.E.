@@ -32,7 +32,15 @@ class BudgetForm extends React.Component {
       category: this.state.category,
       date: this.state.date,
     };
-    this.props.createEntry(entry);
+    this.props.createEntry(entry).then(() =>
+      this.setState({
+        amount: "",
+        incomeOrDebt: "",
+        description: "",
+        category: "",
+        date: "",
+      })
+    );
   }
 
   render() {
@@ -53,8 +61,9 @@ class BudgetForm extends React.Component {
           <select id="budget-select" onChange={this.update("incomeOrDebt")}>
             <option
               id="budget-dropdown-first"
+              value=""
               disabled
-              selected
+              selected={this.state.incomeOrDebt === "" ? "selected" : ""}
             >
               Income or Debt?
             </option>
@@ -74,8 +83,9 @@ class BudgetForm extends React.Component {
           <select id="budget-select" onChange={this.update("category")}>
             <option
               id="budget-dropdown-first"
+              value=""
               disabled
-              selected 
+              selected={this.state.category === "" ? "selected" : ""}
             >
               Choose Category
             </option>
