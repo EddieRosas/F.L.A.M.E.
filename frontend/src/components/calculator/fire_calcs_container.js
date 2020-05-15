@@ -4,15 +4,8 @@ import Calculators from './fire_calcs';
 
 
 const mSTP = (state) => {
-<<<<<<< HEAD
-
-
-    let entries = Object.values(state.budgetTable);
-=======
->>>>>>> master
     
     let entries = Object.values(state.budgetTable)
-
 
     let monthsHash = {
         1 : { month: "Jan", expenses: 0, income: 0 },
