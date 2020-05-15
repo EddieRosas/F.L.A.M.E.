@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./login.css";
 
+toast.configure();
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
@@ -33,7 +36,10 @@ class LoginForm extends React.Component {
       password: this.state.password,
     };
 
-    this.props.login(user);
+    this.props.login(user)
+      .then(() => {
+        this.notifySuccessful();
+      });
   }
 
   handleDemo(e) {
@@ -43,15 +49,26 @@ class LoginForm extends React.Component {
       password: "password"
     }
     this.props.login(demoUser)
+      .then(() => {
+        this.notifySuccessful();
+      });
+  }
+
+  notifySuccessful() {
+    toast.success('Successful login!');
   }
 
   renderErrors() {
     return (
       <div className="errors">
         <ul>
-          {Object.keys(this.state.errors).map((error, i) => (
-            <li id="error-item" key={`error-${i}`}>{this.state.errors[error]}</li>
-          ))}
+          {Object.keys(this.state.errors).map((error, i) => {
+              return (
+                <li id="error-item" key={`error-${i}`}>{this.state.errors[error]}</li>
+              )
+            }
+           )
+          }
         </ul>
       </div>
     );
@@ -60,7 +77,6 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className="login-box">
-        {this.renderErrors()}
         <form onSubmit={this.handleSubmit} id="login-form">
           <p id="login-title">LOGIN</p>
           <div id="login-input-fields">
@@ -89,6 +105,7 @@ class LoginForm extends React.Component {
             </Link>
           </div>
         </form>
+        {this.renderErrors()}
       </div>
     );
   }
