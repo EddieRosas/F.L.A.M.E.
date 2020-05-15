@@ -46,6 +46,10 @@ const notifyFailure = (message) => {
   toast.error(message);
 }
 
+const notifyWarning = (message) => {
+  toast.warn(message);
+}
+
 export const fetchEntries = () => dispatch => ApiUtil.fetchEntries()
   .then(entries => dispatch(receiveTableEntries(entries)));
 
@@ -77,6 +81,13 @@ export const updateEntry = (entry) => dispatch => {
 export const deleteEntry = entryId => dispatch => {
   return (
     ApiUtil.deleteEntry(entryId)
-    .then(() => dispatch(removeTableEntry(entryId)))
+    .then(() => {
+        notifyWarning('Successfully deleted item!');
+        return dispatch(removeTableEntry(entryId));
+      }
+    )
+    .catch(() => {
+      notifyWarning('Deletion unsuccessful.');
+    })
   )
 }
