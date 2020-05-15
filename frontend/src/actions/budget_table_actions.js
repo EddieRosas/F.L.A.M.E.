@@ -59,7 +59,9 @@ export const createEntry = (entry) => dispatch => ApiUtil.createEntry(entry)
     return dispatch(receiveTableEntry(entry));
   })
   .catch(err => {
-    debugger;
+    Object.values(err.response.data).map((error) => {
+      return (notifyFailure(error))
+    });
     return dispatch(receiveEntryErrors(err))
   });
 
