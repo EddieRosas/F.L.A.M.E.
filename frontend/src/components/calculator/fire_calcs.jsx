@@ -60,7 +60,7 @@ class Calculators extends React.Component {
                   <br/>
                   <button id="fi-submit" type="submit">Calculate</button>
                 </form>
-                <h3 id="fire-num-result"></h3>
+                <p id="fire-num-result"></p>
               </div>
               <div className="years-to-fi-calc"></div>
               <h2 id="fi-num-title">Financial Independence Calculator</h2>
@@ -74,7 +74,7 @@ class Calculators extends React.Component {
                 <br/>
                 <button id="fi-submit" type="submit">Calculate</button>
               </form>
-              <h3 id="years-to-fi-result"></h3>
+              <p id="years-to-fi-result"></p>
             </div>
             <CalculatorChartsComponent />
           </div>

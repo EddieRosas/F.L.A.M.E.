@@ -36,7 +36,7 @@ class EditBudgetItem extends React.Component {
   }
 
   render() {
-    const { setModalIsOpen } = this.props;
+    // const { setModalIsOpen } = this.props;
     return (
       <section>
         <h1>Update Item</h1>

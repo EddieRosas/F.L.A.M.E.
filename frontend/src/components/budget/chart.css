@@ -1,0 +1,17 @@
+.recharts-wrapper.bar-chart {
+  background: rgb(250, 247, 247);
+  width: 600px;
+  height: 300px;
+  margin: 5px 30px 20px 5px;
+  padding: 30px 30px 20px 5px;
+  border-radius: 8px;
+  box-shadow: -12px 12px 12px;
+}
+
+.recharts-legend-wrapper {
+  position: absolute;
+  width: 590px;
+  height: auto;
+  left: 45px;
+  bottom: 18px;
+}
