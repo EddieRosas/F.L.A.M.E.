@@ -48,13 +48,18 @@ class LoginForm extends React.Component {
     this.props.login(demoUser);
   }
 
+  notifyFailure(message){
+    toast.error(message);
+  }
+
   renderErrors() {
+    debugger;
     return (
       <div className="errors">
         <ul>
-          {Object.keys(this.state.errors).map((error, i) => {
+          {Object.keys(this.props.errors).map((error, i) => {
               return (
-                <li id="error-item" key={`error-${i}`}>{this.state.errors[error]}</li>
+                this.notifyFailure(error)
               )
             }
            )

@@ -32,7 +32,7 @@ export const logoutUser = () => ({
   type: RECEIVE_USER_LOGOUT,
 });
 
-
+// toast messages
 const notifySuccessful = () => {
   toast.success('Successful login!');
 }
