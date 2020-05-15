@@ -1,5 +1,6 @@
 import React from 'react';
 import "./calculator.css";
+import CalculatorChartsComponent from './calculator_charts.jsx'
 
 class Calculators extends React.Component {
     constructor(props) {
@@ -75,9 +76,7 @@ class Calculators extends React.Component {
               </form>
               <h3 id="years-to-fi-result"></h3>
             </div>
-            <div className="fi-chart-box">
-              <p>-insert edgy neon green chart-</p>
-            </div>
+            <CalculatorChartsComponent />
           </div>
         );
     }
