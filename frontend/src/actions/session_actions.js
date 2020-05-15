@@ -37,6 +37,9 @@ const notifySuccessful = (message) => {
   toast.success(message);
 }
 
+const notifyFailure = (message) => {
+  
+}
 
 // Upon signup, dispatch the approporiate action depending on which type of response we receieve from the backend
 export const signup = (user) => (dispatch) =>
@@ -65,6 +68,7 @@ export const login = (user) => (dispatch) =>
       notifySuccessful('Successful log in!');
     })
     .catch((err) => {
+
       dispatch(receiveErrors(err.response.data));
     });
 
@@ -73,4 +77,5 @@ export const logout = () => (dispatch) => {
   localStorage.removeItem("jwtToken");
   APIUtil.setAuthToken(false);
   dispatch(logoutUser());
+
 };

@@ -35,10 +35,10 @@ class LoginForm extends React.Component {
       password: this.state.password,
     };
 
-    this.props.login(user)
-      .then(() => {
-        this.renderErrors();
-      });
+    this.props.login(user);
+      // .then(() => {
+      //   this.renderErrors();
+      // });
   }
 
   handleDemo(e) {
@@ -47,10 +47,10 @@ class LoginForm extends React.Component {
       username: "mcMonies",
       password: "password"
     }
-    this.props.login(demoUser)
-      .then(() => {
-        this.renderErrors();
-      });
+    this.props.login(demoUser);
+      // .then(() => {
+      //   this.renderErrors();
+      // });
   }
 
   notifyFailure(message){
