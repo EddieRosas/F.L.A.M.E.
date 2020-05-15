@@ -6,7 +6,9 @@ class MainPage extends React.Component {
     return (
       <div className="main-page-box">
         <div id="main-content">
-          Placeholder for splash content
+          <div id="image">
+            {/* <img src="../../photos/FLAME-logo/default.png" alt="lol" /> */}
+          </div>
         </div>
         <div id="footer">
           <h1>F.L.A.M.E.</h1>
@@ -14,7 +16,6 @@ class MainPage extends React.Component {
           <footer>Copyright &copy; 2020 F.L.A.M.E.</footer>
         </div>
       </div>
-      
     );
   }
 }

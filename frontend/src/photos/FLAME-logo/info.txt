@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Changa-Medium
+font link: https://www.fontsquirrel.com/fonts/changa
+font author: Eduardo Tunni
+font author site: http://www.tipo.net.ar/
+Slogan Font: Changa-Medium
+
+icon designer: Lil Squid
+icon designer link: /Lil Squid
+        
+{"bg-gradient-0":"#462AB9","bg-gradient-1":"#737048","icon":"#ffffff","font":"#ffffff","slogan":"#ffffff"}
+      
