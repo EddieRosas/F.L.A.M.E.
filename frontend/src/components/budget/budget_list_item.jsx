@@ -17,7 +17,7 @@ const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
     <section className="budget-list-item-box">
       <p>${entry.amount.$numberDecimal}</p>
       <p>{entry.incomeOrDebt ? "Income" : "Debt"}</p>
-      <p>{entry.description}</p>
+      <p id="budget-list-description">{entry.description}</p>
       <p>{entry.category}</p>
       <p id="budget-list-date">{newDate}</p>
       <label id="budget-item-change" onClick={() => deleteEntry(entry._id)}>
