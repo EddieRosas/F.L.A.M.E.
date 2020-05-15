@@ -11,6 +11,11 @@ class Calculators extends React.Component {
       }
     }
 
+    componentDidMount() {
+      
+      this.props.fetchEntries();
+    }
+
     // most basic formulas
 
     fireNumber = () => {
@@ -79,4 +84,4 @@ class Calculators extends React.Component {
 
 }
 
-export default Calculators
+export default Calculators;
