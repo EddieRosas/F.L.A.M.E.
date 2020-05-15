@@ -82,7 +82,7 @@ export const deleteEntry = entryId => dispatch => {
   return (
     ApiUtil.deleteEntry(entryId)
     .then(() => {
-        
+        notifyWarning('Successfully deleted item');
         return dispatch(removeTableEntry(entryId));
       }
     )
