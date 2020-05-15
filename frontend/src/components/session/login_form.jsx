@@ -36,13 +36,7 @@ class LoginForm extends React.Component {
       password: this.state.password,
     };
 
-    this.props.login(user)
-      .then(() => {
-        this.notifySuccessful();
-      })
-      .catch(() => {
-        
-      });
+    this.props.login(user);
   }
 
   handleDemo(e) {
@@ -51,17 +45,7 @@ class LoginForm extends React.Component {
       username: "mcMonies",
       password: "password"
     }
-    this.props.login(demoUser)
-      .then(() => {
-        this.notifySuccessful();
-      })
-      .catch(() => {
-
-      });
-  }
-
-  notifySuccessful() {
-    toast.success('Successful login!');
+    this.props.login(demoUser);
   }
 
   renderErrors() {
