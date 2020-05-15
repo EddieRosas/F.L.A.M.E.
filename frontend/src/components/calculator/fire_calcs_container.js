@@ -4,7 +4,9 @@ import Calculators from './fire_calcs';
 
 
 const mSTP = (state) => {
-    let entries = Object.values(state.budgetTable)
+
+
+    let entries = Object.values(state.budgetTable);
     
     // let data = []
 
@@ -28,10 +30,11 @@ const mSTP = (state) => {
     // let dec
 
     
-    return ( {
+    return ( 
+      {
         entries: entries
-    }
-    )
+      }
+    );
 }
 
 const mDTP = (dispatch) => ({
