@@ -11,8 +11,7 @@ class LoginForm extends React.Component {
 
     this.state = {
       username: "",
-      password: "",
-      errors: {},
+      password: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -92,11 +91,10 @@ class LoginForm extends React.Component {
             </Link>
           </div>
         </form>
-        {this.renderErrors()}
+        {/*this.renderErrors()*/}
       </div>
     );
   }
 }
 
-//export default withRouter(LoginForm);
 export default LoginForm;
