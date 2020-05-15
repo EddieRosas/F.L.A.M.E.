@@ -1,10 +1,15 @@
 import * as ApiUtil from "../util/budget_table_api_util";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
+
+toast.configure();
 export const RECEIVE_TABLE_ENTRIES = "RECEIVE_ALL_TABLE_ENTRIES";
 export const RECEIVE_TABLE_ENTRY = "RECEIVE_TABLE_ENTRY";
 export const REMOVE_TABLE_ENTRY = "REMOVE_TABLE_ENTRY";
 export const RECEIVE_ENTRY_ERRORS = "RECEIVE_ENTRY_ERRORS";
 export const CLEAR_ENTRY_ERRORS = "CLEAR_ENTRY_ERRORS";
+
 
 export const receiveTableEntries = entries => ({
   type: RECEIVE_TABLE_ENTRIES,
@@ -32,6 +37,15 @@ export const clearEntryErrors = () => ({
   type: CLEAR_ENTRY_ERRORS,
 });
 
+// toast messages
+const notifySuccessful = (message) => {
+  toast.success(message);
+}
+
+const notifyFailure = (message) => {
+  toast.error(message);
+}
+
 export const fetchEntries = () => dispatch => ApiUtil.fetchEntries()
   .then(entries => dispatch(receiveTableEntries(entries)));
 
@@ -40,10 +54,16 @@ export const fetchEntry = (entryId) => dispatch => ApiUtil.fetchEntry(entryId)
 
 
 export const createEntry = (entry) => dispatch => ApiUtil.createEntry(entry)
-  .then(entry => dispatch(receiveTableEntry(entry)))
-  .catch(err => (
-    dispatch(receiveEntryErrors(err))
-  ));
+  .then(entry => {
+    notifySuccessful('Successfully created budget item!');
+    return dispatch(receiveTableEntry(entry));
+  })
+  .catch(err => {
+    Object.values(err.response.data).map((error) => {
+      return (notifyFailure(error))
+    });
+    return dispatch(receiveEntryErrors(err))
+  });
 
 export const updateEntry = (entry) => dispatch => { 
   return (
