@@ -49,7 +49,7 @@ class Calculators extends React.Component {
                 <form id="fire-number-form" onSubmit={this.fireNumber}>
                   <p id="input-title">Estimated Annual Expenses</p>
                   <input id="fi-input-expenses" type="number" min="0" />
-                  <p id="input-title">Annual Withdrawal Rate</p>
+                  <p id="input-title">Annual Withdrawal Rate (%)</p>
                   <input id="fi-input-withdrawls" type="number" min="3" defaultValue={4} />
                   <br/>
                   <button id="fi-submit" type="submit">Calculate</button>
@@ -63,7 +63,7 @@ class Calculators extends React.Component {
                 <input id="fi-input-income" type="number" min="0" />
                 <p id="input-title">Estimated Annual Expenses</p>
                 <input id="fi-input-expenses2" type="number" min="0" />
-                <p id="input-title">Annual Withdrawal rate</p>
+                <p id="input-title">Annual Withdrawal rate (%)</p>
                 <input id="fi-input-withdrawls2" type="number" min="3" defaultValue={4} />
                 <br/>
                 <button id="fi-submit" type="submit">Calculate</button>
