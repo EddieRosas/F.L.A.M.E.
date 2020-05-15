@@ -39,6 +39,9 @@ class LoginForm extends React.Component {
     this.props.login(user)
       .then(() => {
         this.notifySuccessful();
+      })
+      .catch(() => {
+        
       });
   }
 
@@ -51,6 +54,9 @@ class LoginForm extends React.Component {
     this.props.login(demoUser)
       .then(() => {
         this.notifySuccessful();
+      })
+      .catch(() => {
+
       });
   }
 
