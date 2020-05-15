@@ -92,6 +92,12 @@
 }
 
 #session-go-back {
+  color: black;
   text-decoration: none;
   margin: 15px;
+  transition: color .2s;
+}
+
+#session-go-back:hover {
+  color: red;
 }

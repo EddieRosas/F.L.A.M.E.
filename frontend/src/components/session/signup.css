@@ -9,7 +9,7 @@
 }
 
 .signup-form {
-  height: 480px;
+  height: 490px;
   width: 400px;
   background: darkgrey;
   border: 1px solid black;
@@ -74,6 +74,12 @@
 }
 
 #signup-session-go-back {
+  color: black;
   text-decoration: none;
-  margin: 20px;
+  margin: 15px;
+  transition: color .2s;
+}
+
+#signup-session-go-back:hover {
+  color: red;
 }
