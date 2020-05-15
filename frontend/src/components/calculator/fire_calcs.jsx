@@ -26,6 +26,7 @@ class Calculators extends React.Component {
 
         let fireNum = ( annualSpending * (100 / withdrawalRate) )
         
+        this.setState({fireNum: fireNum})
         document.getElementById("fire-num-result").innerHTML = `FIRE Number: $${fireNum} `;
     }
 
@@ -41,6 +42,7 @@ class Calculators extends React.Component {
         let annualSavings = ( annualIncome - annualSpending );
         let years = ( fireNum / annualSavings ) || 0 
         
+        this.setState({ yearsToFI: years });
         document.getElementById(
           "years-to-fi-result"
         ).innerHTML = `Years to F.I.: ${years} years`;
@@ -60,7 +62,7 @@ class Calculators extends React.Component {
                   <br/>
                   <button id="fi-submit" type="submit">Calculate</button>
                 </form>
-                <h3 id="fire-num-result"></h3>
+                <p id="fire-num-result"></p>
               </div>
               <div className="years-to-fi-calc"></div>
               <h2 id="fi-num-title">Financial Independence Calculator</h2>
@@ -74,9 +76,9 @@ class Calculators extends React.Component {
                 <br/>
                 <button id="fi-submit" type="submit">Calculate</button>
               </form>
-              <h3 id="years-to-fi-result"></h3>
+              <p id="years-to-fi-result"></p>
             </div>
-            <CalculatorChartsComponent />
+            <CalculatorChartsComponent fireNum={this.state.fireNum} yearsToFI={this.state.yearsToFI} />
           </div>
         );
     }
