@@ -33,10 +33,13 @@ export const logoutUser = () => ({
 });
 
 // toast messages
-const notifySuccessful = () => {
-  toast.success('Successful login!');
+const notifySuccessful = (message) => {
+  toast.success(message);
 }
 
+const notifyFailure = (message) => {
+  toast.error(message);
+}
 
 // Upon signup, dispatch the approporiate action depending on which type of response we receieve from the backend
 export const signup = (user) => (dispatch) =>
@@ -47,8 +50,12 @@ export const signup = (user) => (dispatch) =>
       APIUtil.setAuthToken(token);
       const decoded = jwt_decode(token);
       dispatch(receiveCurrentUser(decoded));
+      notifySuccessful('Successful sign up!');
+      notifySuccessful('Successful log in!');
     },
-    (err) => dispatch(receiveErrors(err.response.data))
+    (err) => {
+      dispatch(receiveErrors(err.response.data));
+    }
   );
 
 // Upon login, set the session token and dispatch the current user. Dispatch errors on failure.
@@ -60,9 +67,12 @@ export const login = (user) => (dispatch) =>
       APIUtil.setAuthToken(token);
       const decoded = jwt_decode(token);
       dispatch(receiveCurrentUser(decoded));
-      notifySuccessful();
+      notifySuccessful('Successful log in!');
     })
     .catch((err) => {
+      Object.values(err.response.data).map((error) => {
+        return (notifyFailure(error))
+      });
       dispatch(receiveErrors(err.response.data));
     });
 
@@ -71,4 +81,5 @@ export const logout = () => (dispatch) => {
   localStorage.removeItem("jwtToken");
   APIUtil.setAuthToken(false);
   dispatch(logoutUser());
+
 };

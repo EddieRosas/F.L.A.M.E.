@@ -16,7 +16,6 @@ class LoginForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
-    this.renderErrors = this.renderErrors.bind(this);
   }
 
 
@@ -35,10 +34,7 @@ class LoginForm extends React.Component {
       password: this.state.password,
     };
 
-    this.props.login(user)
-      .then(() => {
-        this.renderErrors();
-      });
+    this.props.login(user);
   }
 
   handleDemo(e) {
@@ -47,24 +43,9 @@ class LoginForm extends React.Component {
       username: "mcMonies",
       password: "password"
     }
-    this.props.login(demoUser)
-      .then(() => {
-        this.renderErrors();
-      });
+    this.props.login(demoUser);
   }
 
-  notifyFailure(message){
-    toast.error(message, {position: toast.POSITION.TOP_CENTER});
-  }
-
-  renderErrors() {
-    Object.values(this.props.errors).map((error) => {
-        return (
-          this.notifyFailure(error)
-        )
-      }
-    )
-  }
 
   render() {
     return (
@@ -97,7 +78,6 @@ class LoginForm extends React.Component {
             </Link>
           </div>
         </form>
-        {/*this.renderErrors()*/}
       </div>
     );
   }
