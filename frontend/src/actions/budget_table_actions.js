@@ -41,9 +41,10 @@ export const fetchEntry = (entryId) => dispatch => ApiUtil.fetchEntry(entryId)
 
 export const createEntry = (entry) => dispatch => ApiUtil.createEntry(entry)
   .then(entry => dispatch(receiveTableEntry(entry)))
-  .catch(err => (
-    dispatch(receiveEntryErrors(err))
-  ));
+  .catch(err => {
+    debugger;
+    return dispatch(receiveEntryErrors(err))
+  });
 
 export const updateEntry = (entry) => dispatch => { 
   return (

@@ -73,7 +73,7 @@ export const login = (user) => (dispatch) =>
       Object.values(err.response.data).map((error) => {
         return (notifyFailure(error))
       });
-      dispatch(receiveErrors(err.response.data));
+      return dispatch(receiveErrors(err.response.data));
     });
 
 // We wrote this one earlier
