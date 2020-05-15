@@ -40,9 +40,11 @@ router.post("/register", (req, res) => {
                         newUser.password = hash;
                         newUser.save()
                             .then(user => {
+                                debugger
                                 const payload = { id: user.id, username: user.username }
 
                                 jwt.sign(payload, keys.secretOrKey, {expiresIn: 3600}, (err, token) => {
+                                    debugger
                                     res.json({
                                         success: true,
                                         token: "Bearer " + token
@@ -90,7 +92,7 @@ router.post("/login", (req, res) => {
                                     token: "Bearer " + token
                                 })
                             }
-                        );
+                        )
                     } else {
                         errors.password = "Incorrect password";
                         return res.status(400).json(errors);

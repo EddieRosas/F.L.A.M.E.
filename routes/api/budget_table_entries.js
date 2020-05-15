@@ -47,11 +47,11 @@ router.patch("/:entryId", (req, res) => {
   BudgetTableEntry.findOneAndUpdate(
     { _id: req.params.entryId },
     {
-        amount: req.body.amount,
-        incomeOrDebt: req.body.incomeOrDebt,
-        description: req.body.description,
-        category: req.body.category,
-        date: req.body.date,
+      amount: req.body.amount,
+      incomeOrDebt: req.body.incomeOrDebt,
+      description: req.body.description,
+      category: req.body.category,
+      date: req.body.date,
     },
     { new: true }
   )
