@@ -36,9 +36,6 @@ class LoginForm extends React.Component {
     };
 
     this.props.login(user);
-      // .then(() => {
-      //   this.renderErrors();
-      // });
   }
 
   handleDemo(e) {
@@ -48,9 +45,6 @@ class LoginForm extends React.Component {
       password: "password"
     }
     this.props.login(demoUser);
-      // .then(() => {
-      //   this.renderErrors();
-      // });
   }
 
   notifyFailure(message){
@@ -97,7 +91,6 @@ class LoginForm extends React.Component {
             </Link>
           </div>
         </form>
-        {/*this.renderErrors()*/}
       </div>
     );
   }
