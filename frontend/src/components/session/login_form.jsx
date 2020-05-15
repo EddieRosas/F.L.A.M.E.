@@ -1,15 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./login.css";
 
+toast.configure();
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       username: "",
-      password: "",
-      errors: {},
+      password: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,7 +35,10 @@ class LoginForm extends React.Component {
       password: this.state.password,
     };
 
-    this.props.login(user);
+    this.props.login(user)
+      .then(() => {
+        this.renderErrors();
+      });
   }
 
   handleDemo(e) {
@@ -43,24 +48,27 @@ class LoginForm extends React.Component {
       password: "password"
     }
     this.props.login(demoUser)
+      .then(() => {
+        this.renderErrors();
+      });
+  }
+
+  notifyFailure(message){
+    toast.error(message, {position: toast.POSITION.TOP_CENTER});
   }
 
   renderErrors() {
-    return (
-      <div className="errors">
-        <ul>
-          {Object.keys(this.state.errors).map((error, i) => (
-            <li id="error-item" key={`error-${i}`}>{this.state.errors[error]}</li>
-          ))}
-        </ul>
-      </div>
-    );
+    Object.values(this.props.errors).map((error) => {
+        return (
+          this.notifyFailure(error)
+        )
+      }
+    )
   }
 
   render() {
     return (
       <div className="login-box">
-        {this.renderErrors()}
         <form onSubmit={this.handleSubmit} id="login-form">
           <p id="login-title">LOGIN</p>
           <div id="login-input-fields">
@@ -89,10 +97,10 @@ class LoginForm extends React.Component {
             </Link>
           </div>
         </form>
+        {/*this.renderErrors()*/}
       </div>
     );
   }
 }
 
-//export default withRouter(LoginForm);
 export default LoginForm;

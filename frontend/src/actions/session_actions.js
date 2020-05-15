@@ -1,5 +1,9 @@
 import * as APIUtil from "../util/session_api_util";
 import jwt_decode from "jwt-decode";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure();
 
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
@@ -28,6 +32,11 @@ export const logoutUser = () => ({
   type: RECEIVE_USER_LOGOUT,
 });
 
+// toast messages
+const notifySuccessful = () => {
+  toast.success('Successful login!');
+}
+
 
 // Upon signup, dispatch the approporiate action depending on which type of response we receieve from the backend
 export const signup = (user) => (dispatch) =>
@@ -51,6 +60,7 @@ export const login = (user) => (dispatch) =>
       APIUtil.setAuthToken(token);
       const decoded = jwt_decode(token);
       dispatch(receiveCurrentUser(decoded));
+      notifySuccessful();
     })
     .catch((err) => {
       dispatch(receiveErrors(err.response.data));
