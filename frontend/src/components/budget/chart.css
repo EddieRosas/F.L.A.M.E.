@@ -16,3 +16,7 @@
   left: 45px;
   bottom: 18px;
 }
+
+.recharts-legend-item-text {
+  color: black;
+}
