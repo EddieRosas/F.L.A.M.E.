@@ -13,6 +13,7 @@ class SignupForm extends React.Component {
       errors: {},
     };
 
+    this.handleDemo = this.handleDemo.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clearedErrors = false;
   }
@@ -42,6 +43,15 @@ class SignupForm extends React.Component {
     };
 
     this.props.signup(user, this.props.history);
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    const demoUser = {
+      username: "mcMonies",
+      password: "password",
+    };
+    this.props.login(demoUser);
   }
 
   renderErrors() {
@@ -103,7 +113,10 @@ class SignupForm extends React.Component {
             />
             <br />
             <input id="submit-button" type="submit" value="Submit" />
-            <Link to="/" id="session-go-back">
+            <label id="demo-button" onClick={this.handleDemo}>
+              Demo Login
+            </label>
+            <Link to="/" id="signup-session-go-back">
               back
             </Link>
           </div>
