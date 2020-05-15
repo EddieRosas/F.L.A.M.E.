@@ -151,8 +151,12 @@
   display: flex;
   justify-content: center;
   width: 150px;
+  text-align: center;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   max-height: 40px;
-  overflow: scroll;
   padding: 16px 8px 8px;
   border: 1px solid black;
 }
@@ -175,10 +179,10 @@
 
 #budget-list-description {
   text-align: center;
-  padding: 19px 3px 3px;
   max-height: 45px;
-  width: 162px;
+  width: 150px;
   align-items: center;
+  overflow: hidden;
 }
 
 .budget-list-top {
@@ -189,8 +193,8 @@
 }
 
 .budget-list-top p {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  display: inline-block;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
