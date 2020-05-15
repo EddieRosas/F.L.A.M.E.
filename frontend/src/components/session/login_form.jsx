@@ -35,6 +35,10 @@ class LoginForm extends React.Component {
     this.props.login(user);
   }
 
+  handleDemo() {
+    
+  }
+
   renderErrors() {
     return (
       <div className="errors">
@@ -73,6 +77,7 @@ class LoginForm extends React.Component {
             />
             <br />
             <input id="submit-button" type="submit" value="Submit" />
+            <input id="submit-button" onClick={this.handleDemo} value="Demo Login" />
             <Link to="/" id="session-go-back">
               back
             </Link>
