@@ -83,7 +83,7 @@ class LoginForm extends React.Component {
             />
             <br />
             <input id="submit-button" type="submit" value="Submit" />
-            <input id="submit-button" onClick={this.handleDemo} value="Demo Login" />
+            <label id="demo-button" onClick={this.handleDemo}>Demo Login</label>
             <Link to="/" id="session-go-back">
               back
             </Link>
