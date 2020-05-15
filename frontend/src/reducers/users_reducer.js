@@ -5,7 +5,7 @@ const usersReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_FI_DATA:
-      return action.data;
+      return action.data.data;
     default:
       return state;
   }

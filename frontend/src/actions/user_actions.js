@@ -21,8 +21,8 @@ export const clearFiErrors = () => ({
 export const fetchFiData = (userId) => dispatch => ApiUtil.fetchFiData(userId)
   .then(data => dispatch(receiveFiData(data)));
 
-export const updateFiNum = (user, fireNum) => dispatch => ApiUtil.updateFiNum(user, fireNum)
+export const updateFiNum = (userId, fireNum) => dispatch => ApiUtil.updateFiNum(userId, fireNum)
   .then(data => dispatch(receiveFiData(data)));
 
-export const updateYearsToFI = (user, yearsToFI) => dispatch => ApiUtil.updateYearsToFI(user, yearsToFI)
+export const updateYearsToFI = (userId, yearsToFI) => dispatch => ApiUtil.updateYearsToFI(userId, yearsToFI)
   .then(data => dispatch(receiveFiData(data)));

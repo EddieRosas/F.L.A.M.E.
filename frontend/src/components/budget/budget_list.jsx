@@ -26,7 +26,7 @@ class BudgetList extends React.Component {
     return (
       <div className="budget-list-box">
         <div className="budget-list-container">
-          <h1 id="budget-list-title">Budget List</h1>
+          <h1 id="budget-list-title">Income/Expense Tracker</h1>
           <div id="budget-list">
             <div className="budget-list-top">
               <p>Amount</p>
