@@ -106,7 +106,7 @@
 
 .budget-list-container {
   width: 70%;
-  max-height: 500px;
+  max-height: 600px;
   overflow: scroll;
   background: rgb(238, 236, 236);
   padding: 10px 50px 50px;
