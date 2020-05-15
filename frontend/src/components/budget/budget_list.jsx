@@ -7,7 +7,6 @@ class BudgetList extends React.Component {
     this.props.fetchEntries();
   }
 
-
   // componentDidUpdate(prevProps, prevState) {
   //   if ((prevProps.entries.length === this.props.entries.length) && 
   //     !(prevProps.entries.length === 0 && this.props.entries.length === 0)) {
