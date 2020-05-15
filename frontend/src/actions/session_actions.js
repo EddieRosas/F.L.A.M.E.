@@ -33,8 +33,8 @@ export const logoutUser = () => ({
 });
 
 // toast messages
-const notifySuccessful = () => {
-  toast.success('Successful login!');
+const notifySuccessful = (message) => {
+  toast.success(message);
 }
 
 
@@ -47,6 +47,8 @@ export const signup = (user) => (dispatch) =>
       APIUtil.setAuthToken(token);
       const decoded = jwt_decode(token);
       dispatch(receiveCurrentUser(decoded));
+      notifySuccessful('Successful sign up!');
+      notifySuccessful('Successful log in!');
     },
     (err) => dispatch(receiveErrors(err.response.data))
   );
@@ -60,7 +62,7 @@ export const login = (user) => (dispatch) =>
       APIUtil.setAuthToken(token);
       const decoded = jwt_decode(token);
       dispatch(receiveCurrentUser(decoded));
-      notifySuccessful();
+      notifySuccessful('Successful log in!');
     })
     .catch((err) => {
       dispatch(receiveErrors(err.response.data));
