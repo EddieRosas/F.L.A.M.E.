@@ -5,7 +5,6 @@ export const fetchFiData = (userId) => {
 };
 
 export const updateFiNum = (userId, fireNum) => {
-  debugger
   return axios.patch(`/api/users/${userId}`, { fireNum: JSON.stringify(fireNum) });
 };
 
