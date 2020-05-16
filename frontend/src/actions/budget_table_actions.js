@@ -72,9 +72,14 @@ export const createEntry = (entry) => dispatch => ApiUtil.createEntry(entry)
 export const updateEntry = (entry) => dispatch => { 
   return (
     ApiUtil.updateEntry(entry)
-  .then(entry => dispatch(receiveTableEntry(entry)), err => (
-    dispatch(receiveEntryErrors(err))
-  ))
+    .then(entry => {
+      notifySuccessful('Successfully updated budget item!');
+      return dispatch(receiveTableEntry(entry));
+    })
+    .catch(err => {
+      notifyFailure(err.message);
+      return dispatch(receiveEntryErrors(err));
+    })
   )
 }
 

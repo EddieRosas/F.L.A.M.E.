@@ -44,6 +44,12 @@ router.post("/",
 
 router.patch("/:entryId", (req, res) => {
 
+  const { errors, isValid } = validateEntryInput(req.body);
+
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
+
   BudgetTableEntry.findOneAndUpdate(
     { _id: req.params.entryId },
     {
