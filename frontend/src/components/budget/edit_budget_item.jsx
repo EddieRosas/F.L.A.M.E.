@@ -39,9 +39,11 @@ class EditBudgetItem extends React.Component {
     // const { setModalIsOpen } = this.props;
     return (
       <section>
-        <h1>Update Item</h1>
+        <p id="edit-title">Update Item</p>
         <form onSubmit={this.handleSubmit} action="">
+          <p id="update-label">Amount</p>
           <input
+            id="edit-input"
             type="number"
             value={this.state.amount}
             onChange={this.update("amount")}
@@ -49,56 +51,92 @@ class EditBudgetItem extends React.Component {
             step="0.01"
           />
           <br />
-          <select onChange={this.update("incomeOrDebt")}>
-            <option value="true" selected={this.state.incomeOrDebt === true ? "selected" : ""}>Income</option>
-            <option value="false" selected={this.state.incomeOrDebt === false ? "selected" : ""}>Debt</option>
+          <p id="update-label">Income or Debt?</p>
+          <select id="edit-select" onChange={this.update("incomeOrDebt")}>
+            <option
+              value="true"
+              selected={this.state.incomeOrDebt ? "selected" : ""}
+            >
+              Income
+            </option>
+            <option
+              value="false"
+              selected={!this.state.incomeOrDebt ? "selected" : ""}
+            >
+              Debt
+            </option>
           </select>
           <br />
+          <p id="update-label">Description</p>
           <input
+            id="edit-input"
             type="text"
             value={this.state.description}
             onChange={this.update("description")}
             placeholder="Description"
           />
           <br />
-          <select onChange={this.update("category")}>
-            <option value="Health-Fitness" 
-              selected={this.state.category === 'Health-Fitness' ? "selected": ""}>
+          <p id="update-label">Category</p>
+          <select id="edit-select" onChange={this.update("category")}>
+            <option
+              value="Health-Fitness"
+              selected={
+                this.state.category === "Health-Fitness" ? "selected" : ""
+              }
+            >
               Health & Fitness
             </option>
-            <option value="Groceries"
-              selected={this.state.category === 'Groceries' ? "selected" : ""}>
+            <option
+              value="Groceries"
+              selected={this.state.category === "Groceries" ? "selected" : ""}
+            >
               Groceries
             </option>
-            <option value="Mortgage"
-              selected={this.state.category === 'Mortgage' ? "selected" : ""}>
+            <option
+              value="Mortgage"
+              selected={this.state.category === "Mortgage" ? "selected" : ""}
+            >
               Mortgage
             </option>
-            <option value="Entertainment"
-              selected={this.state.category === 'Entertainment' ? "selected" : ""}>
+            <option
+              value="Entertainment"
+              selected={
+                this.state.category === "Entertainment" ? "selected" : ""
+              }
+            >
               Entertainment
             </option>
-            <option value="Paycheck"
-              selected={this.state.category === 'Paycheck' ? "selected" : ""}>
+            <option
+              value="Paycheck"
+              selected={this.state.category === "Paycheck" ? "selected" : ""}
+            >
               Paycheck
             </option>
-            <option value="Dividends"
-              selected={this.state.category === 'Dividends' ? "selected" : ""}>
+            <option
+              value="Dividends"
+              selected={this.state.category === "Dividends" ? "selected" : ""}
+            >
               Dividends
             </option>
-            <option value="Other"
-              selected={this.state.category === 'Other' ? "selected" : ""}>
+            <option
+              value="Other"
+              selected={this.state.category === "Other" ? "selected" : ""}
+            >
               Other
             </option>
           </select>
           <br />
+          <p id="update-label">Date</p>
           <input
+            id="edit-calendar"
             type="date"
             value={this.state.date}
             onChange={this.update("date")}
           />
           <br />
-          <button type="submit">Update</button>
+          <button id="edit-submit" type="submit">
+            Update
+          </button>
         </form>
       </section>
     );
