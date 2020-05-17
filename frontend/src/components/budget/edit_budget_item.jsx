@@ -31,6 +31,7 @@ class EditBudgetItem extends React.Component {
       category: this.state.category,
       date: this.state.date,
     };
+    debugger;
     this.props.updateEntry(newEntry);
     this.props.setModalIsOpen(false);
   }
