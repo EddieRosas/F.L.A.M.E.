@@ -286,3 +286,17 @@
 #edit-select:focus {
   border: 1px solid rgb(112, 58, 240);
 }
+
+#edit-submit {
+  margin: 9px;
+  width: 83%;
+  height: 30px;
+  padding: 3px;
+  border-radius: 5px;
+  transition: background-color .5s;
+}
+
+#edit-submit:hover {
+  background-color: rgb(206, 203, 203);
+  border-color: rgb(177, 174, 174);
+}

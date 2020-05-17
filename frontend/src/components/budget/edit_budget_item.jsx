@@ -129,7 +129,7 @@ class EditBudgetItem extends React.Component {
             onChange={this.update("date")}
           />
           <br />
-          <button type="submit">Update</button>
+          <button id="edit-submit" type="submit">Update</button>
         </form>
       </section>
     );
