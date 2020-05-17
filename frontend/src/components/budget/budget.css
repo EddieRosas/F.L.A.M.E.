@@ -65,6 +65,7 @@
 #budget-date {
   width: 260px;
   border: none;
+  font-size: 14px;
   border-bottom: 1px solid black;
   padding: 5px;
   margin: 10px 10px;
@@ -207,6 +208,8 @@
 
 #budget-item-change {
   cursor: pointer;
+  overflow: initial;
+  padding: 8px;
 }
 
 #budget-item-change:hover {
@@ -225,4 +228,83 @@
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
+}
+
+#update-modal {
+  margin: -250px 0px 0px -245px;
+  text-align: center;
+  width: 440px;
+  height: 505px;
+}
+
+#edit-title {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+#edit-input {
+  margin: 5px;
+  padding: 5px;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid black;
+  transition: border-bottom .3s;
+}
+
+#edit-input:focus {
+  border-bottom: 1px solid rgb(112, 58, 240);
+}
+
+#edit-calendar {
+  margin: 5px;
+  padding: 5px;
+  width: 80%;
+  border: none;
+  font-size: 14px;
+  border-bottom: 1px solid black;
+  transition: border-color .3s;
+}
+
+#edit-calendar:hover {
+  border-color: rgb(112, 58, 240);
+}
+
+#edit-calendar:focus {
+  border-color: rgb(112, 58, 240);
+}
+
+#edit-select {
+  width: 83%;
+  height: 30px;
+  margin: 10px 10px;
+  background-color: rgb(206, 203, 203);
+  cursor: pointer;
+  transition: border .3s;
+}
+
+#edit-select:focus {
+  border: 1px solid rgb(112, 58, 240);
+}
+
+#edit-submit {
+  margin: 15px 9px 9px;
+  width: 83%;
+  height: 30px;
+  padding: 3px;
+  border-radius: 5px;
+  transition: background-color .5s;
+}
+
+#edit-submit:hover {
+  background-color: rgb(206, 203, 203);
+  border-color: rgb(177, 174, 174);
+}
+
+#update-label {
+  width: 100%;
+  margin: 15px 0px 5px;
+  font-size: 17px;
+  text-align: left;
+  margin-left: 40px;
+  opacity: 0.5;
 }
