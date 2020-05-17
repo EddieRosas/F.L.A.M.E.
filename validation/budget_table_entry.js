@@ -32,3 +32,6 @@ module.exports = function validateBudgetTableInput(data) {
     isValid: Object.keys(errors).length === 0,
   };
 };
+
+
+// :)
