@@ -77,7 +77,8 @@ export const updateEntry = (entry) => dispatch => {
       return dispatch(receiveTableEntry(entry));
     })
     .catch(err => {
-      notifyFailure(err.message);
+      //notifyFailure(err.data.message);
+      debugger;
       return dispatch(receiveEntryErrors(err));
     })
   )
