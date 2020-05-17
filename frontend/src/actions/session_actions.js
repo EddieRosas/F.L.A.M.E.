@@ -55,6 +55,9 @@ export const signup = (user) => (dispatch) =>
     },
     (err) => {
       debugger;
+      Object.values(err.response.data).map((error) => {
+        return (notifyFailure(error))
+      });
       dispatch(receiveErrors(err.response.data));
     }
   );
