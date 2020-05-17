@@ -207,6 +207,8 @@
 
 #budget-item-change {
   cursor: pointer;
+  overflow: initial;
+  padding: 8px;
 }
 
 #budget-item-change:hover {
@@ -228,16 +230,10 @@
 }
 
 #update-modal {
-  top: 50%;
-  left: 50%;
-  right: 0;
-  bottom: 0;
-  margin: -170px 0px 0px -245px;
+  margin: -250px 0px 0px -245px;
   text-align: center;
-  overflow: hidden;
   width: 440px;
-  height: 350px;
-  border: none;
+  height: 505px;
 }
 
 #edit-title {
@@ -245,7 +241,7 @@
 }
 
 #edit-input {
-  margin: 15px;
+  margin: 5px;
   padding: 5px;
   width: 80%;
   border: none;
@@ -258,7 +254,7 @@
 }
 
 #edit-calendar {
-  margin: 15px;
+  margin: 5px;
   padding: 5px;
   width: 80%;
   border: none;
@@ -288,7 +284,7 @@
 }
 
 #edit-submit {
-  margin: 9px;
+  margin: 15px 9px 9px;
   width: 83%;
   height: 30px;
   padding: 3px;
@@ -299,4 +295,13 @@
 #edit-submit:hover {
   background-color: rgb(206, 203, 203);
   border-color: rgb(177, 174, 174);
+}
+
+#update-label {
+  width: 100%;
+  margin: 20px 0px 5px;
+  font-size: 17px;
+  text-align: left;
+  margin-left: 40px;
+  opacity: 0.5;
 }

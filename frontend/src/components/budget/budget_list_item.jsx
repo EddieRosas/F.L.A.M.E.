@@ -36,6 +36,7 @@ const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
             left: "50%",
             right: "0",
             bottom: "0",
+            overflow: "inherit"
           },
           overlay: {
             position: "fixed",

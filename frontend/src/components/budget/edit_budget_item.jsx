@@ -41,6 +41,7 @@ class EditBudgetItem extends React.Component {
       <section>
         <p id="edit-title">Update Item</p>
         <form onSubmit={this.handleSubmit} action="">
+          <p id="update-label">Amount</p>
           <input
             id="edit-input"
             type="number"
@@ -50,6 +51,7 @@ class EditBudgetItem extends React.Component {
             step="0.01"
           />
           <br />
+          <p id="update-label">Income or Debt?</p>
           <select id="edit-select" onChange={this.update("incomeOrDebt")}>
             <option
               value="true"
@@ -65,6 +67,7 @@ class EditBudgetItem extends React.Component {
             </option>
           </select>
           <br />
+          <p id="update-label">Description</p>
           <input
             id="edit-input"
             type="text"
@@ -73,6 +76,7 @@ class EditBudgetItem extends React.Component {
             placeholder="Description"
           />
           <br />
+          <p id="update-label">Category</p>
           <select id="edit-select" onChange={this.update("category")}>
             <option
               value="Health-Fitness"
@@ -122,6 +126,7 @@ class EditBudgetItem extends React.Component {
             </option>
           </select>
           <br />
+          <p id="update-label">Date</p>
           <input
             id="edit-calendar"
             type="date"
@@ -129,7 +134,9 @@ class EditBudgetItem extends React.Component {
             onChange={this.update("date")}
           />
           <br />
-          <button id="edit-submit" type="submit">Update</button>
+          <button id="edit-submit" type="submit">
+            Update
+          </button>
         </form>
       </section>
     );
