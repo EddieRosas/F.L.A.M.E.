@@ -4,6 +4,7 @@ class EditBudgetItem extends React.Component {
   constructor(props) {
     super(props);
     const { entry } = this.props;
+    debugger
     this.state = {
       amount: entry.amount.$numberDecimal,
       incomeOrDebt: entry.incomeOrDebt,
@@ -23,14 +24,16 @@ class EditBudgetItem extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
     let newEntry = {
       _id: this.props.entry._id,
       amount: this.state.amount,
-      incomeOrDebt: this.state.incomeOrDebt,
+      incomeOrDebt: typeof this.state.incomeOrDebt === "boolean" ? JSON.stringify(this.state.incomeOrDebt) : this.state.incomeOrDebt,
       description: this.state.description,
       category: this.state.category,
       date: this.state.date,
     };
+    debugger
     this.props.updateEntry(newEntry);
     this.props.setModalIsOpen(false);
   }
@@ -50,8 +53,8 @@ class EditBudgetItem extends React.Component {
           />
           <br />
           <select onChange={this.update("incomeOrDebt")}>
-            <option value="true" selected={this.state.incomeOrDebt === true ? "selected" : ""}>Income</option>
-            <option value="false" selected={this.state.incomeOrDebt === false ? "selected" : ""}>Debt</option>
+            <option value="true" selected={this.state.incomeOrDebt ? "selected" : ""}>Income</option>
+            <option value="false" selected={!this.state.incomeOrDebt ? "selected" : ""}>Debt</option>
           </select>
           <br />
           <input
