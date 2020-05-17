@@ -44,11 +44,9 @@ router.post("/",
 
 router.patch("/:entryId", (req, res) => {
 
-  debugger;
   const { errors, isValid } = validateEntryInput(req.body);
 
   if (!isValid) {
-    debugger;
     return res.status(400).json(errors);
   }
 
@@ -64,7 +62,6 @@ router.patch("/:entryId", (req, res) => {
     { new: true }
   )
   .then((entry) => {
-    debugger;
     return res.json(entry);
   })
   .catch((errors) => {

@@ -40,11 +40,9 @@ router.post("/register", (req, res) => {
                         newUser.password = hash;
                         newUser.save()
                             .then(user => {
-                                debugger
                                 const payload = { id: user.id, username: user.username }
 
                                 jwt.sign(payload, keys.secretOrKey, {expiresIn: 3600}, (err, token) => {
-                                    debugger
                                     res.json({
                                         success: true,
                                         token: "Bearer " + token
@@ -104,16 +102,19 @@ router.post("/login", (req, res) => {
 
 // update user fireNum/yearsToFI 
 router.patch("/:userId", (req, res) => {
-    const { errors, isValid } = validateFireCalcs(req.body);
+    let validatee;
+    if (req.body.fireNum) validatee = req.body.fireNum
+    if (req.body.yearsToFI) validatee = req.body.yearsToFI
+
+    const { errors, isValid } = validateFireCalcs(validatee)
 
     if (!isValid) {
         return res.status(400).json(errors);
     }
-    var objForUpdate = {};
+    let objForUpdate = {};
 
     if (req.body.fireNum) objForUpdate.fireNum = req.body.fireNum;
     if (req.body.yearsToFI) objForUpdate.yearsToFI = req.body.yearsToFI;
-
     User.findOneAndUpdate(
         { _id: req.params.userId },
         objForUpdate,

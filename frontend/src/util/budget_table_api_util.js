@@ -14,7 +14,6 @@ export const createEntry = (entry) => {
 };
 
 export const updateEntry = (entry) => {
-  debugger;
   return axios.patch(`/api/entries/${entry._id}`, entry);
 };
 
