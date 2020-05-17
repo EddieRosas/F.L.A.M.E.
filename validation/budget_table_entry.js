@@ -4,9 +4,11 @@ const validText = require("./valid-text");
 module.exports = function validateBudgetTableInput(data) {
   let errors = {};
 
+  debugger;
   data.amount = validText(data.amount) ? data.amount : "";
-  data.incomeOrDebt = validText(data.incomeOrDebt) ? data.incomeOrDebt : "";
+  data.incomeOrDebt = validText(JSON.stringify(data.incomeOrDebt)) ? JSON.stringify(data.incomeOrDebt) : "";
 
+  debugger;
   if (!Validator.isFloat(data.amount, { min: 0.01 })) {
     errors.amount = "Please input valid amount (i.e: 1.99, 0.01, 100)";
   }
@@ -15,7 +17,9 @@ module.exports = function validateBudgetTableInput(data) {
     errors.amount = "Amount can't be empty";
   }
 
+  
   if (!Validator.isBoolean(data.incomeOrDebt)) {
+    debugger;
     errors.incomeOrDebt = "Please select Income or Expense/Debt";
   }
 

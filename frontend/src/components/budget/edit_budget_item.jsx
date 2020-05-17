@@ -50,8 +50,8 @@ class EditBudgetItem extends React.Component {
           />
           <br />
           <select onChange={this.update("incomeOrDebt")}>
-            <option value="true" selected={this.state.incomeOrDebt ? "selected" : ""}>Income</option>
-            <option value="false" selected={!this.state.incomeOrDebt ? "selected" : ""}>Debt</option>
+            <option value="true" selected={this.state.incomeOrDebt === true ? "selected" : ""}>Income</option>
+            <option value="false" selected={this.state.incomeOrDebt === false ? "selected" : ""}>Debt</option>
           </select>
           <br />
           <input

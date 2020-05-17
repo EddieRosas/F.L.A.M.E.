@@ -74,6 +74,7 @@ export const updateEntry = (entry) => dispatch => {
     ApiUtil.updateEntry(entry)
     .then(entry => {
       notifySuccessful('Successfully updated budget item!');
+      debugger;
       return dispatch(receiveTableEntry(entry));
     })
     .catch(err => {
