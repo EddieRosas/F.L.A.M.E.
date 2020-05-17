@@ -54,7 +54,6 @@ export const signup = (user) => (dispatch) =>
       notifySuccessful('Successful log in!');
     },
     (err) => {
-      
       dispatch(receiveErrors(err.response.data));
     }
   );
