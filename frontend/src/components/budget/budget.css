@@ -65,6 +65,7 @@
 #budget-date {
   width: 260px;
   border: none;
+  font-size: 14px;
   border-bottom: 1px solid black;
   padding: 5px;
   margin: 10px 10px;
@@ -238,6 +239,7 @@
 
 #edit-title {
   font-size: 30px;
+  margin-top: 10px;
 }
 
 #edit-input {
@@ -258,6 +260,7 @@
   padding: 5px;
   width: 80%;
   border: none;
+  font-size: 14px;
   border-bottom: 1px solid black;
   transition: border-color .3s;
 }
@@ -299,7 +302,7 @@
 
 #update-label {
   width: 100%;
-  margin: 20px 0px 5px;
+  margin: 15px 0px 5px;
   font-size: 17px;
   text-align: left;
   margin-left: 40px;
