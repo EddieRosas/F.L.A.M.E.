@@ -26,9 +26,26 @@ const BudgetListItem = ({ deleteEntry, updateEntry, entry }) => {
       <label id="budget-item-change" onClick={() => setModalIsOpen(true)}>
         <button id="budget-item-delete-button">Edit</button>
       </label>
-      <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
-        <EditBudgetItem 
-          entry={entry} 
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+        id="update-modal"
+        style={{
+          content: {
+            top: "50%",
+            left: "50%",
+            right: "0",
+            bottom: "0",
+          },
+          overlay: {
+            position: "fixed",
+            backgroundColor: "rgba(0,0,0,0.7)",
+            zIndex: "50",
+          },
+        }}
+      >
+        <EditBudgetItem
+          entry={entry}
           updateEntry={updateEntry}
           setModalIsOpen={setModalIsOpen}
         />

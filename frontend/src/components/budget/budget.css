@@ -226,3 +226,63 @@
     width: 0px;
     background: transparent; /* make scrollbar transparent */
 }
+
+#update-modal {
+  top: 50%;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  margin: -170px 0px 0px -245px;
+  text-align: center;
+  overflow: hidden;
+  width: 440px;
+  height: 350px;
+  border: none;
+}
+
+#edit-title {
+  font-size: 30px;
+}
+
+#edit-input {
+  margin: 15px;
+  padding: 5px;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid black;
+  transition: border-bottom .3s;
+}
+
+#edit-input:focus {
+  border-bottom: 1px solid rgb(112, 58, 240);
+}
+
+#edit-calendar {
+  margin: 15px;
+  padding: 5px;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid black;
+  transition: border-color .3s;
+}
+
+#edit-calendar:hover {
+  border-color: rgb(112, 58, 240);
+}
+
+#edit-calendar:focus {
+  border-color: rgb(112, 58, 240);
+}
+
+#edit-select {
+  width: 83%;
+  height: 30px;
+  margin: 10px 10px;
+  background-color: rgb(206, 203, 203);
+  cursor: pointer;
+  transition: border .3s;
+}
+
+#edit-select:focus {
+  border: 1px solid rgb(112, 58, 240);
+}
