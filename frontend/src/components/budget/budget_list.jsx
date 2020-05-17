@@ -22,7 +22,6 @@ class BudgetList extends React.Component {
     if(!entries.length) {
       return null;
     }
-    console.log(this.props)
     return (
       <div className="budget-list-box">
         <div className="budget-list-container">
