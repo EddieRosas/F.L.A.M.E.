@@ -6,7 +6,7 @@
 * [Future Directions](future-directions)
 
 ## Live Site
-[FLAME](https://blooming-castle-18262.herokuapp.com/#/)
+[FLAME](https://blooming-castle-18262.herokuapp.com/)
 
 ## What is FLAME?
 `FLAME` is a finance app, created by 4 engineers over the span of 5 days. Our goal was to provide an intuitive way for users who want to achieve financial independence.  FLAME aims to help everyone who is interested in the FIRE movement and in need of tracking their income, spending, and investments.
