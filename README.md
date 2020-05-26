@@ -18,15 +18,15 @@
 
 ## Features:
 ### Authentication
-![flame_auth](https://github.com/EddieRosas/F.L.A.M.E./tree/master/frontend/src/photos/gifs/flame_auth.gif)
+![flame_auth](https://github.com/EddieRosas/F.L.A.M.E./blob/master/frontend/src/photos/gifs/flame_auth.gif)
 Users are able to enter FLAME by creating an account. This requires that users enter a valid username, password, and email address to create an account. Only the username and password will be required when logging in following this pre-requisite. We utilized the React-Toastify library to create smooth error notifications should any error occur during account creation or login
 
 ### Budget Entiries
-![flame](https://github.com/EddieRosas/F.L.A.M.E./tree/master/frontend/src/photos/gifs/flame_budget.gif)
+![flame](https://github.com/EddieRosas/F.L.A.M.E./blob/master/frontend/src/photos/gifs/flame_budget.gif)
 Users are able to create, edit, amd delete budget entries based on personal preference. Entering the date optionally defaults to the current day if nothing is entered. Flame doesn’t require users to input any of their banking information, simply enter their monthly income, monthly spending, investments etc.
 
 ### FIRE Number Calculator
-![flame_calculator](https://github.com/EddieRosas/F.L.A.M.E./tree/master/frontend/src/photos/gifs/flame_calculator.gif)
+![flame_calculator](https://github.com/EddieRosas/F.L.A.M.E./blob/master/frontend/src/photos/gifs/flame_calculator.gif)
 We carefully developed algorithms for our calculators to accurately provide a users’s current financial standing, their projected years to financial freedom, and their FIRE Number to reach financial independence. Implemented the Re-charts library to conveniently reflect this data.
 
 ## Future Directions
