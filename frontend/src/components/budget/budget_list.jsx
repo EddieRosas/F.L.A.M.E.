@@ -8,6 +8,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer
 } from "recharts";
 import "./budget.css";
 import "./chart.css";
@@ -49,20 +50,26 @@ class BudgetList extends React.Component {
           </div>
         </div>
         <div className="chart">
-          <BarChart
-            className="bar-chart"
-            width={900}
-            height={500}
-            data={this.props.data}
+          <ResponsiveContainer
+            id="responsive-chart"
+            width={'74%'}
+            height={400}
           >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="month" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="income" fill="rgb(40, 200, 50)" />
-            <Bar dataKey="expenses" fill="rgb(230, 60, 40)" />
-          </BarChart>
+            <BarChart
+              className="bar-chart"
+              width={900}
+              height={500}
+              data={this.props.data}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="month" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="income" fill="rgb(40, 200, 50)" />
+              <Bar dataKey="expenses" fill="rgb(230, 60, 40)" />
+            </BarChart>
+          </ ResponsiveContainer>
         </div>
       </div>
     );
