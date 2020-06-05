@@ -57,11 +57,13 @@
 }
 
 #fire-num-result {
+  text-align: center;
   margin: 20px 10px 0px;
   font-size: 25px;
 }
 
 #years-to-fi-result {
+  text-align: center;
   margin: 20px 10px 0px;
   font-size: 25px;
 }
