@@ -100,34 +100,33 @@ class NavBar extends React.Component {
           >
             <p className="title">About</p>
             <p className="tutorial">
-              &emsp;&emsp;FLAME is a finance app, created by 4 engineers over
+              &emsp;&emsp;FLAME is a finance app created by four engineers over
               the span of 5 days. Our goal was to provide an intuitive way for
-              users who want to achieve financial independence. FLAME aims to
-              help everyone who is interested in the FIRE movement and in need
-              of tracking their income, spending, and investments.
+              you to track your spending habits and work towards financial
+              independence. FLAME aims to help anyone who is interested in the
+              FIRE movement, or personal finance in general, get started on
+              their path to financial freedom.
             </p>
             <p className="tutorial">
-              &emsp;&emsp;You are able to enter FLAME by creating an account.
-              This requires that you enter a valid username, password, and email
-              address to create an account. Only the username and password will
-              be required when logging in following this pre-requisite. We
-              utilized the React-Toastify library to create smooth error
-              notifications should any error occur during account creation or
-              login.
+              &emsp;&emsp;You are able to create secure accounts by entering a valid username, password, and email
+              address. Only the username and password will be required when
+              logging in following this pre-requisite. We utilized the
+              React-Toastify library to create smooth error notifications if
+              any error occur during account creation or login.
             </p>
             <p className="tutorial">
               &emsp;&emsp;You are able to create, edit, amd delete budget
               entries based on personal preference. Entering the date optionally
               defaults to the current day if nothing is entered. Flame doesn’t
               require users to input any of their banking information, simply
-              enter their monthly income, monthly spending, investments etc.
+              enter their monthly income and spending.
             </p>
             <p className="tutorial">
               &emsp;&emsp;We carefully developed algorithms for our calculators
               to accurately provide your current financial standing, your
               projected years to financial freedom, and your FIRE Number to
-              reach financial independence. Implemented the Re-charts library to
-              conveniently reflect this data.
+              reach financial independence. We also implemented the Re-charts library to
+              conveniently reflect your data.
             </p>
           </Modal>
           {/* this.changeModalStatus(true)}><BsFillQuestionSquareFill className="question-mark"/></Link> */}
