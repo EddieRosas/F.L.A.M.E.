@@ -19,10 +19,10 @@ class MainPage extends React.Component {
               href="https://www.linkedin.com/in/bcwan/"
               target="_blank"
             >
-              <FaLinkedin size={25} fill="black" />
+              <FaLinkedin size={25} fill="white" />
             </a>
             <a className="github-link" href="https://github.com/bcwan" target="_blank">
-              <FaGithubSquare size={25} fill="black" />
+              <FaGithubSquare size={25} fill="white" />
             </a>
           </div>
           <div className="about-links">
@@ -32,10 +32,10 @@ class MainPage extends React.Component {
               href="https://www.linkedin.com/in/shaphen/"
               target="_blank"
             >
-              <FaLinkedin size={25} fill="black" />
+              <FaLinkedin size={25} fill="white" />
             </a>
             <a className="github-link" href="https://github.com/Shaphen" target="_blank">
-              <FaGithubSquare size={25} fill="black" />
+              <FaGithubSquare size={25} fill="white" />
             </a>
           </div>
           <div className="about-links">
@@ -45,10 +45,10 @@ class MainPage extends React.Component {
               href="https://www.linkedin.com/in/nataliecake/"
               target="_blank"
             >
-              <FaLinkedin size={25} fill="black" />
+              <FaLinkedin size={25} fill="white" />
             </a>
             <a className="github-link" href="https://github.com/NChen666" target="_blank">
-              <FaGithubSquare size={25} fill="black" />
+              <FaGithubSquare size={25} fill="white" />
             </a>
           </div>
           <div className="about-links">
@@ -58,10 +58,10 @@ class MainPage extends React.Component {
               href="https://www.linkedin.com/in/eddie-rosas-45ba6a13a/"
               target="_blank"
             >
-              <FaLinkedin size={25} fill="black" />
+              <FaLinkedin size={25} fill="white" />
             </a>
             <a className="github-link" href="https://github.com/EddieRosas" target="_blank">
-              <FaGithubSquare size={25} fill="black" />
+              <FaGithubSquare size={25} fill="white" />
             </a>
           </div>
         </div>
