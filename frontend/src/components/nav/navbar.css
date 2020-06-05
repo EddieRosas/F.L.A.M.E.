@@ -80,3 +80,29 @@
   font-size: 17px;
   text-decoration: none;
 }
+
+.question-mark {
+  width: 50px;
+  padding: 5px 40px 5px 0px;
+  font-size: 17px;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: right;
+}
+
+.tutorial {
+  font-size: 20px;
+  font-family: monospace;
+  color: rgb(70, 67, 67);
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 27px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: monospace;
+  color: rgb(70, 67, 67);
+}
+
