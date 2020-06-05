@@ -20,3 +20,16 @@
 .recharts-legend-item-text {
   color: black;
 }
+
+.chart {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#responsive-chart {
+  position: relative;
+  margin-left: -60px;
+  left: 0%;
+  top: 0px;
+}

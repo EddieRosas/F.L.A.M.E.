@@ -31,7 +31,7 @@ class Calculators extends React.Component {
         
         this.setState({ fireNum: fireNum })
         this.setState({ yearsToFI: 0 })
-        document.getElementById("fire-num-result").innerHTML = `FIRE Number: $${fireNum} `;
+        // document.getElementById("fire-num-result").innerHTML = `FIRE Number: $${fireNum} `;
     }
 
     yearsToFI = () => {
@@ -48,9 +48,9 @@ class Calculators extends React.Component {
         
         this.setState({ yearsToFI: years });
         this.setState({fireNum: 0 })
-        document.getElementById(
-          "years-to-fi-result"
-        ).innerHTML = `Years to F.I.: ${years} years`;
+        // document.getElementById(
+        //   "years-to-fi-result"
+        // ).innerHTML = `Years to F.I.: ${years} years`;
     }
 
     submitFireNum(e) {
@@ -84,7 +84,7 @@ class Calculators extends React.Component {
                     Calculate
                   </button>
                 </form>
-                <p id="fire-num-result"></p>
+                <p id="fire-num-result">Fire Number: ${this.state.fireNum}</p>
                 <button
                   onClick={this.submitFireNum}
                   className={
@@ -116,7 +116,7 @@ class Calculators extends React.Component {
                   Calculate
                 </button>
               </form>
-              <p id="years-to-fi-result"></p>
+              <p id="years-to-fi-result">Years to F.I: {this.state.yearsToFI} years</p>
               <button
                 onClick={this.submitYearsToFI}
                 className={
