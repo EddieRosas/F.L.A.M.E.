@@ -16,8 +16,8 @@ class Calculators extends React.Component {
     }
 
     componentDidMount() {
-      
       this.props.fetchEntries();
+      this.setState({ fireNum: 0 })
     }
 
     // most basic formulas
