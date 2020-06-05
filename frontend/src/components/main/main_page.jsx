@@ -1,4 +1,5 @@
 import React from "react";
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import "./main.css";
 
 class MainPage extends React.Component {
@@ -11,9 +12,58 @@ class MainPage extends React.Component {
           </div>
         </div>
         <div id="footer">
-          <h1>F.L.A.M.E.</h1>
-          <h3>Financial Literacy and Manage Everything</h3>
-          <footer>Copyright &copy; 2020 F.L.A.M.E.</footer>
+          <div className="about-links">
+            <p className="about-name">BRIAN WAN</p>
+            <a
+              className="linkedin-link"
+              href="https://www.linkedin.com/in/bcwan/"
+              target="_blank"
+            >
+              <FaLinkedin size={25} fill="black" />
+            </a>
+            <a className="github-link" href="https://github.com/bcwan" target="_blank">
+              <FaGithubSquare size={25} fill="black" />
+            </a>
+          </div>
+          <div className="about-links">
+            <p className="about-name">SHAPHEN PANGBURN</p>
+            <a
+              className="linkedin-link"
+              href="https://www.linkedin.com/in/shaphen/"
+              target="_blank"
+            >
+              <FaLinkedin size={25} fill="black" />
+            </a>
+            <a className="github-link" href="https://github.com/Shaphen" target="_blank">
+              <FaGithubSquare size={25} fill="black" />
+            </a>
+          </div>
+          <div className="about-links">
+            <p className="about-name">NATALIE CHEN</p>
+            <a
+              className="linkedin-link"
+              href="https://www.linkedin.com/in/nataliecake/"
+              target="_blank"
+            >
+              <FaLinkedin size={25} fill="black" />
+            </a>
+            <a className="github-link" href="https://github.com/NChen666" target="_blank">
+              <FaGithubSquare size={25} fill="black" />
+            </a>
+          </div>
+          <div className="about-links">
+            <p className="about-name">EDDIE ROSAS</p>
+            <a
+              className="linkedin-link"
+              href="https://www.linkedin.com/in/eddie-rosas-45ba6a13a/"
+              target="_blank"
+            >
+              <FaLinkedin size={25} fill="black" />
+            </a>
+            <a className="github-link" href="https://github.com/EddieRosas" target="_blank">
+              <FaGithubSquare size={25} fill="black" />
+            </a>
+          </div>
         </div>
       </div>
     );

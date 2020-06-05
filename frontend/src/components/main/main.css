@@ -23,8 +23,41 @@
   display: none;
   padding: 10px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   text-align: center;
   background: rgb(194, 191, 191);
   width: 100%;
+}
+
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  width: 165px;
+  justify-content: space-around;
+}
+
+.about-name {
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.github-link {
+  margin-right: 30px;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.github-link:hover {
+  opacity: 1;
+}
+
+.linkedin-link {
+  margin-left: 30px;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.linkedin-link:hover {
+  opacity: 1;
 }
