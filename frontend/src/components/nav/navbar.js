@@ -115,7 +115,7 @@ class NavBar extends React.Component {
               any error occur during account creation or login.
             </p>
             <p className="tutorial">
-              &emsp;&emsp;You are able to create, edit, amd delete budget
+              &emsp;&emsp;You are able to create, edit, and delete budget
               entries based on personal preference. Entering the date optionally
               defaults to the current day if nothing is entered. Flame doesn’t
               require users to input any of their banking information, simply
