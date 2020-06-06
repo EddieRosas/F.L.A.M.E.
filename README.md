@@ -23,7 +23,7 @@ Users are able to create secure accounts. This requires that users enter a valid
 
 ### Budget Entiries
 ![flame](https://github.com/EddieRosas/F.L.A.M.E./blob/master/frontend/src/photos/gifs/flame_budget.gif)
-Users are able to create, edit, amd delete budget entries based on personal preference. Entering the date optionally defaults to the current day if nothing is entered. Flame doesn’t require users to input any of their banking information, simply enter their monthly income and spending.
+Users are able to create, edit, and delete budget entries based on personal preference. Entering the date optionally defaults to the current day if nothing is entered. Flame doesn’t require users to input any of their banking information, simply enter their monthly income and spending.
 
 ### FIRE Number Calculator
 ![flame_calculator](https://github.com/EddieRosas/F.L.A.M.E./blob/master/frontend/src/photos/gifs/flame_calculator.gif)
