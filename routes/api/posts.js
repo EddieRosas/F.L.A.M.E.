@@ -3,7 +3,7 @@ const router = express.Router();
 const passport = require('passport');
 
 const Post = require('../../models/Post');
-// const ValidatePost = require('../../validation/post');
+const validatePostInput = require('../../validation/post');
 
 router.get("/",
   passport.authenticate("jwt", { session: false }),
@@ -18,7 +18,11 @@ router.get("/",
 router.post("/",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    // add validations
+    const { errors, isValid } = validatePostInput(req.body);
+
+    if(!isValid) {
+      return res.status(422).json(errors);
+    }
     
     const newPost = new Post({
       userId: req.user.id,
@@ -33,7 +37,11 @@ router.post("/",
 )
 
 router.patch("/:postId", (req, res) => {
-  // add validations
+  const { errors, isValid } = validatePostInput(req.body);
+
+  if (!isValid) {
+    return res.status(422).json(errors);
+  }
   
   Post.findOneAndUpdate(
     { _id: req.params.postId },
