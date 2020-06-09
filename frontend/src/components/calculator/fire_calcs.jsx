@@ -61,12 +61,12 @@ class Calculators extends React.Component {
 
     calculateFireNum(e) {
       e.preventDefault();
-      this.setState( { yearsToFI: this.fireNumber()} )
+      this.setState( { fireNum: this.fireNumber() })
     }
 
     calculateYearsToFI(e) {
       e.preventDefault();
-      this.setState( {fireNum: this.yearsToFI()} )
+      this.setState( { yearsToFI: this.yearsToFI() })
     }
 
     submitFireNum(e) {
