@@ -26,9 +26,9 @@ const mSTP = (state) => {
     let monthNum = new Date(entry.date).getMonth() + 1;
     if (monthsHash[monthNum]) {
       if (entry.incomeOrDebt === false) {
-        monthsHash[monthNum].expenses += Number(-(entry.amount.$numberDecimal));
+        monthsHash[monthNum].expenses += Number(-(entry.amount.$numberDecimal)).toFixed(2);
       } else {
-        monthsHash[monthNum].income += Number(entry.amount.$numberDecimal);
+        monthsHash[monthNum].income += Number(entry.amount.$numberDecimal).toFixed(2);
       }
     }
   });

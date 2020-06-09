@@ -13,25 +13,29 @@ class Calculators extends React.Component {
 
       this.submitFireNum = this.submitFireNum.bind(this);
       this.submitYearsToFI = this.submitYearsToFI.bind(this);
+      this.calculateFireNum = this.calculateFireNum.bind(this);
+      this.calculateYearsToFI = this.calculateYearsToFI.bind(this);
     }
 
-    componentDidMount() {
-      
-      this.props.fetchEntries();
-    }
+    // componentDidMount() {
+    //   // debugger
+    //   this.props.fetchFiData(this.props.currentUserId)
+    // }
 
     // most basic formulas
 
     fireNumber = () => {
 
         let annualSpending = document.getElementById("fi-input-expenses").value;
-        let withdrawalRate = document.getElementById("fi-input-withdrawls").value
+        let withdrawalRate = document.getElementById("fi-input-withdrawls").value;
 
         let fireNum = ( annualSpending * (100 / withdrawalRate) )
         
-        this.setState({ fireNum: fireNum })
-        this.setState({ yearsToFI: 0 })
-        document.getElementById("fire-num-result").innerHTML = `FIRE Number: $${fireNum} `;
+        // this.setState({ fireNum: fireNum })
+        // this.setState({ yearsToFI: 0 })
+        document.getElementById("fire-num-result").innerHTML = `FIRE Number: $${fireNum.toFixed(2)} `;
+
+        return fireNum;
     }
 
     yearsToFI = () => {
@@ -46,11 +50,23 @@ class Calculators extends React.Component {
         let annualSavings = ( annualIncome - annualSpending );
         let years = ( fireNum / annualSavings ) || 0 
         
-        this.setState({ yearsToFI: years });
-        this.setState({fireNum: 0 })
+        // this.setState({ yearsToFI: years });
+        // this.setState({fireNum: 0 })
         document.getElementById(
           "years-to-fi-result"
-        ).innerHTML = `Years to F.I.: ${years} years`;
+        ).innerHTML = `Years to F.I.: ${years.toFixed(2)} years`;
+
+        return years;
+    }
+
+    calculateFireNum(e) {
+      e.preventDefault();
+      this.setState( { yearsToFI: this.fireNumber()} )
+    }
+
+    calculateYearsToFI(e) {
+      e.preventDefault();
+      this.setState( {fireNum: this.yearsToFI()} )
     }
 
     submitFireNum(e) {
@@ -69,7 +85,7 @@ class Calculators extends React.Component {
             <div className="fi-calculator-box">
               <div className="fire-num-calc">
                 <h2 id="fi-num-title">Fire Number Calculator</h2>
-                <form id="fire-number-form" onSubmit={this.fireNumber}>
+                <form id="fire-number-form" onSubmit={this.calculateFireNum}>
                   <p id="input-title">Estimated Annual Expenses</p>
                   <input id="fi-input-expenses" type="number" min="0" />
                   <p id="input-title">Annual Withdrawal Rate (%)</p>
@@ -99,7 +115,7 @@ class Calculators extends React.Component {
               </div>
               <div className="years-to-fi-calc"></div>
               <h2 id="fi-num-title">Financial Independence Calculator</h2>
-              <form id="fi-years-form" onSubmit={this.yearsToFI}>
+              <form id="fi-years-form" onSubmit={this.calculateYearsToFI}>
                 <p id="input-title">Annual Income (post-tax)</p>
                 <input id="fi-input-income" type="number" min="0" />
                 <p id="input-title">Estimated Annual Expenses</p>
