@@ -57,11 +57,13 @@
 }
 
 #fire-num-result {
+  text-align: center;
   margin: 20px 10px 0px;
   font-size: 25px;
 }
 
 #years-to-fi-result {
+  text-align: center;
   margin: 20px 10px 0px;
   font-size: 25px;
 }
@@ -175,5 +177,55 @@
 }
 
 #fi-submit:hover {
+  background: rgb(214, 212, 212);
+}
+
+.fire-num-submit-disabled {
+  opacity: 0.5;
+  margin-top: 20px;
+  border: 1px solid rgb(155, 153, 153);
+  width: 82%;
+  height: 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.fire-num-submit {
+  margin-top: 20px;
+  border: 1px solid rgb(155, 153, 153);
+  width: 82%;
+  height: 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.fire-num-submit:hover {
+  background: rgb(214, 212, 212);
+}
+
+.years-to-fi-submit-disabled {
+  opacity: 0.5;
+  margin-top: 20px;
+  border: 1px solid rgb(155, 153, 153);
+  width: 82%;
+  height: 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.years-to-fi-submit {
+  margin-top: 20px;
+  border: 1px solid rgb(155, 153, 153);
+  width: 82%;
+  height: 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.years-to-fi-submit:hover {
   background: rgb(214, 212, 212);
 }

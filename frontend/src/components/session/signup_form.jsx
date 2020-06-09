@@ -18,7 +18,7 @@ class SignupForm extends React.Component {
     this.clearedErrors = false;
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentDidUpdate(nextProps) {
     if (nextProps.signedIn === true) {
       this.props.history.push("/login");
     }
@@ -54,24 +54,10 @@ class SignupForm extends React.Component {
     this.props.login(demoUser);
   }
 
-  renderErrors() {
-    return (
-      <div className="errors">
-        <ul>
-          {Object.keys(this.state.errors).map((error, i) => (
-            <li id="error-item" key={`error-${i}`}>
-              {this.state.errors[error]}
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
 
   render() {
     return (
       <div className="signup-box">
-        {this.renderErrors()}
         <form className="signup-form" onSubmit={this.handleSubmit}>
           <p id="signup-title">SIGN UP</p>
           <div id="input-fields">
