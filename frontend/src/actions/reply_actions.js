@@ -52,7 +52,7 @@ const notifyWarning = (message) => {
 }
 
 //thunk actions
-export const fetchReplies = () => dispatch => ApiUtil.fetchReplies()
+export const fetchReplies = (postId) => dispatch => ApiUtil.fetchReplies(postId)
     .then(replies => dispatch(receiveReplies(replies)));
 
 export const fetchReply = (replyId) => dispatch => ApiUtil.fetchReply(replyId)
