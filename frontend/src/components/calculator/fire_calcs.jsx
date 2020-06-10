@@ -17,11 +17,11 @@ class Calculators extends React.Component {
       this.calculateYearsToFI = this.calculateYearsToFI.bind(this);
     }
 
-    componentDidMount() {
-      this.props.fetchEntries();
-      this.setState({ fireNum: 0 })
-    }
 
+    // componentDidMount() {
+    //   // debugger
+    //   this.props.fetchFiData(this.props.currentUserId)
+    // }
     // most basic formulas
 
     fireNumber = () => {
