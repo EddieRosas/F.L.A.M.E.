@@ -4,15 +4,14 @@ const validText = require('./valid-text');
 module.exports = function validateReplyInput(data) {
   let errors = {};
 
-  data.body = validText(data.title) ? data.title : "";
-  data.username = validText(data.username) ? data.username : "";
+  data.body = validText(data.body) ? data.body : "";
   
   if (!Validator.isLength(data.body, { min: 3 })) {
     errors.body = "Reply needs to be at least 3 characters long"
   }
 
   if (Validator.isEmpty(data.body)) {
-    errors.title = "Reply cannot be empty"
+    errors.body = "Reply cannot be empty"
   }
 
   return {
