@@ -4,7 +4,6 @@ class EditBudgetItem extends React.Component {
   constructor(props) {
     super(props);
     const { entry } = this.props;
-    debugger
     this.state = {
       amount: entry.amount.$numberDecimal,
       incomeOrDebt: entry.incomeOrDebt,
@@ -33,13 +32,12 @@ class EditBudgetItem extends React.Component {
       category: this.state.category,
       date: this.state.date,
     };
-    debugger
     this.props.updateEntry(newEntry);
     this.props.setModalIsOpen(false);
   }
 
   render() {
-    // const { setModalIsOpen } = this.props;
+
     return (
       <section>
         <p id="edit-title">Update Item</p>

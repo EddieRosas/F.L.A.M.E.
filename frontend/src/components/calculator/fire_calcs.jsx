@@ -17,10 +17,10 @@ class Calculators extends React.Component {
       this.calculateYearsToFI = this.calculateYearsToFI.bind(this);
     }
 
-    // componentDidMount() {
-    //   // debugger
-    //   this.props.fetchFiData(this.props.currentUserId)
-    // }
+    componentDidMount() {
+      this.props.fetchEntries();
+      this.setState({ fireNum: 0 })
+    }
 
     // most basic formulas
 
@@ -100,7 +100,7 @@ class Calculators extends React.Component {
                     Calculate
                   </button>
                 </form>
-                <p id="fire-num-result"></p>
+                <p id="fire-num-result">Fire Number: ${this.state.fireNum}</p>
                 <button
                   onClick={this.submitFireNum}
                   className={
@@ -132,7 +132,7 @@ class Calculators extends React.Component {
                   Calculate
                 </button>
               </form>
-              <p id="years-to-fi-result"></p>
+              <p id="years-to-fi-result">Years to F.I: {this.state.yearsToFI} years</p>
               <button
                 onClick={this.submitYearsToFI}
                 className={

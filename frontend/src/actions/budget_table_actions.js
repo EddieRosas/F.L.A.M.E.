@@ -77,7 +77,9 @@ export const updateEntry = (entry) => dispatch => {
       return dispatch(receiveTableEntry(entry));
     })
     .catch(err => {
-      notifyFailure(err.response.data);
+      Object.values(err.response.data).map((error) => {
+        return (notifyFailure(error))
+      });
       return dispatch(receiveEntryErrors(err));
     })
   )
