@@ -8,6 +8,7 @@ const validateReplyInput = require('../../validation/reply');
 router.get("/:postId",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
+    debugger
     Reply.find({ postId: req.params.postId })
       .sort({ date: -1 })
       .then(replies => res.json(replies))
@@ -27,7 +28,8 @@ router.post("/:postId",
     const newReply = new Reply({
       postId: req.params.postId,
       body: req.body.body,
-      name: req.user.username
+      username: req.user.username,
+      date: req.body.date,
     });
 
     newReply.save().then(reply => res.json(reply));
@@ -45,7 +47,8 @@ router.patch("/:replyId", (req, res) => {
     { _id: req.params.replyId },
     {
       body: req.body.body,
-      name: req.user.username
+      username: req.user.username,
+      date: req.body.date,
     },
     { new: true }
   ).then(reply => {
@@ -56,7 +59,7 @@ router.patch("/:replyId", (req, res) => {
 })
 
 router.delete("/replyId",
-  passport.authentecate("jwt", { session: false }),
+  passport.authenticate("jwt", { session: false }),
   (req, res) => {
     Reply.findByIdAndDelete(req.params.replyId)
       .then(reply => res.json(reply.id))
@@ -64,4 +67,4 @@ router.delete("/replyId",
   }
 )
 
-modeule.exports = router;
+module.exports = router;
