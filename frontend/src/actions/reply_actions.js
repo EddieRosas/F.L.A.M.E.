@@ -5,37 +5,37 @@ import 'react-toastify/dist/ReactToastify.css';
 
 toast.configure();
 
-export const RECEIVE_POSTS = "RECEIVE_POSTS";
-export const RECEIVE_POST = "RECEIVE_POST";
-export const REMOVE_POST = "REMOVE_POST";
-export const RECEIVE_POST_ERRORS = "RECEIVE_POST_ERRORS";
-export const CLEAR_POST_ERRORS = "CLEAR_POST_ERRORS";
+export const RECEIVE_REPLIES = "RECEIVE_REPLIES";
+export const RECEIVE_REPLY = "RECEIVE_REPLY";
+export const REMOVE_REPLY = "REMOVE_REPLY";
+export const RECEIVE_REPLY_ERRORS = "RECEIVE_REPLY_ERRORS";
+export const CLEAR_REPLY_ERRORS = "CLEAR_REPLY_ERRORS";
 
 
-export const receivePosts = posts => ({
-    type: RECEIVE_POSTS,
-    posts
+export const receiveReplies = replies => ({
+    type: RECEIVE_REPLIES,
+    replies
 });
 
-export const receivePost = post => {
+export const receiveReply = reply => {
     return {
-        type: RECEIVE_POST,
-        post
+        type: RECEIVE_REPLY,
+        reply
     }
 };
 
-export const removePost = postId => ({
-    type: REMOVE_POST,
-    postId
+export const removeReply = replyId => ({
+    type: REMOVE_REPLY,
+    replyId
 });
 
-export const receivePostErrors = errors => ({
-    type: RECEIVE_POST_ERRORS,
+export const receiveReplyErrors = errors => ({
+    type: RECEIVE_REPLY_ERRORS,
     errors
 });
 
-export const clearPostErrors = () => ({
-    type: CLEAR_POST_ERRORS,
+export const clearReplyErrors = () => ({
+    type: CLEAR_REPLY_ERRORS,
 });
 
 // toast messages
@@ -52,17 +52,17 @@ const notifyWarning = (message) => {
 }
 
 //thunk actions
-export const fetchPost = () => dispatch => ApiUtil.fetchPosts()
-    .then(posts => dispatch(receivePosts(posts)));
+export const fetchReplies = () => dispatch => ApiUtil.fetchReplies()
+    .then(replies => dispatch(receiveReplies(replies)));
 
-export const fetchPost = (postId) => dispatch => ApiUtil.fetchPost(postId)
-    .then(post => dispatch(receivePost(post)));
+export const fetchReply = (replyId) => dispatch => ApiUtil.fetchReply(replyId)
+    .then(reply => dispatch(receiveReply(reply)));
 
 
-export const createPost = (post) => dispatch => ApiUtil.createPost(post)
-    .then(post => {
-        notifySuccessful('Successfully created post!');
-        return dispatch(receivePost(post));
+export const createReply = (reply) => dispatch => ApiUtil.createReply(reply)
+    .then(reply => {
+        notifySuccessful('Successfully created reply!');
+        return dispatch(receiveReply(reply));
     })
     .catch(err => {
         Object.values(err.response.data).map((error) => {
@@ -71,12 +71,12 @@ export const createPost = (post) => dispatch => ApiUtil.createPost(post)
         return dispatch(receivePostErrors(err))
     });
 
-export const updatePost = (post) => dispatch => {
+export const updateReply = (reply) => dispatch => {
     return (
-        ApiUtil.updatePost(post)
-            .then(post => {
-                notifySuccessful('Successfully updated post!');
-                return dispatch(receivePost(post));
+        ApiUtil.updateReply(reply)
+            .then(reply => {
+                notifySuccessful('Successfully updated reply!');
+                return dispatch(receiveReply(reply));
             })
             .catch(err => {
                 Object.values(err.response.data).map((error) => {
@@ -87,12 +87,12 @@ export const updatePost = (post) => dispatch => {
     )
 }
 
-export const deletePost = postId => dispatch => {
+export const deleteReply = replyId => dispatch => {
     return (
-        ApiUtil.deletePost(postId)
+        ApiUtil.deleteReply(replyId)
             .then(() => {
                 notifyWarning('Successfully deleted post!');
-                return dispatch(removePost(postId));
+                return dispatch(removeReply(replyId));
             }
             )
             .catch(() => {
