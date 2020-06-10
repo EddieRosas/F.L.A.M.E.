@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export const fetchReplies = () => {
-    return axios.get("/api/replies");
+export const fetchReplies = (postId) => {
+    return axios.get("/api/replies/postId");
 };
 
 export const fetchReply = (replyId) => {
