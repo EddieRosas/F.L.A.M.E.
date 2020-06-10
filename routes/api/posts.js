@@ -11,7 +11,7 @@ router.get("/",
     Post.find()
       .sort({ date: -1 })
       .then(posts => res.json(posts))
-      .catch(err => res.status(404).json({ noPostsFound: "No Posts were found :c" }))
+      .catch(err => res.status(404).json({ noPostsFound: "No posts were found :c" }))
   }
 )
 

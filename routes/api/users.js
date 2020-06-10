@@ -120,7 +120,7 @@ router.patch("/:userId", (req, res) => {
         objForUpdate,
         { new: true }
     )
-    .then((userData) => {
+    .then((userData) => { 
     
         return res.json(
             { 
