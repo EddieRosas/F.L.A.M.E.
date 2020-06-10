@@ -56,7 +56,7 @@ router.patch("/:replyId", (req, res) => {
   });
 })
 
-router.delete("/replyId",
+router.delete("/:replyId",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     Reply.findByIdAndDelete(req.params.replyId)
