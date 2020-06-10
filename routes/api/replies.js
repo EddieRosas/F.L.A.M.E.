@@ -37,18 +37,16 @@ router.post("/:postId",
 )
 
 router.patch("/:replyId", (req, res) => {
-  const { errors, isValid } = validateReplyInput(req.body)
+  // const { errors, isValid } = validateReplyInput(req.body)
 
-  if (!isValid) {
-    return res.status(422).json(errors)
-  }
+  // if (!isValid) {
+  //   return res.status(422).json(errors)
+  // }
 
   Reply.findOneAndUpdate(
     { _id: req.params.replyId },
     {
       body: req.body.body,
-      username: req.user.username,
-      date: req.body.date,
     },
     { new: true }
   ).then(reply => {
