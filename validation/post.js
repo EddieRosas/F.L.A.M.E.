@@ -5,10 +5,10 @@ module.exports = function validatePostInput(data) {
   let errors = {};
 
   data.title = validText(data.title) ? data.title : "";
-  data.description = validText(data.description) ? data.description : ""
+  data.description = validText(data.description) ? data.description : "";
   
   if (!Validator.isNumeric(data.postType)) {
-    errors.postType = "Type must be a number"
+    errors.postType = "Please choose either Question or Story"
   }
 
   if (Validator.isEmpty(data.postType)) {
