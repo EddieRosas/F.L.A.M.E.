@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const mongoose = require('mongoose');
 const passport = require("passport");
 
 const BudgetTableEntry = require("../../models/BudgetTableEntry");
@@ -35,7 +34,7 @@ router.post("/",
           incomeOrDebt: req.body.incomeOrDebt,
           description: req.body.description,
           category: req.body.category,
-          date: req.body.date === "" ? new Date(): req.body.date,
+          date: req.body.dateq === "" ? new Date() : req.body.date,
         });
 
         newEntry.save().then(entry => res.json(entry));
