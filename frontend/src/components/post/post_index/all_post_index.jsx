@@ -20,7 +20,7 @@ class AllPostIndex extends React.Component {
   }
 
   render() {
-    
+    return null;
   }
 }
 
