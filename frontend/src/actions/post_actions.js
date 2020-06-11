@@ -52,7 +52,7 @@ const notifyWarning = (message) => {
 }
 
 //thunk actions
-export const fetchPost = () => dispatch => ApiUtil.fetchPosts()
+export const fetchPosts = () => dispatch => ApiUtil.fetchPosts()
     .then(posts => dispatch(receivePosts(posts)));
 
 export const fetchPost = (postId) => dispatch => ApiUtil.fetchPost(postId)
