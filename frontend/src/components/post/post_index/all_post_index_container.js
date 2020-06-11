@@ -7,5 +7,14 @@ import {
 } from '../../../actions/post_actions';
 
 const mSTP = (state) => ({
-  posts: Object.values
+  currentUser: state.session.user,
+  posts: Object.values(state.post)
 });
+
+const mDTP = (dispatch) => ({
+  fetchPosts: () => dispatch(fetchPosts()),
+  fetchPost: (postId) => dispatch(fetchPost(postId)),
+  createPost: (post) => dispatch(createPost(post))
+});
+
+export default connect(mSTP, mDTP)(AllPostIndex);
