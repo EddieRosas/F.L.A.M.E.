@@ -13,6 +13,7 @@ import CalculatorsContainer from './calculator/fire_calcs_container';
 import AllPostIndexContainer from './post/post_index/all_post_index_container';
 import BudgetContainer from './budget/budget.jsx'
 
+import AskPostContainer from '../components/post/new_post/ask_post_container';
 
 const App = () => (
   <div>
@@ -20,8 +21,15 @@ const App = () => (
     <Switch>
       <ProtectedRoute exact path="/budget" component={BudgetContainer} />
       <ProtectedRoute exact path="/profile" component={ProfileContainer} />
-      <ProtectedRoute exact path="/calculators" component={CalculatorsContainer} />
+      <ProtectedRoute
+        exact
+        path="/calculators"
+        component={CalculatorsContainer}
+      />
       <ProtectedRoute exact path="/forum" component={AllPostIndexContainer} />
+
+      <ProtectedRoute exact path="/ask" component={AskPostContainer} />
+
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <AuthRoute exact path="/" component={MainPage} />

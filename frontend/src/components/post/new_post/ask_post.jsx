@@ -5,8 +5,10 @@ class AskPost extends React.Component {
     super(props);
     this.state = {
       title: "",
-      description: ""
+      description: "",
+      postType: ""
     }
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
@@ -16,8 +18,8 @@ class AskPost extends React.Component {
   }
 
   handleSubmit() {
-    //this.props.createPost(this.state)
-    //  .then(() => this.props.changeModalStatusForAsk(false));
+    this.props.createPost(this.state);
+     //.then(() => this.props.changeModalStatusForAsk(false));
   }
 
   render() {
@@ -38,6 +40,17 @@ class AskPost extends React.Component {
             onChange={this.update("description")}
           />
           <br />
+          <select onChange={this.update("postType")}>
+            <option
+              value=""
+              disabled
+              selected={this.state.postType === "" ? "selected" : ""}
+            >
+              Choose Post Type
+            </option>
+            <option value="0">Question</option>
+            <option value="1">Story</option>
+          </select>
           <button type="submit">Submit your post!</button>
         </form>
       </div>
