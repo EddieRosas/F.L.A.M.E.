@@ -22,6 +22,9 @@ const PostSchema = new Schema({
     required: true,
     index: true
   },
+  likes: [
+    { type: Schema.Types.ObjectId, ref: "users" }
+  ],
   createdAt: {
     type: Date,
     default: Date.now
