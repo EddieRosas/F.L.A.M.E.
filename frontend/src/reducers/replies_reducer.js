@@ -11,7 +11,7 @@ const repliesReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_REPLIES:
-            return Object.assign({}, nextState, replies);
+            return Object.assign({}, nextState, action.replies);
         case RECEIVE_REPLY:
             return Object.assign({}, nextState, { [action.reply.id]: action.reply });
 
