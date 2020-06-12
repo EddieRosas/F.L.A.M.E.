@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ListGroup from "react-bootstrap/ListGroup";
 import Modal from "react-modal";
+import AllPostItem from './all_post_item';
 
 class AllPostIndex extends React.Component {
   constructor(props) {
