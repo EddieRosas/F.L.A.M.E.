@@ -6,8 +6,8 @@ class ShowPost extends React.Component {
     super(props);
     this.state = {
       modalIsOpenForEdit: false,
-      modalIsOpenForAsk: false
-    }
+      modalIsOpenForAsk: false,
+    };
   }
 
   componentDidMount() {
@@ -25,10 +25,13 @@ class ShowPost extends React.Component {
     this.props.fetchPost(newId);
   }
 
+  changeModalStatusForAsk(status) {
+    this.setState({ modalIsOpenForAsk: status });
+  }
+
   render() {
     return null;
   }
-
 }
 
 export default ShowPost;
