@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ListGroupItem } from 'react-bootstrap';
 
+// commented out comments is code that should work if props are imported
 // const AllQuestionsItem = ({ post, fetchPost }) => {
 const AllPostItem = () => {
   return (
