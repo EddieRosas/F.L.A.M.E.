@@ -81,6 +81,15 @@
   text-decoration: none;
 }
 
+#forum-link {
+  width: 60px;
+  padding: 5px 10px 5px;
+  color: black;
+  font-family: monospace;
+  font-size: 17px;
+  text-decoration: none;
+}
+
 .question-mark {
   width: 50px;
   padding: 5px 40px 5px 0px;
