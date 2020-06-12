@@ -15,6 +15,11 @@ class AskPost extends React.Component {
     }
   }
 
+  handleSubmit() {
+    //this.props.createPost(this.state)
+    //  .then(() => this.props.changeModalStatusForAsk(false));
+  }
+
   render() {
     return null;
   }
