@@ -8,8 +8,12 @@ import {
 
 const mSTP = (state) => ({
   currentUser: state.session.user,
-  posts: Object.values(state.post)
 });
+
+// const mSTP = (state) => ({
+//   currentUser: state.session.user,
+//   posts: Object.values(state.post),
+// });
 
 const mDTP = (dispatch) => ({
   fetchPosts: () => dispatch(fetchPosts()),
