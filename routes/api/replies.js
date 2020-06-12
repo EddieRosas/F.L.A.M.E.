@@ -8,7 +8,6 @@ const validateReplyInput = require('../../validation/reply');
 router.get("/:postId",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    debugger
     Reply.find({ postId: req.params.postId })
       .sort({ date: -1 })
       .then(replies => res.json(replies))
@@ -64,5 +63,45 @@ router.delete("/:replyId",
       .catch(err => res.status(404).json({ noReplyFound: "Reply does not exist" }));
   }
 )
+
+router.put(
+  "/like",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    Reply.findByIdAndUpdate(
+      req.body.replyId,
+      {
+        $push: { likes: req.user.id },
+      },
+      { new: true }
+    )
+      .then((reply) => {
+        return res.json(reply);
+      })
+      .catch((err) => {
+        res.json(err);
+      });
+  }
+);
+
+router.put(
+  "/unlike",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    Reply.findByIdAndUpdate(
+      req.body.replyId,
+      {
+        $pull: { likes: req.user.id },
+      },
+      { new: true }
+    )
+      .then((reply) => {
+        return res.json(reply);
+      })
+      .catch((err) => {
+        res.json(err);
+      });
+  }
+);
 
 module.exports = router;

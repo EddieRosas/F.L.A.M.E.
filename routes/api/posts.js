@@ -68,4 +68,32 @@ router.delete("/:postId",
   }
 )
 
+router.put("/like", passport.authenticate("jwt", { session: false }),
+(req, res) => {
+  Post.findByIdAndUpdate(req.body.postId,
+    {
+      $push: {likes: req.user.id}
+    }, 
+    { new: true }
+  ).then(post => {
+    return res.json(post)
+  }).catch(err => {
+    res.json(err)
+  });
+});
+
+router.put("/unlike", passport.authenticate("jwt", { session: false }),
+(req, res) => {
+  Post.findByIdAndUpdate(req.body.postId,
+    {
+      $pull: {likes: req.user.id}
+    }, 
+    { new: true }
+  ).then(post => {
+    return res.json(post)
+  }).catch(err => {
+    res.json(err)
+  });
+});
+
 module.exports = router;
