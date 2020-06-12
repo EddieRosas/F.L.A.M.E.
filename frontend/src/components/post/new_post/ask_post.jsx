@@ -21,7 +21,29 @@ class AskPost extends React.Component {
   }
 
   render() {
-    return null;
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <label>Title</label>
+          <input
+            type="text"
+            value={this.state.title}
+            onChange={this.update("title")}
+          />
+          <br />
+          <label>Body</label>
+          <textarea
+            type="text"
+            value={this.state.description}
+            onChange={this.update("description")}
+          />
+          <br />
+          <button type="submit">Submit your post!</button>
+        </form>
+      </div>
+    );
   }
 
 }
+
+export default AskPost;
