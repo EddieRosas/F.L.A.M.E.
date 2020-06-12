@@ -70,7 +70,6 @@ router.delete("/:postId",
 
 router.put("/like", passport.authenticate("jwt", { session: false }),
 (req, res) => {
-  debugger
   Post.findByIdAndUpdate(req.body.postId,
     {
       $push: {likes: req.user.id}
