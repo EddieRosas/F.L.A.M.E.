@@ -9,7 +9,7 @@ const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 const validateFireCalcs = require("../../validation/fire_calcs");
 
-//private auth rout
+//private auth route
 router.get("/current", passport.authenticate("jwt", {session: false}), (req, res) => {
     res.json({id: req.user.id, username: req.user.username, email: req.user.email });
 })
@@ -120,7 +120,7 @@ router.patch("/:userId", (req, res) => {
         objForUpdate,
         { new: true }
     )
-    .then((userData) => {
+    .then((userData) => { 
     
         return res.json(
             { 

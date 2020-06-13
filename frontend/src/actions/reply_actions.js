@@ -1,4 +1,4 @@
-import * as ApiUtil from "../util/post_api_util";
+import * as ApiUtil from "../util/reply_api_util";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -68,7 +68,7 @@ export const createReply = (reply) => dispatch => ApiUtil.createReply(reply)
         Object.values(err.response.data).map((error) => {
             return (notifyFailure(error))
         });
-        return dispatch(receivePostErrors(err))
+        return dispatch(receiveReplyErrors(err));
     });
 
 export const updateReply = (reply) => dispatch => {
@@ -82,7 +82,7 @@ export const updateReply = (reply) => dispatch => {
                 Object.values(err.response.data).map((error) => {
                     return (notifyFailure(error))
                 });
-                return dispatch(receivePosts(err));
+                return dispatch(receiveReply(err));
             })
     )
 }

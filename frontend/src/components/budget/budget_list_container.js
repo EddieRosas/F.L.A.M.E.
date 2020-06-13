@@ -26,12 +26,16 @@ const mSTP = (state) => {
     let monthNum = new Date(entry.date).getMonth() + 1;
     if (monthsHash[monthNum]) {
       if (entry.incomeOrDebt === false) {
-        monthsHash[monthNum].expenses += Number(-(entry.amount.$numberDecimal));
+        let monthlyExpense = Number(entry.amount.$numberDecimal).toFixed(2)
+        monthsHash[monthNum].expenses -= parseFloat(monthlyExpense)
       } else {
-        monthsHash[monthNum].income += Number(entry.amount.$numberDecimal);
+        let monthlyIncome = Number(entry.amount.$numberDecimal).toFixed(2)
+        monthsHash[monthNum].income += parseFloat(monthlyIncome)
       }
     }
   });
+
+  debugger
 
   let data = Object.values(monthsHash);
   
