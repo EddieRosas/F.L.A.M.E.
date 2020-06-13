@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ListGroup from "react-bootstrap/ListGroup";
 import Modal from "react-modal";
 import AllPostItem from './all_post_item';
+import "./post_index.css";
 
 class AllPostIndex extends React.Component {
   constructor(props) {
@@ -30,7 +31,7 @@ class AllPostIndex extends React.Component {
     } = this.props;
 
     return (
-      <div>
+      <div className="posts-list">
         <ListGroup variant="flush">
           {posts.map((post) => (
             <AllPostItem

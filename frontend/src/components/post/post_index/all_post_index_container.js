@@ -12,9 +12,10 @@ const mSTP = (state) => ({
   posts: Object.values(state.post),
 });
 
+
+//fetchPost: (postId) => dispatch(fetchPost(postId)),
 const mDTP = (dispatch) => ({
   fetchPosts: () => dispatch(fetchPosts()),
-  fetchPost: (postId) => dispatch(fetchPost(postId)),
   createPost: (post) => dispatch(createPost(post))
 });
 
