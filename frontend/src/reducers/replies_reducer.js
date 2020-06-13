@@ -11,7 +11,11 @@ const repliesReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_REPLIES:
-            return Object.assign({}, nextState, action.replies);
+            let reply = {};
+            for(let i=0; i<action.replies.data.length;i++){
+                reply[action.replies.data[i]._id] = action.replies.data[i];
+            }
+            return Object.assign({}, nextState, reply);
         case RECEIVE_REPLY:
             return Object.assign({}, nextState, { [action.reply.id]: action.reply });
 
