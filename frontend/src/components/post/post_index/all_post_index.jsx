@@ -13,7 +13,7 @@ class AllPostIndex extends React.Component {
   }
 
   componentDidMount() {
-    //this.props.fetchPosts();
+    this.props.fetchPosts();
     Modal.setAppElement("#root");
   }
 
@@ -22,25 +22,27 @@ class AllPostIndex extends React.Component {
   }
 
   render() {
-    // const {
-    //   currentUser,
-    //   posts,
-    //   fetchPost,
-    //   createPost,
-    // } = this.props;
+    const {
+      currentUser,
+      posts,
+      fetchPost,
+      createPost,
+    } = this.props;
 
-    // return (
-    //   <ListGroup variant="flush">
-    //     {posts.map((post) => (
-    //       <AllPostItem
-    //         post={post}
-    //         fetchPost={fetchPost}
-    //         key={post._id}
-    //       />
-    //     ))}
-    //   </ListGroup>
-    // );
-    return null;
+    return (
+      <div>
+        <ListGroup variant="flush">
+          {posts.map((post) => (
+            <AllPostItem
+              post={post}
+              fetchPost={fetchPost}
+              key={post._id}
+            />
+          ))}
+        </ListGroup>
+      </div>
+    );
+    // return null;
   }
 }
 

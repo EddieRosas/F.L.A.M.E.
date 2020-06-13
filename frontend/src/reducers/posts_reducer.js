@@ -4,7 +4,6 @@ import { RECEIVE_USER_LOGOUT } from "../actions/session_actions";
 const postsReducer = (state = {}, action) => {
     Object.freeze(state);
     let nextState = Object.assign({}, state);
-
     switch (action.type) {
       case RECEIVE_POSTS:
         let posts = {};
