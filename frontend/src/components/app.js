@@ -29,7 +29,7 @@ const App = () => (
         component={CalculatorsContainer}
       />
       <ProtectedRoute exact path="/posts" component={AllPostIndexContainer} />
-      {/* <ProtectedRoute exact path="/posts/:postId" component={ShowPostContainer} /> */}
+      <ProtectedRoute exact path="/posts/:postId" component={ShowPostContainer} />
       <ProtectedRoute exact path="/ask" component={AskPostContainer} />
 
       <AuthRoute exact path="/login" component={LoginFormContainer} />
