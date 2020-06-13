@@ -42,7 +42,6 @@ class AllPostIndex extends React.Component {
         </ListGroup>
       </div>
     );
-    // return null;
   }
 }
 
