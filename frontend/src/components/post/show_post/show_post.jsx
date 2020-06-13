@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
+import "./show_post.css"
 
 class ShowPost extends React.Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class ShowPost extends React.Component {
     }
 
     return (
-      <div>
+      <div className="show-post-component">
         <h1>{post.title}</h1>
         <p>{post.description}</p>
       </div>
