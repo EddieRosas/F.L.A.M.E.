@@ -30,9 +30,15 @@ class ShowPost extends React.Component {
   }
 
   render() {
+    const { post, currentUser, updatePost, createPost } = this.props;
+    if (!post) {
+      return null;
+    }
+
     return (
       <div>
-        <p>Hello</p>
+        <h1>{post.title}</h1>
+        <p>{post.description}</p>
       </div>
     )
   }
