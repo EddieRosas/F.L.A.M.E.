@@ -7,7 +7,11 @@ const postsReducer = (state = {}, action) => {
 
     switch (action.type) {
       case RECEIVE_POSTS:
-        return Object.assign({}, nextState, action.posts);
+        let posts = {};
+        for (let i = 0; i < action.posts.data.length; i++){
+            posts[action.posts.data[i]._id] = action.posts.data[i];
+        }
+        return Object.assign({}, nextState, posts);
       case RECEIVE_POST:
         return Object.assign({}, nextState, {
           [action.post.data._id]: action.post.data,
@@ -17,7 +21,7 @@ const postsReducer = (state = {}, action) => {
         return nextState;
       case RECEIVE_USER_LOGOUT:
         return {};
-        
+
       default:
         return state;
     }
