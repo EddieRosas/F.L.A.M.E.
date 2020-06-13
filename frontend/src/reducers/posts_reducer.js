@@ -6,7 +6,12 @@ const postsReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_POSTS:
-            return Object.assign({}, nextState, posts);
+            let post = {};
+            for (let i = 0; i < action.posts.data.length; i++) {
+                post[action.posts.data[i]._id] = action.posts.data[i];
+            }
+            
+            return Object.assign({}, nextState, post);
         case RECEIVE_POST:
             return Object.assign({}, nextState, { [action.post.id]: action.post });
 
