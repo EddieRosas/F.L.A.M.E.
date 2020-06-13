@@ -10,20 +10,20 @@ class ShowPost extends React.Component {
     };
   }
 
-  componentDidMount() {
-    //this.props.fetchPost(this.props.postId);
-    Modal.setAppElement("#root");
-  }
+  // componentDidMount() {
+  //   //this.props.fetchPost(this.props.postId);
+  //   Modal.setAppElement("#root");
+  // }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.postId !== this.props.postId) {
-      //this.fetchData(this.props.postId);
-    }
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevProps.postId !== this.props.postId) {
+  //     //this.fetchData(this.props.postId);
+  //   }
+  // }
 
-  fetchData(newId) {
-    this.props.fetchPost(newId);
-  }
+  // fetchData(newId) {
+  //   this.props.fetchPost(newId);
+  // }
 
   changeModalStatusForAsk(status) {
     this.setState({ modalIsOpenForAsk: status });
