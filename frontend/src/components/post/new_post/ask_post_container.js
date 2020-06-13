@@ -2,7 +2,6 @@ import { connect } from "react-redux";
 import AskPost from "./ask_post";
 import {
   fetchPost,
-  fetchPosts,
   updatePost,
   createPost,
 } from "../../../actions/post_actions";
@@ -16,8 +15,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => ({
   fetchPost: (postId) => dispatch(fetchPost(postId)),
   updatePost: (post) => dispatch(updatePost(post)),
-  createPost: (post) => dispatch(createPost(post)),
-  fetchPosts: () => dispatch(fetchPosts())
+  createPost: (post) => dispatch(createPost(post))
 });
 
 export default connect(mSTP, mDTP)(AskPost);
