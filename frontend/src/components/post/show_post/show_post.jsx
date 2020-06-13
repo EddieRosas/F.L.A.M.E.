@@ -30,7 +30,11 @@ class ShowPost extends React.Component {
   }
 
   render() {
-    return null;
+    return (
+      <div>
+        <p>Show Page</p>
+      </div>
+    )
   }
 }
 

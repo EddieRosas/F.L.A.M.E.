@@ -9,7 +9,7 @@ const AllPostItem = ({ post }) => {
   return (
     <ListGroupItem>
       <div>
-        <Link to={`/post/${post._id}`}>{post.title}</Link>
+        <Link to={`/posts/${post._id}`}>{post.title}</Link>
         <p>{post.description}</p>
       </div>
     </ListGroupItem>
