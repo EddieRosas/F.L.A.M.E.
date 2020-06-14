@@ -4,10 +4,11 @@
 
 .nav-bar-index {
   display: flex;
-  width: 70%;
+  width: 65%;
   background-color: whitesmoke;
   margin: 30px;
   padding: 20px;
+  border-radius: 3px;
 }
 
 .nav-item {
