@@ -15,7 +15,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => ({
   fetchPost: (postId) => dispatch(fetchPost(postId)),
   updatePost: (post) => dispatch(updatePost(post)),
-  createPost: (post) => dispatch(createPost(post)),
+  createPost: (post) => dispatch(createPost(post))
 });
 
 export default connect(mSTP, mDTP)(AskPost);
