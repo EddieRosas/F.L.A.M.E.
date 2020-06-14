@@ -2,9 +2,10 @@ import React from "react";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import { Switch } from "react-router-dom";
 import NavBarContainer from "./nav/navbar_container";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./reset.css";
 import "./app.css";
-// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import MainPage from "./main/main_page.jsx";
 import LoginFormContainer from "./session/login_form_container";
