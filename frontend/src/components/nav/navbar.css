@@ -99,14 +99,16 @@
 }
 
 .question-mark {
-  width: 60px;
+  width: 23px;
   height: 50px;
-  padding: 5px 40px 5px 0px;
+  padding: 5px 0px 5px 0px;
+  margin: 0px 40px;
   font-size: 28px;
   text-decoration: none;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: right;
+}
+
+.modal-page {
+  width: 97px;
 }
 
 .tutorial {
