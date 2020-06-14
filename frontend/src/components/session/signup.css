@@ -50,14 +50,15 @@
 
 #input {
   width: 298px;
-  color: black;
+  color: white;
+  background-color: black;
   border: 1px solid white;
   padding: 5px 5px 5px 10px;
   border-radius: 5px;
 }
 
 #input:focus {
-  border-color: rgb(112, 58, 240);
+  border-color: #ff7c7c;
 }
 
 #submit-button {
@@ -65,13 +66,13 @@
   width: 298px;
   padding: 3px;
   border-radius: 5px;
-  border: 1px solid grey;
-  background-color: rgb(214, 211, 211);
-  transition: background-color .3s;
+  border: none;
+  background-color: #ff7c7c;
+  transition: all .3s;
 }
 
 #submit-button:hover {
-  background-color: rgb(236, 231, 231);
+  transform: scale(1.03);
 }
 
 #signup-session-go-back {

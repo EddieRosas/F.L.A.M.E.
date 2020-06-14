@@ -50,7 +50,8 @@
 
 #input {
   width: 298px;
-  color: black;
+  color: white;
+  background-color: black;
   border: 1px solid white;
   padding: 5px;
   border-radius: 5px;
@@ -66,14 +67,14 @@
   width: 298px;
   height: 30px;
   padding: 3px;
-  border: 1px solid grey;
+  border: none;
   border-radius: 5px;
-  background-color: rgb(214, 211, 211);
-  transition: background-color .3s;
+  background-color: #ff7c7c;
+  transition: all .3s;
 }
 
 #submit-button:hover {
-  background-color: rgb(236, 231, 231);
+  transform: scale(1.03);
 }
 
 #demo-button {
@@ -83,14 +84,15 @@
   height: 30px;
   padding: 3px;
   cursor: pointer;
-  border: 1px solid grey;
+  color: black;
+  border: none;
   border-radius: 5px;
-  background-color: rgb(214, 211, 211);
-  transition: background-color .3s;
+  background-color: #ff7c7c;
+  transition: all .3s;
 }
 
 #demo-button:hover {
-  background-color: #E0B0ff;
+  transform: scale(1.03);
 }
 
 #session-go-back {
