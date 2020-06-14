@@ -9,7 +9,7 @@
   display: flex;
   text-align: center;
   padding-bottom: 10px;
-  width: 65%;
+  width: 60%;
 }
 
 .user-profile-header {
@@ -19,6 +19,7 @@
   font-weight: 900;
   padding-left: 20px;
   text-decoration: none;
+  margin-top: 13px;
 }
 
 .user-profile-header:hover {
@@ -33,7 +34,7 @@
 }
 
 .session-buttons {
-  width: 35%;
+  width: 40%;
   display: flex;
   flex-wrap: wrap;
   text-align: right;
@@ -62,8 +63,7 @@
 }
 
 #logout-button {
-  width: 50px;
-  padding: 5px 50px 5px 10px;
+  padding: 5px 25px 5px 10px;
   color: black;
   font-family: monospace;
   font-size: 17px;
@@ -72,7 +72,6 @@
 }
 
 #budget-link {
-  width: 60px;
   padding: 5px 10px 5px;
   color: black;
   font-family: monospace;
@@ -81,7 +80,6 @@
 }
 
 #calculator-link {
-  width: 143px;
   padding: 5px 10px 5px;
   color: black;
   font-family: monospace;
@@ -90,7 +88,6 @@
 }
 
 #forum-link {
-  width: 60px;
   padding: 5px 10px 5px;
   color: black;
   font-family: monospace;

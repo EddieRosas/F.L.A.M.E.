@@ -6,6 +6,7 @@ import Modal from "react-modal";
 import AllPostItem from './all_post_item';
 
 import "./post_index.css";
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 class AllPostIndex extends React.Component {
   constructor(props) {
