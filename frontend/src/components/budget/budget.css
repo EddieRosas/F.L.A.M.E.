@@ -20,12 +20,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background: rgb(238, 236, 236);
+  background: rgba(23, 23, 23, 0.7);
+  color: white;
   padding: 50px 30px;
   box-shadow: 5px 8px 12px black;
   border-right: 1px solid black;
   position: relative;
-  /* display: none; */
 }
 
 .budget-form {
@@ -41,9 +41,10 @@
 }
 
 #budget-amount {
-  width: 93%;
+  width: 97%;
   border: none;
-  background-color: rgb(238, 236, 236);
+  background-color: black;
+  color: white;
   border-bottom: 1px solid black;
   padding: 5px;
   margin: 15px 10px;
@@ -51,13 +52,14 @@
 }
 
 #budget-amount:focus {
-  border-bottom: 1px solid rgb(112, 58, 240);
+  border-bottom: 1px solid #ff7c7c;
 }
 
 #budget-description {
-  width: 93%;
+  width: 97%;
   border: none;
-  background-color: rgb(238, 236, 236);
+  background-color: black;
+  color: white;
   border-bottom: 1px solid black;
   padding: 5px;
   margin: 10px 10px;
@@ -65,38 +67,41 @@
 }
 
 #budget-description:focus {
-  border-bottom: 1px solid rgb(112, 58, 240);
+  border-bottom: 1px solid #ff7c7c;
 }
 
 #budget-date {
-  width: 92%;
+  width: 97%;
   border: none;
   font-size: 14px;
   border-bottom: 1px solid black;
+  background-color: black;
+  color: white;
   padding: 5px;
   margin: 10px 10px;
   transition: border-bottom .3s;
 }
 
 #budget-date:focus {
-  border-bottom: 1px solid rgb(112, 58, 240);
+  border-bottom: 1px solid #ff7c7c;
 }
 
 #budget-date:hover {
-  border-bottom: 1px solid rgb(112, 58, 240);
+  border-bottom: 1px solid #ff7c7c;
 }
 
 #budget-select {
   width: 97%;
   height: 30px;
   margin: 10px 10px;
-  background-color: rgb(206, 203, 203);
+  background-color: black;
+  color: white;
   cursor: pointer;
   transition: border .3s;
 }
 
 #budget-select:hover {
-  border: 1px solid rgb(112, 58, 240);
+  border: 1px solid #ff7c7c;
 }
 
 #budget-dropdown-first {
@@ -129,12 +134,14 @@
   height: 30px;
   padding: 3px;
   border-radius: 5px;
+  background-color: black;
+  color: white;
   border: 1px solid;
-  transition: background-color .5s;
+  transition: border-color .5s;
 }
 
 #budget-submit:hover {
-  background-color: rgb(206, 203, 203);
+  border-color: #ff7c7c;
 }
 
 #budget-list-title {
