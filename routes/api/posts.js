@@ -15,6 +15,15 @@ router.get("/",
   }
 )
 
+router.get("/:id",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    Post.findById(req.params.id)
+      .then(post => res.json(post))
+      .catch(err => res.status(404).json({ noPostFound: "No post were found :c" }))
+  }
+)
+
 router.post("/",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {

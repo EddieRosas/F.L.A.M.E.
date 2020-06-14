@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
+import "./show_post.css"
 
 class ShowPost extends React.Component {
   constructor(props) {
@@ -11,13 +12,13 @@ class ShowPost extends React.Component {
   }
 
   componentDidMount() {
-    //this.props.fetchPost(this.props.postId);
+    this.props.fetchPost(this.props.postId);
     Modal.setAppElement("#root");
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.postId !== this.props.postId) {
-      //this.fetchData(this.props.postId);
+      this.fetchData(this.props.postId);
     }
   }
 
@@ -30,7 +31,17 @@ class ShowPost extends React.Component {
   }
 
   render() {
-    return null;
+    const { post, currentUser, updatePost, createPost } = this.props;
+    if (!post) {
+      return null;
+    }
+
+    return (
+      <div className="show-post-component">
+        <h1>{post.title}</h1>
+        <p>{post.description}</p>
+      </div>
+    )
   }
 }
 
