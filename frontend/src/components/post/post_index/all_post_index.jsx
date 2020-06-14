@@ -37,6 +37,7 @@ class AllPostIndex extends React.Component {
         <Nav
           className="nav-bar-index"
           activeKey="/home"
+          variant="pills"
           // onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
         >
           <Nav.Item className="nav-item">
