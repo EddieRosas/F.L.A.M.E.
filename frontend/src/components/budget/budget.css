@@ -217,19 +217,22 @@
   cursor: pointer;
   overflow: initial;
   padding: 8px;
+  transition: color 0.2s;
 }
 
 #budget-item-change:hover {
-  background-color: darkgray;
+  color: green;
 }
 
 #budget-item-delete-button {
-  background-color: rgb(238, 236, 236);
+  background-color: rgba(23, 23, 23, 0);
+  color: white;
   border: none;
+  transition: color 0.2s;
 }
 
 #budget-item-delete-button:hover {
-  background-color: darkgray;
+  color: red;
 }
 
 ::-webkit-scrollbar {
