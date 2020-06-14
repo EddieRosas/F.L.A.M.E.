@@ -1,6 +1,7 @@
 .navbar-box {
   background-color: #E0B0ff;
   display: flex;
+  height: 80px;
   box-shadow: 0px 8px 12px black;
 }
 
@@ -8,7 +9,7 @@
   display: flex;
   text-align: center;
   padding-bottom: 10px;
-  width: 50%;
+  width: 70%;
 }
 
 .user-profile-header {
@@ -20,14 +21,19 @@
   text-decoration: none;
 }
 
+.user-profile-header:hover {
+  text-decoration: none;
+  color: black;
+}
+
 .title-name {
   font-family: monospace;
   font-size: 16px;
-  padding: 20px 25px 0px
+  padding: 30px 25px 0px
 }
 
 .session-buttons {
-  width: 50%;
+  width: 30%;
   display: flex;
   flex-wrap: wrap;
   text-align: right;
@@ -36,7 +42,7 @@
 }
 
 #signup-button {
-  width: 92px;
+  width: 62px;
   padding: 5px 0px 5px 0px;
   margin-right: 40px;
   color: black;
@@ -46,7 +52,7 @@
 }
 
 #login-button {
-  width: 92px;
+  width: 52px;
   padding: 5px 0px 5px 0px;
   margin-right: 40px;
   color: black;
