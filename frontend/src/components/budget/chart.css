@@ -1,12 +1,13 @@
 .recharts-wrapper.bar-chart {
-  background: rgb(250, 247, 247);
+  background: rgba(23, 23, 23, 0.7);
+  color: white;
   width: 600px;
   height: 300px;
   left: 10px;
   margin: 5px 30px 20px 5px;
   padding: 30px 30px 20px 5px;
   border-radius: 8px;
-  box-shadow: -12px 12px 12px;
+  box-shadow: 8px 8px 12px black;
 }
 
 .recharts-legend-wrapper {
