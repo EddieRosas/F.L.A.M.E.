@@ -33,8 +33,8 @@ class BudgetList extends React.Component {
     }
 
     // Get current Posts
-    const idxLastEntry = this.currPage * this.entriesPerPage;
-    const idxFirstEntry = idxLastEntry - this.entriesPerPage;
+    const idxLastEntry = this.state.currPage * this.state.entriesPerPage;
+    const idxFirstEntry = idxLastEntry - this.state.entriesPerPage;
     const currEntries = entries.slice(idxFirstEntry, idxLastEntry)
     
     return (
