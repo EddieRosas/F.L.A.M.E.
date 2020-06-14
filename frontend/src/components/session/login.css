@@ -26,29 +26,33 @@
 }
 
 #login-form {
-  height: 350px;
+  font-family: monospace;
+  color: white;
+  height: 340px;
   width: 400px;
-  background: darkgrey;
-  border: 1px solid black;
-  box-shadow: -8px 8px 12px black;
+  background: rgba(23, 23, 23, 0.6);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 8px 8px 12px black;
 }
 
 #login-input-fields {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 35px 0px;
 }
 
 #login-label {
   font-size: 18px;
-  padding-bottom: 10px;
-  margin-right: 190px;
+  margin: 5px 208px 3px 0px;
 }
 
 #input {
-  width: 280px;
+  width: 298px;
+  color: white;
+  background-color: black;
   border: 1px solid white;
   padding: 5px;
   border-radius: 5px;
@@ -60,41 +64,50 @@
 }
 
 #submit-button {
-  margin-top: 8px;
+  margin-top: 0px;
   width: 298px;
   height: 30px;
   padding: 3px;
-  border: 1px solid grey;
+  border: none;
+  font-size: 16px;
   border-radius: 5px;
-  background-color: rgb(214, 211, 211);
-  transition: background-color .3s;
+  background-color: #ff7c7c;
+  transition: all .3s;
 }
 
 #submit-button:hover {
-  background-color: rgb(236, 231, 231);
+  transform: scale(1.03);
 }
 
 #demo-button {
   text-align: center;
   margin-top: 8px;
-  width: 290px;
-  height: 20px;
-  padding: 8px 3px 0px;
+  width: 298px;
+  height: 30px;
+  padding: 3px;
   cursor: pointer;
-  border: 1px solid grey;
+  color: black;
+  font-size: 16px;
+  border: none;
   border-radius: 5px;
-  background-color: rgb(214, 211, 211);
-  transition: background-color .3s;
+  background-color: #ff7c7c;
+  transition: all .3s;
 }
 
 #demo-button:hover {
-  background-color: #E0B0ff;
+  transform: scale(1.03);
 }
 
 #session-go-back {
-  color: black;
+  position: absolute;
+  top: -65px;
+  right: 20px;
+  font-weight: 400;
+  width: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
   text-decoration: none;
-  margin: 15px;
   transition: color .2s;
 }
 
