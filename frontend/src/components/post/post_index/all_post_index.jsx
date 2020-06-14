@@ -39,22 +39,22 @@ class AllPostIndex extends React.Component {
           activeKey="/home"
           // onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
         >
-          <Nav.Item>
+          <Nav.Item className="nav-item">
             <Nav.Link eventKey="posts">
               All Posts
             </Nav.Link>
           </Nav.Item>
-          <Nav.Item>
+          <Nav.Item className="nav-item">
             <Nav.Link eventKey="questions">
               Questions
             </Nav.Link>
           </Nav.Item>
-          <Nav.Item>
+          <Nav.Item className="nav-item">
             <Nav.Link eventKey="stories">
               Stories
             </Nav.Link>
           </Nav.Item>
-          <Nav.Item>
+          <Nav.Item className="nav-item">
             <Nav.Link eventKey="popular">
               Popular
             </Nav.Link>

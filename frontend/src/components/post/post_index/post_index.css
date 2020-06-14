@@ -4,7 +4,12 @@
 
 .nav-bar-index {
   display: flex;
+  width: 70%;
   background-color: whitesmoke;
   margin: 30px;
   padding: 20px;
+}
+
+.nav-item {
+  padding: 0 25px;
 }
