@@ -16,7 +16,7 @@
   overflow-y: auto;
   margin: 80px 0px 80px 40px;
   border-radius: 10px;
-  min-width: 20%;
+  min-width: 25%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -112,13 +112,14 @@
 }
 
 .budget-list-container {
-  width: 70%;
+  width: 85%;
   max-height: 363px;
   overflow: scroll;
-  background: rgb(238, 236, 236);
+  background: rgba(23, 23, 23, 0.7);
+  color: white;
   padding: 10px 50px 50px;
   margin: 50px;
-  box-shadow: -8px 8px 12px black;
+  box-shadow: 8px 8px 12px black;
   border-radius: 8px;
 }
 

@@ -52,7 +52,7 @@ class BudgetList extends React.Component {
         <div className="chart">
           <ResponsiveContainer
             id="responsive-chart"
-            width={'74%'}
+            width={'85%'}
             height={400}
           >
             <BarChart

@@ -16,7 +16,7 @@
   font-family: monospace;
   background: rgba(23, 23, 23, 0.6);
   border: 1px solid black;
-  box-shadow: -8px 8px 12px black;
+  box-shadow: 8px 8px 12px black;
 }
 
 #signup-title {
