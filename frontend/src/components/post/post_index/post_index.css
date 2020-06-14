@@ -1,5 +1,7 @@
 .posts-list {
   background-color: whitesmoke;
+  margin: 30px;
+  width: 65%;
 }
 
 .nav-bar-index {
@@ -7,7 +9,7 @@
   width: 65%;
   background-color: whitesmoke;
   margin: 30px;
-  padding: 20px;
+  padding: 10px;
   border-radius: 3px;
 }
 
