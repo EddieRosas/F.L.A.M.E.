@@ -32,7 +32,8 @@
 .about-links {
   display: flex;
   flex-wrap: wrap;
-  width: 165px;
+  width: 180px;
+  margin-top: 10px;
   justify-content: space-around;
   opacity: 0.5;
   transition: opacity 0.3s;

@@ -36,8 +36,9 @@
 }
 
 #signup-button {
-  width: 60px;
-  padding: 5px 40px 5px 0px;
+  width: 92px;
+  padding: 5px 0px 5px 0px;
+  margin-right: 40px;
   color: black;
   font-family: monospace;
   font-size: 17px;
@@ -45,8 +46,9 @@
 }
 
 #login-button {
-  width: 50px;
-  padding: 5px 40px 5px 0px;
+  width: 92px;
+  padding: 5px 0px 5px 0px;
+  margin-right: 40px;
   color: black;
   font-family: monospace;
   font-size: 17px;
@@ -91,9 +93,10 @@
 }
 
 .question-mark {
-  width: 50px;
+  width: 60px;
+  height: 50px;
   padding: 5px 40px 5px 0px;
-  font-size: 17px;
+  font-size: 28px;
   text-decoration: none;
   display: flex;
   flex-wrap: wrap;
