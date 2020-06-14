@@ -1,3 +1,10 @@
 .posts-list {
   background-color: whitesmoke;
 }
+
+.nav-bar-index {
+  display: flex;
+  background-color: whitesmoke;
+  margin: 30px;
+  padding: 20px;
+}
