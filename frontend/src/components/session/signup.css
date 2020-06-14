@@ -67,6 +67,7 @@
   padding: 3px;
   border-radius: 5px;
   border: none;
+  font-size: 16px;
   background-color: #ff7c7c;
   transition: all .3s;
 }

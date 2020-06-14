@@ -26,8 +26,9 @@
 }
 
 #login-form {
+  font-family: monospace;
   color: white;
-  height: 350px;
+  height: 340px;
   width: 400px;
   background: rgba(23, 23, 23, 0.6);
   border: none;
@@ -45,7 +46,7 @@
 
 #login-label {
   font-size: 18px;
-  margin: 5px 197px 3px 0px;
+  margin: 5px 208px 3px 0px;
 }
 
 #input {
@@ -68,6 +69,7 @@
   height: 30px;
   padding: 3px;
   border: none;
+  font-size: 16px;
   border-radius: 5px;
   background-color: #ff7c7c;
   transition: all .3s;
@@ -85,6 +87,7 @@
   padding: 3px;
   cursor: pointer;
   color: black;
+  font-size: 16px;
   border: none;
   border-radius: 5px;
   background-color: #ff7c7c;
@@ -98,9 +101,10 @@
 #session-go-back {
   position: absolute;
   top: -65px;
-  right: 15px;
-  font-weight: 600;
+  right: 20px;
+  font-weight: 400;
   width: 20px;
+  font-size: 20px;
   text-align: center;
   color: white;
   text-decoration: none;
