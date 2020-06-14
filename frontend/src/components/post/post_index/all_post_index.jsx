@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ListGroup from "react-bootstrap/ListGroup";
 import Modal from "react-modal";
 import AllPostItem from './all_post_item';
+
 import "./post_index.css";
 
 class AllPostIndex extends React.Component {
