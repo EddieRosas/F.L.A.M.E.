@@ -235,6 +235,17 @@
   color: red;
 }
 
+#budget-item-edit-button {
+  background-color: rgba(23, 23, 23, 0);
+  color: white;
+  border: none;
+  transition: color 0.2s;
+}
+
+#budget-item-edit-button:hover {
+  color: burlywood;
+}
+
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
