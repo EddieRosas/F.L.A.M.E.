@@ -14,6 +14,14 @@ import "./budget.css";
 import "./chart.css";
 
 class BudgetList extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      currPage: 1,
+      entriesPerPage: 5
+    }
+  }
+  
   componentDidMount() {
     this.props.fetchEntries();
   }
@@ -23,6 +31,12 @@ class BudgetList extends React.Component {
     if(!entries.length) {
       return null;
     }
+
+    // Get current Posts
+    const idxLastEntry = this.currPage * this.entriesPerPage;
+    const idxFirstEntry = idxLastEntry - this.entriesPerPage;
+    const currEntries = entries.slice(idxFirstEntry, idxLastEntry)
+    
     return (
       <div className="budget-list-box">
         <div className="budget-list-container">
@@ -37,7 +51,7 @@ class BudgetList extends React.Component {
               <p></p>
               <p></p>
             </div>
-            {entries.map((entry) => {
+            {currEntries.map((entry) => {
               return (
                 <BudgetListItem
                   key={entry._id}
