@@ -20,7 +20,6 @@ const postsReducer = (state = {}, action) => {
         return nextState;
       case RECEIVE_USER_LOGOUT:
         return {};
-
       default:
         return state;
     }
