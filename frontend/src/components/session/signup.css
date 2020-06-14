@@ -51,6 +51,7 @@
 #input {
   width: 298px;
   color: white;
+  font-size: 15px;
   background-color: black;
   border: 1px solid white;
   padding: 5px 5px 5px 10px;
@@ -67,7 +68,7 @@
   padding: 3px;
   border-radius: 5px;
   border: none;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #ff7c7c;
   transition: all .3s;
 }
