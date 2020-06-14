@@ -1,3 +1,16 @@
 .posts-list {
   background-color: whitesmoke;
 }
+
+.nav-bar-index {
+  display: flex;
+  width: 65%;
+  background-color: whitesmoke;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.nav-item {
+  padding: 0 25px;
+}

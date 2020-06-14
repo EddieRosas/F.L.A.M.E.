@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ListGroup from "react-bootstrap/ListGroup";
+import { Nav, NavItem } from 'react-bootstrap';
 import Modal from "react-modal";
 import AllPostItem from './all_post_item';
 
@@ -33,9 +34,33 @@ class AllPostIndex extends React.Component {
 
     return (
       <div className="post-index-component">
-        <section className="post-index-filter">
-          
-        </section>
+        <Nav
+          className="nav-bar-index"
+          activeKey="/home"
+          variant="pills"
+          // onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
+        >
+          <Nav.Item className="nav-item">
+            <Nav.Link eventKey="posts">
+              All Posts
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item className="nav-item">
+            <Nav.Link eventKey="questions">
+              Questions
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item className="nav-item">
+            <Nav.Link eventKey="stories">
+              Stories
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item className="nav-item">
+            <Nav.Link eventKey="popular">
+              Popular
+            </Nav.Link>
+          </Nav.Item>
+        </Nav>
         <div className="posts-list">
           <ListGroup variant="flush">
             {posts.map((post) => (
