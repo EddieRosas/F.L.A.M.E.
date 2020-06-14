@@ -61,7 +61,6 @@ class LoginForm extends React.Component {
               onChange={this.update("username")}
               placeholder="*required field"
             />
-            <br />
             <label id="login-label">PASSWORD</label>
             <input
               id="input"
@@ -74,7 +73,7 @@ class LoginForm extends React.Component {
             <input id="submit-button" type="submit" value="Submit" />
             <label id="demo-button" onClick={this.handleDemo}>Demo Login</label>
             <Link to="/" id="session-go-back">
-              back
+              X
             </Link>
           </div>
         </form>

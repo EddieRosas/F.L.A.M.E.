@@ -49,7 +49,8 @@
 }
 
 #input {
-  width: 280px;
+  width: 298px;
+  color: black;
   border: 1px solid white;
   padding: 5px 5px 5px 10px;
   border-radius: 5px;
@@ -60,7 +61,7 @@
 }
 
 #submit-button {
-  margin-top: 8px;
+  margin-top: 0px;
   width: 298px;
   padding: 3px;
   border-radius: 5px;
