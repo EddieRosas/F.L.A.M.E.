@@ -54,7 +54,6 @@ export const signup = (user) => (dispatch) =>
       notifySuccessful('Successful log in!');
     },
     (err) => {
-      debugger;
       Object.values(err.response.data).map((error) => {
         return (notifyFailure(error))
       });

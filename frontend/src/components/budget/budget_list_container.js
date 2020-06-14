@@ -35,7 +35,6 @@ const mSTP = (state) => {
     }
   });
 
-  debugger
 
   let data = Object.values(monthsHash);
   

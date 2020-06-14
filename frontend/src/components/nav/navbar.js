@@ -33,7 +33,7 @@ class NavBar extends React.Component {
             FI Calculators
           </Link>
           &nbsp;
-          <Link id="forum-link" to={"/forum"}>
+          <Link id="forum-link" to={"/posts"}>
             Forums
           </Link>
           &nbsp;
