@@ -17,7 +17,7 @@
   position: absolute;
   right: 50%;
   margin-right: 5%;
-  bottom: 20%;
+  bottom: 16%;
   width: 500px;
   height: 255px;
   background-color: black;
@@ -32,7 +32,7 @@
   position: absolute;
   left: 50%;
   margin-left: 5%;
-  bottom: 20%;
+  bottom: 16%;
   width: 500px;
   height: 255px;
   background-color: black;
@@ -47,7 +47,7 @@
   position: absolute;
   left: 50%;
   margin-left: -255px;
-  bottom: 60%;
+  bottom: 57%;
   width: 500px;
   height: 255px;
   background-color: black;
