@@ -7,9 +7,7 @@ class MainPage extends React.Component {
     return (
       <div className="main-page-box">
         <div id="main-content">
-          <div id="image">
-            {/* <img src="../../photos/FLAME-logo/default.png" alt="lol" /> */}
-          </div>
+          <div id="image1" />
         </div>
         <div id="footer">
           <div className="about-links">
