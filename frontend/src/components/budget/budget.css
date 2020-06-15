@@ -133,16 +133,16 @@
   margin: 9px;
   width: 97%;
   height: 30px;
-  padding: 3px;
+  padding: 6px;
   border-radius: 5px;
-  background-color: black;
-  color: white;
-  border: 1px solid;
-  transition: border-color .5s;
+  background-color: #ff7c7c;
+  color: black;
+  border: none;
+  transition: all .5s;
 }
 
 #budget-submit:hover {
-  border-color: #ff7c7c;
+  transform: scale(1.03);
 }
 
 #budget-list-title {
