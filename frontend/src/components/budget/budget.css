@@ -372,3 +372,7 @@
 #page-item:focus {
   background: rgba(255, 255, 255, 1);
 }
+
+.recharts-tooltip-wrapper, .recharts-tooltip-wrapper-left, .recharts-tooltip-wrapper-bottom {
+  color: black;
+}

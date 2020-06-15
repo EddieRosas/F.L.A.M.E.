@@ -86,11 +86,12 @@ class BudgetList extends React.Component {
               width={900}
               height={500}
               data={this.props.data}
+              color="black"
             >
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="month" />
               <YAxis />
-              <Tooltip />
+              <Tooltip id="tooltip" cursor={{ fill: "rgba(255, 255, 255, 0.2)" }} />
               <Legend />
               <Bar dataKey="income" fill="rgb(40, 200, 50)" />
               <Bar dataKey="expenses" fill="rgb(230, 60, 40)" />
