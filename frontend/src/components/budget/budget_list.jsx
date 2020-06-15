@@ -1,5 +1,6 @@
 import React from 'react';
 import BudgetListItem from './budget_list_item.jsx';
+import { Pagination } from "./pagination";
 import {
   BarChart,
   Bar,
@@ -61,6 +62,7 @@ class BudgetList extends React.Component {
                 />
               );
             })}
+            <Pagination entriesPerPage={ this.state.entriesPerPage } totalEntries={ entries.length } />
           </div>
         </div>
         <div className="chart">
