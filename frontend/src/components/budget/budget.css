@@ -117,9 +117,10 @@
 }
 
 .budget-list-container {
+  position: relative;
   width: 85%;
-  max-height: 440px;
-  overflow: scroll;
+  height: 450px;
+  overflow: hidden;
   background: rgba(23, 23, 23, 0.7);
   color: white;
   padding: 10px 50px 50px;
@@ -153,6 +154,7 @@
 }
 
 #budget-list {
+  position: relative;
   margin-top: 20px;
   width: 100%;
 }
@@ -335,4 +337,29 @@
   text-align: left;
   margin-left: 40px;
   opacity: 0.5;
+}
+
+#pagination-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  width: 100%;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#page-item {
+  width: 20px;
+  height: 20px;
+  margin: 0px 2px;
+  background: white;
+  color: black;
+  border-radius: 2px;
+  text-align: center;
+  padding-top: 2px;
+  cursor: pointer;
 }

@@ -19,7 +19,7 @@ class BudgetList extends React.Component {
     super(props)
     this.state = {
       currPage: 1,
-      entriesPerPage: 2
+      entriesPerPage: 5
     }
 
     this.paginate = this.paginate.bind(this);
@@ -30,7 +30,6 @@ class BudgetList extends React.Component {
   }
 
   paginate(pageNumber) {
-    debugger
     this.setState({ currPage: pageNumber })
   }
   
@@ -69,12 +68,12 @@ class BudgetList extends React.Component {
                 />
               );
             })}
-            <Pagination 
-              entriesPerPage={ this.state.entriesPerPage } 
-              totalEntries={ entries.length }
-              paginate={ this.paginate }
-            />
           </div>
+          <Pagination 
+            entriesPerPage={ this.state.entriesPerPage } 
+            totalEntries={ entries.length }
+            paginate={ this.paginate }
+          />
         </div>
         <div className="chart">
           <ResponsiveContainer

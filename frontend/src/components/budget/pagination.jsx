@@ -8,12 +8,12 @@ export const Pagination = ({ entriesPerPage, totalEntries, paginate }) => {
   }
   
   return (
-    <nav>
-      <ul className="pagenation">
+    <nav id="pagination-nav">
+      <ul className="pagination">
         {
           pageNums.map(num => (
-            <li key={ num } className="page-item">
-              <a onClick={() => paginate(num)} className="page-link">
+            <li key={ num } id="page-item">
+              <a onClick={() => paginate(num)} id="page-link">
                 { num }
               </a>
             </li>
