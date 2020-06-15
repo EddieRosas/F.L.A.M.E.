@@ -356,10 +356,19 @@
   width: 20px;
   height: 20px;
   margin: 0px 2px;
-  background: white;
+  background: rgba(255, 255, 255, 0.7);
   color: black;
   border-radius: 2px;
   text-align: center;
   padding-top: 2px;
   cursor: pointer;
+  transition: background 0.2s;
+}
+
+#page-item:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+#page-item:focus {
+  background: rgba(255, 255, 255, 1);
 }
