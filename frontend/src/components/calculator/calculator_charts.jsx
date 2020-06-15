@@ -29,7 +29,7 @@ class CalculatorCharts extends React.Component {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />
-            <Tooltip />
+            <Tooltip cursor={{ fill: "rgba(255, 255, 255, 0.2)" }} />
             <Legend left={10} />
             <Bar dataKey="fireNum" fill="rgb(40, 200, 50)" />
             <Bar dataKey="fiYears" fill="rgb(230, 60, 40)" />
