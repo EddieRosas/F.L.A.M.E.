@@ -19,7 +19,7 @@ class MainPage extends React.Component {
           </div>
           <div id="image3-container">
             <div id="image3">
-              <p id="splash-image-titles">Budget History Tracker</p>
+              <p id="splash-image-titles">Spending History Tracker</p>
             </div>
           </div>
         </div>
