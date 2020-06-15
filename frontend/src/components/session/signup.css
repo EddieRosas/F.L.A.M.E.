@@ -9,16 +9,19 @@
 }
 
 .signup-form {
+  position: relative;
   height: 490px;
   width: 400px;
-  background: darkgrey;
+  color: white;
+  font-family: monospace;
+  background: rgba(23, 23, 23, 0.6);
   border: 1px solid black;
-  box-shadow: -8px 8px 12px black;
+  box-shadow: 8px 8px 12px black;
 }
 
 #signup-title {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 37px;
   font-size: 28px;
 }
 
@@ -31,26 +34,27 @@
 }
 
 #label {
-  font-size: 18px;
+  font-size: 20px;
   padding-bottom: 10px;
-  margin-right: 190px;
+  margin-right: 200px;
 }
 
 #label-email {
-  font-size: 18px;
+  font-size: 20px;
   padding-bottom: 10px;
-  margin-right: 230px;
+  margin-right: 235px;
 }
 
 #label-confirm {
-  font-size: 18px;
+  font-size: 20px;
   padding-bottom: 10px;
-  margin-right: 108px;
+  margin-right: 105px;
 }
 
 #input {
   width: 298px;
   color: white;
+  font-size: 15px;
   background-color: black;
   border: 1px solid white;
   padding: 5px 5px 5px 10px;
@@ -67,7 +71,7 @@
   padding: 3px;
   border-radius: 5px;
   border: none;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #ff7c7c;
   transition: all .3s;
 }
@@ -77,9 +81,15 @@
 }
 
 #signup-session-go-back {
-  color: black;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-weight: 400;
+  width: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
   text-decoration: none;
-  margin: 15px;
   transition: color .2s;
 }
 

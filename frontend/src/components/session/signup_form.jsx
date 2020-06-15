@@ -22,8 +22,6 @@ class SignupForm extends React.Component {
     if (nextProps.signedIn === true) {
       this.props.history.push("/login");
     }
-
-    this.setState({ errors: nextProps.errors });
   }
 
   update(field) {
@@ -69,6 +67,7 @@ class SignupForm extends React.Component {
               value={this.state.email}
               onChange={this.update("email")}
               placeholder="*required field"
+              autoComplete="off"
             />
             <br />
             <label id="label">USERNAME</label>
@@ -78,6 +77,7 @@ class SignupForm extends React.Component {
               value={this.state.username}
               onChange={this.update("username")}
               placeholder="*required field"
+              autoComplete="off"
             />
             <br />
             <label id="label">PASSWORD</label>
@@ -98,12 +98,12 @@ class SignupForm extends React.Component {
               placeholder="*required field"
             />
             <br />
-            <input id="submit-button" type="submit" value="Submit" />
+            <input id="submit-button" type="submit" value="SUBMIT" />
             <label id="demo-button" onClick={this.handleDemo}>
-              Demo Login
+              DEMO LOGIN
             </label>
             <Link to="/" id="signup-session-go-back">
-              back
+              X
             </Link>
           </div>
         </form>

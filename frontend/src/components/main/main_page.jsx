@@ -7,8 +7,20 @@ class MainPage extends React.Component {
     return (
       <div className="main-page-box">
         <div id="main-content">
-          <div id="image">
-            {/* <img src="../../photos/FLAME-logo/default.png" alt="lol" /> */}
+          <div id="image1-container">
+            <div id="image1">
+              <p id="splash-image-titles">Financial Freedom Calculators</p>
+            </div>
+          </div>
+          <div id="image2-container">
+            <div id="image2">
+              <p id="splash-image-titles">Community Forums</p>
+            </div>
+          </div>
+          <div id="image3-container">
+            <div id="image3">
+              <p id="splash-image-titles">Spending History Tracker</p>
+            </div>
           </div>
         </div>
         <div id="footer">

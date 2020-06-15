@@ -229,3 +229,13 @@
 .years-to-fi-submit:hover {
   background: rgb(214, 212, 212);
 }
+
+.recharts-default-tooltip {
+  color: black;
+  background-color: black !important;
+  height: 100px;
+}
+
+.recharts-tooltip-label {
+  padding-top: 0px !important;
+}

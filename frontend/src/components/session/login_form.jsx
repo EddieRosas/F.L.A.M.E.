@@ -60,6 +60,7 @@ class LoginForm extends React.Component {
               value={this.state.username}
               onChange={this.update("username")}
               placeholder="*required field"
+              autoComplete="off"
             />
             <label id="login-label">PASSWORD</label>
             <input
@@ -70,8 +71,8 @@ class LoginForm extends React.Component {
               placeholder="*required field"
             />
             <br />
-            <input id="submit-button" type="submit" value="Submit" />
-            <label id="demo-button" onClick={this.handleDemo}>Demo Login</label>
+            <input id="submit-button" type="submit" value="SUBMIT" />
+            <label id="demo-button" onClick={this.handleDemo}>DEMO LOGIN</label>
             <Link to="/" id="session-go-back">
               X
             </Link>

@@ -21,14 +21,14 @@
 
 #login-title {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 35px;
   font-size: 28px;
 }
 
 #login-form {
   font-family: monospace;
   color: white;
-  height: 340px;
+  height: 325px;
   width: 400px;
   background: rgba(23, 23, 23, 0.6);
   border: none;
@@ -46,12 +46,13 @@
 
 #login-label {
   font-size: 18px;
-  margin: 5px 208px 3px 0px;
+  margin: 10px 208px 8px 0px;
 }
 
 #input {
   width: 298px;
   color: white;
+  font-size: 15px;
   background-color: black;
   border: 1px solid white;
   padding: 5px;
@@ -64,7 +65,7 @@
 }
 
 #submit-button {
-  margin-top: 0px;
+  margin-top: 5px;
   width: 298px;
   height: 30px;
   padding: 3px;
@@ -81,13 +82,13 @@
 
 #demo-button {
   text-align: center;
-  margin-top: 8px;
+  margin-top: 10px;
   width: 298px;
   height: 30px;
-  padding: 8px;
+  padding: 5px;
   cursor: pointer;
   color: black;
-  font-size: 16px;
+  font-size: 18px;
   border: none;
   border-radius: 5px;
   background-color: #ff7c7c;
@@ -100,8 +101,8 @@
 
 #session-go-back {
   position: absolute;
-  top: -65px;
-  right: 20px;
+  top: -40px;
+  right: 25px;
   font-weight: 400;
   width: 20px;
   font-size: 20px;
