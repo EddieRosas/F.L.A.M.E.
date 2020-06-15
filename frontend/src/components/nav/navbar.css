@@ -42,7 +42,7 @@
   align-items: center;
 }
 
-#signup-button {
+#signup-button, #login-button, #about-button {
   width: 62px;
   padding: 5px 0px 5px 0px;
   margin-right: 40px;
@@ -52,18 +52,9 @@
   text-decoration: none;
 }
 
-#login-button {
-  width: 52px;
-  padding: 5px 0px 5px 0px;
-  margin-right: 40px;
-  color: black;
-  font-family: monospace;
-  font-size: 17px;
-  text-decoration: none;
-}
-
 #logout-button {
-  padding: 5px 25px 5px 10px;
+  margin-right: 45px;
+  padding: 5px 0px 5px 10px;
   color: black;
   font-family: monospace;
   font-size: 17px;
