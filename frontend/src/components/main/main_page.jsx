@@ -8,6 +8,8 @@ class MainPage extends React.Component {
       <div className="main-page-box">
         <div id="main-content">
           <div id="image1" />
+          <div id="image2" />
+          <div id="image3" />
         </div>
         <div id="footer">
           <div className="about-links">
