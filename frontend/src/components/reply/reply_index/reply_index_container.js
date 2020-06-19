@@ -16,3 +16,14 @@ const mSTP = (state, ownProps) => {
   }
 };
 
+const mDTP = (dispatch) => {
+  return {
+    fetchReplies: (postId) => dispatch(fetchReplies(postId)),
+    fetchReply: (replyId) => dispatch(fetchReply(replyId)),
+    createReply: (reply) => dispatch(createReply(reply)),
+    deleteReply: (replyId) => dispatch(deleteReply(replyId)),
+    updateReply: (reply) => dispatch(updateReply(reply))
+  }
+};
+
+export default connect(mSTP, mDTP)(ReplyIndex);
