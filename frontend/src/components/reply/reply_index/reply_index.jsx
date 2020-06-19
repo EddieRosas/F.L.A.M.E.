@@ -1,5 +1,6 @@
 import React from 'react';
 import ReplyItem from './reply_item';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 class ReplyIndex extends React.Component {
 
@@ -19,12 +20,21 @@ class ReplyIndex extends React.Component {
 
   render() {
     const {
-      
+      replies,
+      deleteReply,
+      updateReply,
+      currentUser,
+      postId
     } = this.props;
 
     return (
       <div>
-
+        <h4>Replies</h4>
+        <ListGroup>
+          {replies.map((reply) => {
+            
+          })}
+        </ListGroup>
       </div>
     );
   }
