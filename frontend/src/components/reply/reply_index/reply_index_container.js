@@ -11,7 +11,7 @@ import {
 const mSTP = (state, ownProps) => {
   return {
     replies: Object.values(state.reply),
-    postId: ownProps.match.params.postId,
+    postId: ownProps.postId,
     currentUser: state.session.user
   }
 };
