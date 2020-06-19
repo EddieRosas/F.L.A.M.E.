@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import "./show_post.css"
+import ReplyIndexContainer from '../../reply/reply_index/reply_index_container';
 
 class ShowPost extends React.Component {
   constructor(props) {
@@ -40,6 +41,7 @@ class ShowPost extends React.Component {
       <div className="show-post-component">
         <h1>{post.title}</h1>
         <p>{post.description}</p>
+        <ReplyIndexContainer postId={this.props.postId} />
       </div>
     )
   }
