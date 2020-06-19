@@ -18,7 +18,8 @@ router.get("/:postId",
 router.post("/:postId",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    // const { errors, isValid } = validateReplyInput(req.body)
+    // was commented out
+    const { errors, isValid } = validateReplyInput(req.body)
 
     // if(!isValid) {
     //   return res.status(422).json(errors)
@@ -36,7 +37,8 @@ router.post("/:postId",
 )
 
 router.patch("/:replyId", (req, res) => {
-  // const { errors, isValid } = validateReplyInput(req.body)
+  // was commented out
+  const { errors, isValid } = validateReplyInput(req.body)
 
   // if (!isValid) {
   //   return res.status(422).json(errors)
