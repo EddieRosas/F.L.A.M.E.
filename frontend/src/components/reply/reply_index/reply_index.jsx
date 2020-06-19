@@ -31,9 +31,15 @@ class ReplyIndex extends React.Component {
       <div>
         <h4>Replies</h4>
         <ListGroup>
-          {replies.map((reply) => {
-            
-          })}
+          {replies.map((reply) => (
+            <ReplyItem key={reply._id}
+                       reply={reply}
+                       currentUser={currentUser}
+                       deleteReply={deleteReply}
+                       updateReply={updateReply}
+                       postId={postId}
+            />
+          ))}
         </ListGroup>
       </div>
     );
