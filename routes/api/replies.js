@@ -21,9 +21,10 @@ router.post("/:postId",
     // was commented out
     const { errors, isValid } = validateReplyInput(req.body)
 
-    // if(!isValid) {
-    //   return res.status(422).json(errors)
-    // }
+    if(!isValid) {
+      return res.status(422).json(errors)
+    }
+    //
 
     const newReply = new Reply({
       postId: req.params.postId,
@@ -40,9 +41,10 @@ router.patch("/:replyId", (req, res) => {
   // was commented out
   const { errors, isValid } = validateReplyInput(req.body)
 
-  // if (!isValid) {
-  //   return res.status(422).json(errors)
-  // }
+  if (!isValid) {
+    return res.status(422).json(errors)
+  }
+  //
 
   Reply.findOneAndUpdate(
     { _id: req.params.replyId },
