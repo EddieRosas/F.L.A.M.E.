@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import "./show_post.css"
+import ReplyIndexContainer from '../../reply/reply_index/reply_index_container';
 
 class ShowPost extends React.Component {
   constructor(props) {
