@@ -8,3 +8,11 @@ import {
   updateReply
 } from '../../../actions/reply_actions';
 
+const mSTP = (state, ownProps) => {
+  return {
+    answers: Object.values(state.reply),
+    postId: ownProps.match.params.postId,
+    currentUser: state.session.user
+  }
+};
+
