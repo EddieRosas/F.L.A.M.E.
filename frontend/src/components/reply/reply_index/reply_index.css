@@ -1,4 +1,10 @@
 .replies-index {
   background: whitesmoke;
   margin: 30px;
+  border-radius: 3px;
+}
+
+.replies-title {
+  padding: 25px;
+  font-size: 18px;
 }

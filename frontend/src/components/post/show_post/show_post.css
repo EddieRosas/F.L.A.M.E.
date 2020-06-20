@@ -1,5 +1,14 @@
 .post-details {
   background-color: whitesmoke;
   margin: 30px;
+  border-radius: 3px;
 }
 
+.post-title {
+  font-size: 23px;
+  padding: 25px;
+}
+
+.post-desc {
+  padding: 0px 25px 25px 25px;
+}

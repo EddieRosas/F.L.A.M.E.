@@ -30,7 +30,7 @@ class ReplyIndex extends React.Component {
 
     return (
       <div className="replies-index">
-        <h4>Replies</h4>
+        <h4 className="replies-title">Replies</h4>
         <ListGroup>
           {replies.map((reply) => (
             <ReplyItem key={reply._id}
