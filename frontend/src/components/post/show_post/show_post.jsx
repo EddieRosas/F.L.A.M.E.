@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
+import { Button } from 'react-bootstrap';
 import "./show_post.css"
 import ReplyIndexContainer from '../../reply/reply_index/reply_index_container';
 
@@ -40,7 +41,15 @@ class ShowPost extends React.Component {
     return (
       <div className="show-post-component">
         <div className="post-details">
-          <h1 className="post-title">{post.title}</h1>
+          <div className="post-title-button">
+            <h1 className="post-title">{post.title}</h1>
+            <Button 
+              variant="outline-secondary"
+              className="add-new-post-btn"
+            >
+              Add a Post
+            </Button>
+          </div>
           <p className="post-desc">{post.description}</p>
         </div>
         <ReplyIndexContainer postId={this.props.postId} />
