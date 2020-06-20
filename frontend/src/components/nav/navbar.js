@@ -46,10 +46,11 @@ class NavBar extends React.Component {
       return (
         <div className="session-buttons">
           <Link
+          id="about-button"
             className="modal-page"
             onClick={() => this.changeModalStatus(true)}
           >
-            <BsFillQuestionSquareFill className="question-mark" />
+            ABOUT
           </Link>
           <Link to={"/login"} id="login-button">
             LOGIN
