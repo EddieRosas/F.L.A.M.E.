@@ -39,8 +39,10 @@ class ShowPost extends React.Component {
 
     return (
       <div className="show-post-component">
-        <h1>{post.title}</h1>
-        <p>{post.description}</p>
+        <div className="post-details">
+          <h1>{post.title}</h1>
+          <p>{post.description}</p>
+        </div>
         <ReplyIndexContainer postId={this.props.postId} />
       </div>
     )
