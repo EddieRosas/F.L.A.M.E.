@@ -8,6 +8,7 @@
 .post-title {
   font-size: 23px;
   padding: 25px;
+  align-self: flex-start;
 }
 
 .post-desc {
@@ -20,5 +21,7 @@
 
 .add-new-post-btn {
   height: 50px;
-  margin: 10px;
+  margin: 12px;
+  margin-left: auto;
+  margin-right: 25px;
 }

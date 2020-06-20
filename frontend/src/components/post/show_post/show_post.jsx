@@ -47,7 +47,7 @@ class ShowPost extends React.Component {
               variant="outline-secondary"
               className="add-new-post-btn"
             >
-              Add a Post
+              Create New Post
             </Button>
           </div>
           <p className="post-desc">{post.description}</p>
