@@ -1,6 +1,7 @@
 import React from 'react';
 import ReplyItem from './reply_item';
 import ListGroup from 'react-bootstrap/ListGroup';
+import './reply_index.css';
 
 class ReplyIndex extends React.Component {
 
@@ -28,7 +29,7 @@ class ReplyIndex extends React.Component {
     } = this.props;
 
     return (
-      <div>
+      <div className="replies-index">
         <h4>Replies</h4>
         <ListGroup>
           {replies.map((reply) => (
