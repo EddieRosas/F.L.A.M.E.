@@ -22,6 +22,20 @@ class NewReply extends React.Component {
     }
   }
 
+  loggedIn() {
+    return (
+      <div>
+        <h4>Your reply</h4>
+        <form onSubmit={this.handleSubmit}>
+          <textarea col="30" row="8" onChange={this.update("description")} />
+          <Button variant="outline-secondary">
+            Add New Reply
+          </Button>
+        </form>
+      </div>
+    );
+  }
+
   render() {
     return null;
   }
