@@ -2,9 +2,17 @@ import React from 'react';
 import ReplyItem from './reply_item';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Button } from 'react-bootstrap';
+import Modal from "react-modal";
 import './reply_index.css';
 
 class ReplyIndex extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modalOpenNewReply: false
+    }
+  }
+
 
   componentDidMount() {
     this.props.fetchReplies(this.props.postId);
