@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { Button } from 'react-bootstrap';
 import "./show_post.css"
 import ReplyIndexContainer from '../../reply/reply_index/reply_index_container';
-
+import AskPostContainer from '../new_post/ask_post_container';
 
 class ShowPost extends React.Component {
   constructor(props) {
@@ -73,6 +73,7 @@ class ShowPost extends React.Component {
           >
             Close
           </Button>
+          <AskPostContainer />
         </Modal>
         <ReplyIndexContainer postId={this.props.postId} />
       </div>
