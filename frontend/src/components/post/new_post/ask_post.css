@@ -1,0 +1,8 @@
+.new-post-title {
+  margin: 5px;
+  padding: 5px;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid black;
+  transition: border-bottom .3s;
+}

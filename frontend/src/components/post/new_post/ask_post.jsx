@@ -1,4 +1,5 @@
 import React from 'react';
+import './ask_post.css'
 
 class AskPost extends React.Component {
   constructor(props) {
@@ -30,6 +31,7 @@ class AskPost extends React.Component {
           <label>Title</label>
           <input
             type="text"
+            className="new-post-title"
             value={this.state.title}
             onChange={this.update("title")}
           />
