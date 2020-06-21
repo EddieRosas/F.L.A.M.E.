@@ -36,7 +36,17 @@ class NewReply extends React.Component {
     );
   }
 
+
   render() {
-    return null;
+    const { currentUser } = this.props;
+    return (
+      <div>
+        {
+          currentUser ? this.loggedIn() : ""
+        }
+      </div>
+    )
   }
 }
+
+export default NewAnswer;
