@@ -29,7 +29,7 @@ class ReplyIndex extends React.Component {
   }
 
   changeModalStatusNewReply(status) {
-    this.state({ modalOpenNewReply: status });
+    this.setState({ modalOpenNewReply: status });
   }
 
   render() {
@@ -48,7 +48,7 @@ class ReplyIndex extends React.Component {
           <Button
             variant="outline-secondary"
             className="add-new-reply-btn"
-            onClick={() => this.changeModalStatusNewReply(false)}
+            onClick={() => this.changeModalStatusNewReply(true)}
           >
             Create New Reply
           </Button>
@@ -65,6 +65,26 @@ class ReplyIndex extends React.Component {
             />
           ))}
         </ListGroup>
+        <Modal
+          isOpen={this.state.modalOpenNewReply}
+          onRequestClose={() => this.changeModalStatusNewReply(false)}
+          style={{
+            content: {
+              borderRadius: "7px",
+            },
+            overlay: {
+              position: "fixed",
+              zIndex: "50",
+            },
+          }}
+        >
+          <Button
+            variant="outline-dark"
+            onClick={() => this.changeModalStatusNewReply(false)}
+          >
+            Close
+          </Button>
+        </Modal>
       </div>
     );
   }
