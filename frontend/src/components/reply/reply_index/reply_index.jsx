@@ -2,9 +2,17 @@ import React from 'react';
 import ReplyItem from './reply_item';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Button } from 'react-bootstrap';
+import Modal from "react-modal";
 import './reply_index.css';
 
 class ReplyIndex extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modalOpenNewReply: false
+    }
+  }
+
 
   componentDidMount() {
     this.props.fetchReplies(this.props.postId);
@@ -18,6 +26,10 @@ class ReplyIndex extends React.Component {
     if (prevProps.postId !== this.props.postId) {
       this.fetchData(this.props.postId);
     }
+  }
+
+  changeModalStatusNewReply(status) {
+    this.setState({ modalOpenNewReply: status });
   }
 
   render() {
@@ -36,21 +48,43 @@ class ReplyIndex extends React.Component {
           <Button
             variant="outline-secondary"
             className="add-new-reply-btn"
+            onClick={() => this.changeModalStatusNewReply(true)}
           >
             Create New Reply
-            </Button>
+          </Button>
         </div>
         <ListGroup>
           {replies.map((reply) => (
-            <ReplyItem key={reply._id}
-                       reply={reply}
-                       currentUser={currentUser}
-                       deleteReply={deleteReply}
-                       updateReply={updateReply}
-                       postId={postId}
+            <ReplyItem
+              key={reply._id}
+              reply={reply}
+              currentUser={currentUser}
+              deleteReply={deleteReply}
+              updateReply={updateReply}
+              postId={postId}
             />
           ))}
         </ListGroup>
+        <Modal
+          isOpen={this.state.modalOpenNewReply}
+          onRequestClose={() => this.changeModalStatusNewReply(false)}
+          style={{
+            content: {
+              borderRadius: "7px",
+            },
+            overlay: {
+              position: "fixed",
+              zIndex: "50",
+            },
+          }}
+        >
+          <Button
+            variant="outline-dark"
+            onClick={() => this.changeModalStatusNewReply(false)}
+          >
+            Close
+          </Button>
+        </Modal>
       </div>
     );
   }
