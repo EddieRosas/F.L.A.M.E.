@@ -85,6 +85,7 @@ class ReplyIndex extends React.Component {
         >
           <Button
             variant="outline-dark"
+            className="close-new-reply-btn"
             onClick={() => this.changeModalStatusNewReply(false)}
           >
             Close

@@ -19,3 +19,7 @@
   margin-left: auto;
   margin-right: 25px;
 }
+
+.close-new-reply-btn {
+  float: right;
+}

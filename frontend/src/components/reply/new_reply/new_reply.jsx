@@ -28,7 +28,9 @@ class NewReply extends React.Component {
         <h4>Your reply</h4>
         <form onSubmit={this.handleSubmit}>
           <textarea col="30" row="8" onChange={this.update("description")} />
-          <Button type="submit" variant="outline-secondary">
+          <Button type="submit" 
+                  variant="outline-secondary"
+          >
             Add New Reply
           </Button>
         </form>
