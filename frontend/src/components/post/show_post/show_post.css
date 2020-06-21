@@ -1,3 +1,27 @@
-.show-post-component {
+.post-details {
   background-color: whitesmoke;
+  margin: 30px;
+  border-radius: 3px;
+  width: 60%;
+}
+
+.post-title {
+  font-size: 23px;
+  padding: 25px 25px 10px;
+  align-self: flex-start;
+}
+
+.post-desc {
+  padding: 0px 25px 25px 25px;
+}
+
+.post-title-button {
+  display: flex;
+}
+
+.add-new-post-btn {
+  height: 40px;
+  margin: 15px 25px 10px 25px;
+  margin-left: auto;
+  margin-right: 25px;
 }

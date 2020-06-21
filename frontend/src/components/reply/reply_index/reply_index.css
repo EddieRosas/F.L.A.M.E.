@@ -1,0 +1,22 @@
+.replies-index {
+  background: whitesmoke;
+  margin: 30px;
+  border-radius: 3px;
+  width: 60%;
+}
+
+.replies-title {
+  padding: 25px;
+  font-size: 18px;
+}
+
+.replies-title-btn {
+  display: flex;
+}
+
+.add-new-reply-btn {
+  height: 40px;
+  margin: 15px;
+  margin-left: auto;
+  margin-right: 25px;
+}
