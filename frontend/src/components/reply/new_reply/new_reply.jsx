@@ -49,4 +49,4 @@ class NewReply extends React.Component {
   }
 }
 
-export default NewAnswer;
+export default NewReply;
