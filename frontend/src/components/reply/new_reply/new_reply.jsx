@@ -16,6 +16,12 @@ class NewReply extends React.Component {
     this.props.createReply(this.state);
   }
 
+  update(field) {
+    return e => {
+      this.setState({ [field]: e.currentTarget.value });
+    }
+  }
+
   render() {
     return null;
   }
