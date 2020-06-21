@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import './ask_post.css'
 
 class AskPost extends React.Component {
@@ -58,7 +59,13 @@ class AskPost extends React.Component {
             <option value="0">Question</option>
             <option value="1">Story</option>
           </select>
-          <button type="submit">Submit your post!</button>
+          <Button
+            variant="outline-dark"
+            className="new-post-btn"
+            type="submit"
+          >
+            Submit your post!
+          </Button>
         </form>
       </div>
     );
