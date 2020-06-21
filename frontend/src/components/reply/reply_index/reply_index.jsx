@@ -71,6 +71,10 @@ class ReplyIndex extends React.Component {
           onRequestClose={() => this.changeModalStatusNewReply(false)}
           style={{
             content: {
+              top: "25%",
+              left: "25%",
+              right: "25%",
+              bottom: "25%",
               borderRadius: "7px",
             },
             overlay: {
