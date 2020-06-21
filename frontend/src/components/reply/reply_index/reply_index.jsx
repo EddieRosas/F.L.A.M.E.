@@ -28,6 +28,10 @@ class ReplyIndex extends React.Component {
     }
   }
 
+  changeModalStatusNewReply(status) {
+    this.state({ modalOpenNewReply: status });
+  }
+
   render() {
     const {
       replies,
