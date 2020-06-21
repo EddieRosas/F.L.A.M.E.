@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import { Button } from 'react-bootstrap';
 import "./show_post.css"
 import ReplyIndexContainer from '../../reply/reply_index/reply_index_container';
+import Modal from 'react-modal';
 
 class ShowPost extends React.Component {
   constructor(props) {
@@ -43,9 +44,10 @@ class ShowPost extends React.Component {
         <div className="post-details">
           <div className="post-title-button">
             <h1 className="post-title">{post.title}</h1>
-            <Button 
+            <Button
               variant="outline-secondary"
               className="add-new-post-btn"
+              onClick={() => this.changeModalStatusForAsk(true)}
             >
               Create New Post
             </Button>
@@ -54,7 +56,7 @@ class ShowPost extends React.Component {
         </div>
         <ReplyIndexContainer postId={this.props.postId} />
       </div>
-    )
+    );
   }
 }
 
