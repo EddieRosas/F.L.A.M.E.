@@ -48,18 +48,20 @@ class ReplyIndex extends React.Component {
           <Button
             variant="outline-secondary"
             className="add-new-reply-btn"
+            onClick={() => this.changeModalStatusNewReply(false)}
           >
             Create New Reply
-            </Button>
+          </Button>
         </div>
         <ListGroup>
           {replies.map((reply) => (
-            <ReplyItem key={reply._id}
-                       reply={reply}
-                       currentUser={currentUser}
-                       deleteReply={deleteReply}
-                       updateReply={updateReply}
-                       postId={postId}
+            <ReplyItem
+              key={reply._id}
+              reply={reply}
+              currentUser={currentUser}
+              deleteReply={deleteReply}
+              updateReply={updateReply}
+              postId={postId}
             />
           ))}
         </ListGroup>
