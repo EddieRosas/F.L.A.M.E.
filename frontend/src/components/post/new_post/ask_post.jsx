@@ -37,13 +37,17 @@ class AskPost extends React.Component {
           />
           <br />
           <label>Body</label>
-          <textarea
+          <input
             type="text"
+            className="new-post-description"
             value={this.state.description}
             onChange={this.update("description")}
           />
           <br />
-          <select onChange={this.update("postType")}>
+          <select 
+            onChange={this.update("postType")}
+            className="ask-post-select"
+          >
             <option
               value=""
               disabled
