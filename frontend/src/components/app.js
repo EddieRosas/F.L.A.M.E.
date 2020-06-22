@@ -17,8 +17,6 @@ import BudgetContainer from './budget/budget.jsx'
 
 import ShowPostContainer from './post/show_post/show_post_container'
 
-import AskPostContainer from '../components/post/new_post/ask_post_container';
-
 const App = () => (
   <div>
     <NavBarContainer />
@@ -32,7 +30,6 @@ const App = () => (
       />
       <ProtectedRoute exact path="/posts" component={AllPostIndexContainer} />
       <ProtectedRoute exact path="/posts/:postId" component={ShowPostContainer} />
-      <ProtectedRoute exact path="/ask" component={AskPostContainer} />
 
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />

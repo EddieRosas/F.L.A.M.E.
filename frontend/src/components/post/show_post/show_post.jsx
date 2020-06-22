@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { Button } from 'react-bootstrap';
 import "./show_post.css"
 import ReplyIndexContainer from '../../reply/reply_index/reply_index_container';
-
+import AskPostContainer from '../new_post/ask_post_container';
 
 class ShowPost extends React.Component {
   constructor(props) {
@@ -59,6 +59,10 @@ class ShowPost extends React.Component {
           onRequestClose={() => this.changeModalStatusForAsk(false)}
           style={{
             content: {
+              top: "25%",
+              left: "30%",
+              right: "30%",
+              bottom: "40%",
               borderRadius: "7px",
             },
             overlay: {
@@ -67,12 +71,7 @@ class ShowPost extends React.Component {
             },
           }}
         >
-          <Button
-            variant="outline-dark"
-            onClick={() => this.changeModalStatusForAsk(false)}
-          >
-            Close
-          </Button>
+          <AskPostContainer />
         </Modal>
         <ReplyIndexContainer postId={this.props.postId} />
       </div>

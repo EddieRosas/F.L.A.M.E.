@@ -19,3 +19,15 @@
   margin-left: auto;
   margin-right: 25px;
 }
+
+.new-replies-textbox {
+  margin: 5px;
+  padding: 5px;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid black;
+  transition: border-bottom .3s;
+  resize: none;
+  margin-bottom: 10px;
+}
+

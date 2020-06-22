@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
+import './ask_post.css'
 
 class AskPost extends React.Component {
   constructor(props) {
@@ -25,23 +27,29 @@ class AskPost extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="ask-post-form">
+        <p className="ask-post-title">Create New Post</p>
         <form onSubmit={this.handleSubmit}>
           <label>Title</label>
           <input
             type="text"
+            className="new-post-title"
             value={this.state.title}
             onChange={this.update("title")}
           />
           <br />
           <label>Body</label>
-          <textarea
+          <input
             type="text"
+            className="new-post-description"
             value={this.state.description}
             onChange={this.update("description")}
           />
           <br />
-          <select onChange={this.update("postType")}>
+          <select 
+            onChange={this.update("postType")}
+            className="ask-post-select"
+          >
             <option
               value=""
               disabled
@@ -52,7 +60,13 @@ class AskPost extends React.Component {
             <option value="0">Question</option>
             <option value="1">Story</option>
           </select>
-          <button type="submit">Submit your post!</button>
+          <Button
+            variant="outline-dark"
+            className="new-post-btn"
+            type="submit"
+          >
+            Submit your post!
+          </Button>
         </form>
       </div>
     );
