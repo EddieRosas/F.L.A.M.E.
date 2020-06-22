@@ -27,7 +27,9 @@ class NewReply extends React.Component {
       <div>
         <h4>Your reply</h4>
         <form onSubmit={this.handleSubmit}>
-          <textarea col="30" row="8" onChange={this.update("description")} />
+          <input onChange={this.update("description")} 
+                 className="new-replies-textbox"
+          />
           <Button type="submit" 
                   variant="outline-secondary"
           >
