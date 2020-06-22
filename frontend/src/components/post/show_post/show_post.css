@@ -25,9 +25,6 @@
   margin-right: 25px;
 }
 
-.close-new-post-btn {
-  float: right;
-}
 
 @media screen and (max-width: 400px) {
   .show-post-component {

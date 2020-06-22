@@ -71,13 +71,6 @@ class ShowPost extends React.Component {
             },
           }}
         >
-          <Button
-            variant="outline-dark"
-            className="close-new-post-btn"
-            onClick={() => this.changeModalStatusForAsk(false)}
-          >
-            Close
-          </Button>
           <AskPostContainer />
         </Modal>
         <ReplyIndexContainer postId={this.props.postId} />
