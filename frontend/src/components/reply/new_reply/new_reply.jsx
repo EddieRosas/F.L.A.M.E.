@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import './new_reply.css'
 
 class NewReply extends React.Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class NewReply extends React.Component {
 
   loggedIn() {
     return (
-      <div>
+      <div className="new-replies-form">
         <h4>Your reply</h4>
         <form onSubmit={this.handleSubmit}>
           <input onChange={this.update("description")} 
