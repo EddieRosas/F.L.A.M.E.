@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import './new_reply.css'
 
 class NewReply extends React.Component {
   constructor(props) {
@@ -24,11 +25,16 @@ class NewReply extends React.Component {
 
   loggedIn() {
     return (
-      <div>
-        <h4>Your reply</h4>
+      <div className="new-replies-form">
+        <p className="new-reply-title">Add New Reply</p>
         <form onSubmit={this.handleSubmit}>
-          <textarea col="30" row="8" onChange={this.update("description")} />
-          <Button variant="outline-secondary">
+          <label>Reply</label>
+          <input onChange={this.update("description")} 
+                 className="new-replies-textbox"
+          />
+          <Button type="submit" 
+                  variant="outline-secondary"
+          >
             Add New Reply
           </Button>
         </form>
@@ -49,4 +55,4 @@ class NewReply extends React.Component {
   }
 }
 
-export default NewAnswer;
+export default NewReply;

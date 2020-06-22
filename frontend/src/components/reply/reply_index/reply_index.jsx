@@ -4,6 +4,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { Button } from 'react-bootstrap';
 import Modal from "react-modal";
 import './reply_index.css';
+import NewReplyContainer from '../new_reply/new_reply_container'
 
 class ReplyIndex extends React.Component {
   constructor(props) {
@@ -70,6 +71,10 @@ class ReplyIndex extends React.Component {
           onRequestClose={() => this.changeModalStatusNewReply(false)}
           style={{
             content: {
+              top: "32%",
+              left: "25%",
+              right: "25%",
+              bottom: "40%",
               borderRadius: "7px",
             },
             overlay: {
@@ -78,12 +83,7 @@ class ReplyIndex extends React.Component {
             },
           }}
         >
-          <Button
-            variant="outline-dark"
-            onClick={() => this.changeModalStatusNewReply(false)}
-          >
-            Close
-          </Button>
+          <NewReplyContainer />
         </Modal>
       </div>
     );

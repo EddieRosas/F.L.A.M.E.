@@ -25,6 +25,7 @@
   margin-right: 25px;
 }
 
+
 @media screen and (max-width: 400px) {
   .show-post-component {
     display: none;

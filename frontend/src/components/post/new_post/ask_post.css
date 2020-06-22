@@ -1,0 +1,37 @@
+.ask-post-title {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.new-post-title {
+  margin: 5px;
+  padding: 5px;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid black;
+  transition: border-bottom .3s;
+}
+
+.new-post-description {
+  margin: 5px;
+  padding: 5px;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid black;
+  transition: border-bottom .3s;
+  resize: none;
+}
+
+.ask-post-select {
+  width: 83%;
+  height: 30px;
+  margin: 10px 10px;
+  background-color: rgb(206, 203, 203);
+  cursor: pointer;
+  transition: border .3s;
+}
+
+.ask-post-form {
+  text-align: center
+}
+
