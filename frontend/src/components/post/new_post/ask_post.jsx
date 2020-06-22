@@ -28,6 +28,7 @@ class AskPost extends React.Component {
   render() {
     return (
       <div className="ask-post-form">
+        <p className="ask-post-title">Create New Post</p>
         <form onSubmit={this.handleSubmit}>
           <label>Title</label>
           <input

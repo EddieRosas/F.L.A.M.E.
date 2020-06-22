@@ -26,8 +26,9 @@ class NewReply extends React.Component {
   loggedIn() {
     return (
       <div className="new-replies-form">
-        <h4>Your reply</h4>
+        <p className="new-reply-title">Add New Reply</p>
         <form onSubmit={this.handleSubmit}>
+          <label>Reply</label>
           <input onChange={this.update("description")} 
                  className="new-replies-textbox"
           />

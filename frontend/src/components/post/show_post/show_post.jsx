@@ -60,9 +60,9 @@ class ShowPost extends React.Component {
           style={{
             content: {
               top: "25%",
-              left: "25%",
-              right: "25%",
-              bottom: "25%",
+              left: "30%",
+              right: "30%",
+              bottom: "40%",
               borderRadius: "7px",
             },
             overlay: {

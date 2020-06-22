@@ -1,3 +1,8 @@
+.ask-post-title {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
 .new-post-title {
   margin: 5px;
   padding: 5px;
@@ -29,3 +34,4 @@
 .ask-post-form {
   text-align: center
 }
+
