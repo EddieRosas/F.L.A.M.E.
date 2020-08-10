@@ -21,7 +21,7 @@ const App = () => (
   <div>
     <NavBarContainer />
     <Switch>
-      <Route exact path="/" component={MainPage} />
+      {/* <Route exact path="/" component={MainPage} /> */}
       <ProtectedRoute exact path="/budget" component={BudgetContainer} />
       <ProtectedRoute exact path="/profile" component={ProfileContainer} />
       <ProtectedRoute
