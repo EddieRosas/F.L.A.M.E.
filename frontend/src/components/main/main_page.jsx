@@ -30,10 +30,11 @@ class MainPage extends React.Component {
               className="linkedin-link"
               href="https://www.linkedin.com/in/bcwan/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FaLinkedin size={25} fill="white" />
             </a>
-            <a className="github-link" href="https://github.com/bcwan" target="_blank">
+            <a className="github-link" href="https://github.com/bcwan" target="_blank" rel="noopener noreferrer">
               <FaGithubSquare size={25} fill="white" />
             </a>
           </div>
@@ -43,10 +44,11 @@ class MainPage extends React.Component {
               className="linkedin-link"
               href="https://www.linkedin.com/in/shaphen/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FaLinkedin size={25} fill="white" />
             </a>
-            <a className="github-link" href="https://github.com/Shaphen" target="_blank">
+            <a className="github-link" href="https://github.com/Shaphen" target="_blank" rel="noopener noreferrer">
               <FaGithubSquare size={25} fill="white" />
             </a>
           </div>
@@ -56,10 +58,11 @@ class MainPage extends React.Component {
               className="linkedin-link"
               href="https://www.linkedin.com/in/nataliecake/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FaLinkedin size={25} fill="white" />
             </a>
-            <a className="github-link" href="https://github.com/NChen666" target="_blank">
+            <a className="github-link" href="https://github.com/NChen666" target="_blank" rel="noopener noreferrer">
               <FaGithubSquare size={25} fill="white" />
             </a>
           </div>
@@ -69,10 +72,11 @@ class MainPage extends React.Component {
               className="linkedin-link"
               href="https://www.linkedin.com/in/eddie-rosas-45ba6a13a/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FaLinkedin size={25} fill="white" />
             </a>
-            <a className="github-link" href="https://github.com/EddieRosas" target="_blank">
+            <a className="github-link" href="https://github.com/EddieRosas" target="_blank" rel="noopener noreferrer">
               <FaGithubSquare size={25} fill="white" />
             </a>
           </div>
