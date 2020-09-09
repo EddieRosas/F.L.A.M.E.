@@ -59,7 +59,7 @@ class MainPage extends React.Component {
             >
               <FaLinkedin size={25} fill="white" />
             </a>
-            <a className="github-link" href="https://github.com/NChen666" target="_blank">
+            <a className="github-link" href="https://github.com/NatalieCC" target="_blank">
               <FaGithubSquare size={25} fill="white" />
             </a>
           </div>
